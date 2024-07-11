@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# EC Solutions and Enterprise
+
+This is a website built with the Next.js framework and featuring TypeScript, ESLint, Prettier, and Tailwind CSS. These tools are widely used in the web development community and can help you create modern, scalable, and maintainable websites.
+
+## Features
+
+The repository template includes the following features:
+
+- **Next.js**: A popular React-based framework for building web applications with server-side rendering, static site generation, and other features.
+- **TypeScript**: A typed superset of JavaScript that helps you catch errors early and improve code quality.
+- **ESLint**: A tool for finding and fixing code issues and enforcing consistent coding styles.
+- **Prettier**: A code formatter that helps you maintain consistent formatting and saves time.
+- **Tailwind CSS**: A utility-first CSS framework that enables you to rapidly design and customize your user interface.
+
+The template also includes some preconfigured settings and dependencies, such as:
+
+- A `.eslintrc.json` file with some common rules for TypeScript and React development.
+- A `.prettierrc.json` file with some default formatting options.
+- A `tailwind.config.ts` file with some basic configurations for customizing the Tailwind CSS styles.
+- Some sample Next.js pages and components that demonstrate how to use TypeScript and Tailwind CSS.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Make sure you have the following software installed on your machine:
+
+- [Git](https://git-scm.com)
+- [Node.js](https://nodejs.org/en) (version 14 or later)
+
+### Installation
+
+1. Download or clone the repository to your local machine
+
+   ```bash
+   git clone https://github.com/joaquinvaldezzz/ec-solutions-and-enterprise.git
+   ```
+
+2. Go to the project directory
+
+   ```bash
+   cd ec-solutions-and-enterprise
+   ```
+
+3. Install dependencies using npm
+
+   ```bash
+   npm install
+   ```
+
+### Run Locally
+
+To start the development server, run the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will start the server at http://localhost:3000. You can access the app in your web browser at that address.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Local Production Preview
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To preview the production build locally, run the following command:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm run preview
+```
