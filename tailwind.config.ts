@@ -47,7 +47,10 @@ const config: Config = {
         tight: '-0.02em',
       },
       spacing: {
+        3.5: '0.875rem',
         4.5: '1.125rem',
+        5.5: '1.375rem',
+        15: '3.75rem',
       },
     },
   },
