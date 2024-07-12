@@ -19,7 +19,8 @@
     "^@/styles/(.*)$",
     "^@/app/(.*)$",
     "",
-    "^[./]"
+    "^[./]",
+    "^@/public/(.*)$"
   ],
   "tailwindFunctions": ["cva"]
 }
