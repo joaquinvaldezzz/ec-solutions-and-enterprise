@@ -1,4 +1,6 @@
-import type { Config } from 'tailwindcss'
+/* eslint-disable import/no-extraneous-dependencies */
+import { type Config } from 'tailwindcss'
+import { fontFamily } from 'tailwindcss/defaultTheme'
 
 import { blurs, boxShadows, colors } from './theme'
 
@@ -37,7 +39,17 @@ const config: Config = {
       'display-xl': ['3.75rem', { lineHeight: '4.5rem' }],
       'display-2xl': ['4.5rem', { lineHeight: '5.625rem' }],
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+      },
+      letterSpacing: {
+        tight: '-0.02em',
+      },
+      spacing: {
+        4.5: '1.125rem',
+      },
+    },
   },
   plugins: [],
 }
