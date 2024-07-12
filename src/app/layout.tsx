@@ -30,7 +30,7 @@ export default function Layout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-w-80 antialiased">{children}</body>
+      <body className="min-w-80 bg-white text-gray-900 antialiased">{children}</body>
     </html>
   )
 }
