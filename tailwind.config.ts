@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { type Config } from 'tailwindcss'
+import { neutral } from 'tailwindcss/colors'
 import { fontFamily } from 'tailwindcss/defaultTheme'
 
 import { blurs, boxShadows, colors } from './theme'
@@ -10,11 +11,18 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  future: {
+    disableColorOpacityUtilitiesByDefault: true,
+  },
   theme: {
     container: {
+      screens: {
+        xl: '1280px',
+      },
       center: true,
       padding: {
         DEFAULT: '1rem',
+        xl: '2rem',
       },
     },
     blur: {
@@ -40,6 +48,12 @@ const config: Config = {
       'display-2xl': ['4.5rem', { lineHeight: '5.625rem' }],
     },
     extend: {
+      colors: {
+        brand: {
+          25: '#fbfbfb',
+          ...neutral,
+        },
+      },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
