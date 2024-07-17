@@ -2,7 +2,11 @@
   "printWidth": 100,
   "semi": false,
   "singleQuote": true,
-  "plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "@prettier/plugin-xml",
+    "prettier-plugin-tailwindcss"
+  ],
   "importOrder": [
     "^(react/(.*)$)|^(react$)",
     "^(next/(.*)$)|^(next$)",
