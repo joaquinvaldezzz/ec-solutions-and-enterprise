@@ -17,7 +17,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "validate-filename"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/consistent-type-imports": [
@@ -26,6 +26,21 @@
         "fixStyle": "inline-type-imports"
       }
     ],
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "validate-filename/naming-rules": [
+      "error",
+      {
+        "rules": [
+          {
+            "case": "kebab",
+            "target": "**/app/**"
+          },
+          {
+            "case": "kebab",
+            "target": "**/components/**"
+          }
+        ]
+      }
+    ]
   }
 }
