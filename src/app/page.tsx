@@ -3,6 +3,9 @@ import Link from 'next/link'
 
 import { Button } from '@/components/ui/button'
 
+import SMGeometricShapes from '@/public/images/backgrounds/sm-geometric-shapes.svg'
+import SMGridCheckBackground from '@/public/images/backgrounds/sm-grid-check-bg.svg'
+
 interface Service {
   icon: ReactNode
   title: string
@@ -51,8 +54,9 @@ const services: Service[] = [
 export default function Home() {
   return (
     <div>
-      <section className="py-16">
-        <div className="container">
+      <section className="relative overflow-hidden py-16">
+        <SMGridCheckBackground className="absolute bottom-16 left-1/2 size-[60rem] -translate-x-1/2" />
+        <div className="container relative">
           <Link
             className="inline-flex w-max items-center gap-2 rounded-2xl bg-brand-50 py-1 pl-1 pr-2.5 ring-1 ring-inset ring-brand-200"
             href="#"
@@ -91,7 +95,9 @@ export default function Home() {
             </Button>
           </div>
 
-          <div className="mt-16"></div>
+          <div className="mt-16">
+            <SMGeometricShapes />
+          </div>
         </div>
       </section>
 

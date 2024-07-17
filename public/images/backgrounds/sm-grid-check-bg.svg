@@ -1,0 +1,1855 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 960 960">
+  <mask
+    id="b"
+    width="960"
+    height="960"
+    x="0"
+    y="0"
+    maskUnits="userSpaceOnUse"
+    style="mask-type:alpha"
+  >
+    <path fill="url(#a)" d="M0 0h960v960H0z" />
+  </mask>
+  <g mask="url(#b)">
+    <g clip-path="url(#c)">
+      <mask id="d" fill="#fff">
+        <path d="M0 0h64v64H0V0Z" />
+      </mask>
+      <path fill="#d0d5dd" d="M64 64v1h1v-1h-1ZM63 0v64h2V0h-2Zm1 63H0v2h64v-2Z" mask="url(#d)" />
+      <mask id="e" fill="#fff">
+        <path d="M64 0h64v64H64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#e)"
+      />
+      <mask id="f" fill="#fff">
+        <path d="M128 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#f)"
+      />
+      <mask id="g" fill="#fff">
+        <path d="M192 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#g)"
+      />
+      <mask id="h" fill="#fff">
+        <path d="M256 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#h)"
+      />
+      <mask id="i" fill="#fff">
+        <path d="M320 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#i)"
+      />
+      <mask id="j" fill="#fff">
+        <path d="M384 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#j)"
+      />
+      <mask id="k" fill="#fff">
+        <path d="M448 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#k)"
+      />
+      <mask id="l" fill="#fff">
+        <path d="M512 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#l)"
+      />
+      <mask id="m" fill="#fff">
+        <path d="M576 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#m)"
+      />
+      <mask id="n" fill="#fff">
+        <path d="M640 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#n)"
+      />
+      <mask id="o" fill="#fff">
+        <path d="M704 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#o)"
+      />
+      <mask id="p" fill="#fff">
+        <path d="M768 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#p)"
+      />
+      <mask id="q" fill="#fff">
+        <path d="M832 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#q)"
+      />
+      <mask id="r" fill="#fff">
+        <path d="M896 0h64v64h-64V0Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 64v1h1v-1h-1Zm-1-64v64h2V0h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#r)"
+      />
+      <mask id="s" fill="#fff">
+        <path d="M0 64h64v64H0V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#s)"
+      />
+      <mask id="t" fill="#fff">
+        <path d="M64 64h64v64H64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#t)"
+      />
+      <mask id="u" fill="#fff">
+        <path d="M128 64h64v64h-64V64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M128 64h64v64h-64V64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M192 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#u)"
+      />
+      <mask id="v" fill="#fff">
+        <path d="M192 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#v)"
+      />
+      <mask id="w" fill="#fff">
+        <path d="M256 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#w)"
+      />
+      <mask id="x" fill="#fff">
+        <path d="M320 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#x)"
+      />
+      <mask id="y" fill="#fff">
+        <path d="M384 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#y)"
+      />
+      <mask id="z" fill="#fff">
+        <path d="M448 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#z)"
+      />
+      <mask id="A" fill="#fff">
+        <path d="M512 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#A)"
+      />
+      <mask id="B" fill="#fff">
+        <path d="M576 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#B)"
+      />
+      <mask id="C" fill="#fff">
+        <path d="M640 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#C)"
+      />
+      <mask id="D" fill="#fff">
+        <path d="M704 64h64v64h-64V64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M704 64h64v64h-64V64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M768 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#D)"
+      />
+      <mask id="E" fill="#fff">
+        <path d="M768 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#E)"
+      />
+      <mask id="F" fill="#fff">
+        <path d="M832 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#F)"
+      />
+      <mask id="G" fill="#fff">
+        <path d="M896 64h64v64h-64V64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 128v1h1v-1h-1Zm-1-64v64h2V64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#G)"
+      />
+      <mask id="H" fill="#fff">
+        <path d="M0 128h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#H)"
+      />
+      <mask id="I" fill="#fff">
+        <path d="M64 128h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#I)"
+      />
+      <mask id="J" fill="#fff">
+        <path d="M128 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#J)"
+      />
+      <mask id="K" fill="#fff">
+        <path d="M192 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#K)"
+      />
+      <mask id="L" fill="#fff">
+        <path d="M256 128h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M256 128h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M320 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#L)"
+      />
+      <mask id="M" fill="#fff">
+        <path d="M320 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#M)"
+      />
+      <mask id="N" fill="#fff">
+        <path d="M384 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#N)"
+      />
+      <mask id="O" fill="#fff">
+        <path d="M448 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#O)"
+      />
+      <mask id="P" fill="#fff">
+        <path d="M512 128h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M512 128h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M576 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#P)"
+      />
+      <mask id="Q" fill="#fff">
+        <path d="M576 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#Q)"
+      />
+      <mask id="R" fill="#fff">
+        <path d="M640 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#R)"
+      />
+      <mask id="S" fill="#fff">
+        <path d="M704 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#S)"
+      />
+      <mask id="T" fill="#fff">
+        <path d="M768 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#T)"
+      />
+      <mask id="U" fill="#fff">
+        <path d="M832 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#U)"
+      />
+      <mask id="V" fill="#fff">
+        <path d="M896 128h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 192v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#V)"
+      />
+      <mask id="W" fill="#fff">
+        <path d="M0 192h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#W)"
+      />
+      <mask id="X" fill="#fff">
+        <path d="M64 192h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#X)"
+      />
+      <mask id="Y" fill="#fff">
+        <path d="M128 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#Y)"
+      />
+      <mask id="Z" fill="#fff">
+        <path d="M192 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#Z)"
+      />
+      <mask id="aa" fill="#fff">
+        <path d="M256 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aa)"
+      />
+      <mask id="ab" fill="#fff">
+        <path d="M320 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ab)"
+      />
+      <mask id="ac" fill="#fff">
+        <path d="M384 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ac)"
+      />
+      <mask id="ad" fill="#fff">
+        <path d="M448 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ad)"
+      />
+      <mask id="ae" fill="#fff">
+        <path d="M512 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ae)"
+      />
+      <mask id="af" fill="#fff">
+        <path d="M576 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#af)"
+      />
+      <mask id="ag" fill="#fff">
+        <path d="M640 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ag)"
+      />
+      <mask id="ah" fill="#fff">
+        <path d="M704 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ah)"
+      />
+      <mask id="ai" fill="#fff">
+        <path d="M768 192h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M768 192h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M832 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ai)"
+      />
+      <mask id="aj" fill="#fff">
+        <path d="M832 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aj)"
+      />
+      <mask id="ak" fill="#fff">
+        <path d="M896 192h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 256v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ak)"
+      />
+      <mask id="al" fill="#fff">
+        <path d="M0 256h64v64H0v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M0 256h64v64H0v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M64 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#al)"
+      />
+      <mask id="am" fill="#fff">
+        <path d="M64 256h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#am)"
+      />
+      <mask id="an" fill="#fff">
+        <path d="M128 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#an)"
+      />
+      <mask id="ao" fill="#fff">
+        <path d="M192 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ao)"
+      />
+      <mask id="ap" fill="#fff">
+        <path d="M256 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ap)"
+      />
+      <mask id="aq" fill="#fff">
+        <path d="M320 256h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M320 256h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M384 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aq)"
+      />
+      <mask id="ar" fill="#fff">
+        <path d="M384 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ar)"
+      />
+      <mask id="as" fill="#fff">
+        <path d="M448 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#as)"
+      />
+      <mask id="at" fill="#fff">
+        <path d="M512 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#at)"
+      />
+      <mask id="au" fill="#fff">
+        <path d="M576 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#au)"
+      />
+      <mask id="av" fill="#fff">
+        <path d="M640 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#av)"
+      />
+      <mask id="aw" fill="#fff">
+        <path d="M704 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aw)"
+      />
+      <mask id="ax" fill="#fff">
+        <path d="M768 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ax)"
+      />
+      <mask id="ay" fill="#fff">
+        <path d="M832 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ay)"
+      />
+      <mask id="az" fill="#fff">
+        <path d="M896 256h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 320v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#az)"
+      />
+      <mask id="aA" fill="#fff">
+        <path d="M0 320h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#aA)"
+      />
+      <mask id="aB" fill="#fff">
+        <path d="M64 320h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#aB)"
+      />
+      <mask id="aC" fill="#fff">
+        <path d="M128 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aC)"
+      />
+      <mask id="aD" fill="#fff">
+        <path d="M192 320h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M192 320h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M256 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aD)"
+      />
+      <mask id="aE" fill="#fff">
+        <path d="M256 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aE)"
+      />
+      <mask id="aF" fill="#fff">
+        <path d="M320 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aF)"
+      />
+      <mask id="aG" fill="#fff">
+        <path d="M384 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aG)"
+      />
+      <mask id="aH" fill="#fff">
+        <path d="M448 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aH)"
+      />
+      <mask id="aI" fill="#fff">
+        <path d="M512 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aI)"
+      />
+      <mask id="aJ" fill="#fff">
+        <path d="M576 320h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M576 320h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M640 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aJ)"
+      />
+      <mask id="aK" fill="#fff">
+        <path d="M640 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aK)"
+      />
+      <mask id="aL" fill="#fff">
+        <path d="M704 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aL)"
+      />
+      <mask id="aM" fill="#fff">
+        <path d="M768 320h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M768 320h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M832 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aM)"
+      />
+      <mask id="aN" fill="#fff">
+        <path d="M832 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aN)"
+      />
+      <mask id="aO" fill="#fff">
+        <path d="M896 320h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 384v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aO)"
+      />
+      <mask id="aP" fill="#fff">
+        <path d="M0 384h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#aP)"
+      />
+      <mask id="aQ" fill="#fff">
+        <path d="M64 384h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#aQ)"
+      />
+      <mask id="aR" fill="#fff">
+        <path d="M128 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aR)"
+      />
+      <mask id="aS" fill="#fff">
+        <path d="M192 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aS)"
+      />
+      <mask id="aT" fill="#fff">
+        <path d="M256 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aT)"
+      />
+      <mask id="aU" fill="#fff">
+        <path d="M320 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aU)"
+      />
+      <mask id="aV" fill="#fff">
+        <path d="M384 384h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M384 384h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M448 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aV)"
+      />
+      <mask id="aW" fill="#fff">
+        <path d="M448 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aW)"
+      />
+      <mask id="aX" fill="#fff">
+        <path d="M512 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aX)"
+      />
+      <mask id="aY" fill="#fff">
+        <path d="M576 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aY)"
+      />
+      <mask id="aZ" fill="#fff">
+        <path d="M640 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#aZ)"
+      />
+      <mask id="ba" fill="#fff">
+        <path d="M704 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ba)"
+      />
+      <mask id="bb" fill="#fff">
+        <path d="M768 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bb)"
+      />
+      <mask id="bc" fill="#fff">
+        <path d="M832 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bc)"
+      />
+      <mask id="bd" fill="#fff">
+        <path d="M896 384h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 448v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bd)"
+      />
+      <mask id="be" fill="#fff">
+        <path d="M0 448h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#be)"
+      />
+      <mask id="bf" fill="#fff">
+        <path d="M64 448h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#bf)"
+      />
+      <mask id="bg" fill="#fff">
+        <path d="M128 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bg)"
+      />
+      <mask id="bh" fill="#fff">
+        <path d="M192 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bh)"
+      />
+      <mask id="bi" fill="#fff">
+        <path d="M256 448h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M256 448h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M320 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bi)"
+      />
+      <mask id="bj" fill="#fff">
+        <path d="M320 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bj)"
+      />
+      <mask id="bk" fill="#fff">
+        <path d="M384 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bk)"
+      />
+      <mask id="bl" fill="#fff">
+        <path d="M448 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bl)"
+      />
+      <mask id="bm" fill="#fff">
+        <path d="M512 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bm)"
+      />
+      <mask id="bn" fill="#fff">
+        <path d="M576 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bn)"
+      />
+      <mask id="bo" fill="#fff">
+        <path d="M640 448h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M640 448h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M704 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bo)"
+      />
+      <mask id="bp" fill="#fff">
+        <path d="M704 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bp)"
+      />
+      <mask id="bq" fill="#fff">
+        <path d="M768 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bq)"
+      />
+      <mask id="br" fill="#fff">
+        <path d="M832 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#br)"
+      />
+      <mask id="bs" fill="#fff">
+        <path d="M896 448h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 512v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bs)"
+      />
+      <mask id="bt" fill="#fff">
+        <path d="M0 512h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#bt)"
+      />
+      <mask id="bu" fill="#fff">
+        <path d="M64 512h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#bu)"
+      />
+      <mask id="bv" fill="#fff">
+        <path d="M128 512h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M128 512h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M192 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bv)"
+      />
+      <mask id="bw" fill="#fff">
+        <path d="M192 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bw)"
+      />
+      <mask id="bx" fill="#fff">
+        <path d="M256 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bx)"
+      />
+      <mask id="by" fill="#fff">
+        <path d="M320 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#by)"
+      />
+      <mask id="bz" fill="#fff">
+        <path d="M384 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bz)"
+      />
+      <mask id="bA" fill="#fff">
+        <path d="M448 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bA)"
+      />
+      <mask id="bB" fill="#fff">
+        <path d="M512 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bB)"
+      />
+      <mask id="bC" fill="#fff">
+        <path d="M576 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bC)"
+      />
+      <mask id="bD" fill="#fff">
+        <path d="M640 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bD)"
+      />
+      <mask id="bE" fill="#fff">
+        <path d="M704 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bE)"
+      />
+      <mask id="bF" fill="#fff">
+        <path d="M768 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bF)"
+      />
+      <mask id="bG" fill="#fff">
+        <path d="M832 512h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M832 512h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M896 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bG)"
+      />
+      <mask id="bH" fill="#fff">
+        <path d="M896 512h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 576v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bH)"
+      />
+      <mask id="bI" fill="#fff">
+        <path d="M0 576h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#bI)"
+      />
+      <mask id="bJ" fill="#fff">
+        <path d="M64 576h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#bJ)"
+      />
+      <mask id="bK" fill="#fff">
+        <path d="M128 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bK)"
+      />
+      <mask id="bL" fill="#fff">
+        <path d="M192 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bL)"
+      />
+      <mask id="bM" fill="#fff">
+        <path d="M256 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bM)"
+      />
+      <mask id="bN" fill="#fff">
+        <path d="M320 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bN)"
+      />
+      <mask id="bO" fill="#fff">
+        <path d="M384 576h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M384 576h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M448 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bO)"
+      />
+      <mask id="bP" fill="#fff">
+        <path d="M448 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bP)"
+      />
+      <mask id="bQ" fill="#fff">
+        <path d="M512 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bQ)"
+      />
+      <mask id="bR" fill="#fff">
+        <path d="M576 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bR)"
+      />
+      <mask id="bS" fill="#fff">
+        <path d="M640 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bS)"
+      />
+      <mask id="bT" fill="#fff">
+        <path d="M704 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bT)"
+      />
+      <mask id="bU" fill="#fff">
+        <path d="M768 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bU)"
+      />
+      <mask id="bV" fill="#fff">
+        <path d="M832 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bV)"
+      />
+      <mask id="bW" fill="#fff">
+        <path d="M896 576h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 640v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bW)"
+      />
+      <mask id="bX" fill="#fff">
+        <path d="M0 640h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#bX)"
+      />
+      <mask id="bY" fill="#fff">
+        <path d="M64 640h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#bY)"
+      />
+      <mask id="bZ" fill="#fff">
+        <path d="M128 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#bZ)"
+      />
+      <mask id="ca" fill="#fff">
+        <path d="M192 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ca)"
+      />
+      <mask id="cb" fill="#fff">
+        <path d="M256 640h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M256 640h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M320 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cb)"
+      />
+      <mask id="cc" fill="#fff">
+        <path d="M320 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cc)"
+      />
+      <mask id="cd" fill="#fff">
+        <path d="M384 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cd)"
+      />
+      <mask id="ce" fill="#fff">
+        <path d="M448 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ce)"
+      />
+      <mask id="cf" fill="#fff">
+        <path d="M512 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cf)"
+      />
+      <mask id="cg" fill="#fff">
+        <path d="M576 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cg)"
+      />
+      <mask id="ch" fill="#fff">
+        <path d="M640 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ch)"
+      />
+      <mask id="ci" fill="#fff">
+        <path d="M704 640h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M704 640h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M768 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ci)"
+      />
+      <mask id="cj" fill="#fff">
+        <path d="M768 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cj)"
+      />
+      <mask id="ck" fill="#fff">
+        <path d="M832 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ck)"
+      />
+      <mask id="cl" fill="#fff">
+        <path d="M896 640h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 704v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cl)"
+      />
+      <mask id="cm" fill="#fff">
+        <path d="M0 704h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#cm)"
+      />
+      <mask id="cn" fill="#fff">
+        <path d="M64 704h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#cn)"
+      />
+      <mask id="co" fill="#fff">
+        <path d="M128 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#co)"
+      />
+      <mask id="cp" fill="#fff">
+        <path d="M192 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cp)"
+      />
+      <mask id="cq" fill="#fff">
+        <path d="M256 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cq)"
+      />
+      <mask id="cr" fill="#fff">
+        <path d="M320 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cr)"
+      />
+      <mask id="cs" fill="#fff">
+        <path d="M384 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cs)"
+      />
+      <mask id="ct" fill="#fff">
+        <path d="M448 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ct)"
+      />
+      <mask id="cu" fill="#fff">
+        <path d="M512 704h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M512 704h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M576 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cu)"
+      />
+      <mask id="cv" fill="#fff">
+        <path d="M576 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cv)"
+      />
+      <mask id="cw" fill="#fff">
+        <path d="M640 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cw)"
+      />
+      <mask id="cx" fill="#fff">
+        <path d="M704 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cx)"
+      />
+      <mask id="cy" fill="#fff">
+        <path d="M768 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cy)"
+      />
+      <mask id="cz" fill="#fff">
+        <path d="M832 704h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M832 704h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M896 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cz)"
+      />
+      <mask id="cA" fill="#fff">
+        <path d="M896 704h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 768v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cA)"
+      />
+      <mask id="cB" fill="#fff">
+        <path d="M0 768h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#cB)"
+      />
+      <mask id="cC" fill="#fff">
+        <path d="M64 768h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#cC)"
+      />
+      <mask id="cD" fill="#fff">
+        <path d="M128 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cD)"
+      />
+      <mask id="cE" fill="#fff">
+        <path d="M192 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cE)"
+      />
+      <mask id="cF" fill="#fff">
+        <path d="M256 768h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M256 768h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M320 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cF)"
+      />
+      <mask id="cG" fill="#fff">
+        <path d="M320 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cG)"
+      />
+      <mask id="cH" fill="#fff">
+        <path d="M384 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cH)"
+      />
+      <mask id="cI" fill="#fff">
+        <path d="M448 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cI)"
+      />
+      <mask id="cJ" fill="#fff">
+        <path d="M512 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cJ)"
+      />
+      <mask id="cK" fill="#fff">
+        <path d="M576 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cK)"
+      />
+      <mask id="cL" fill="#fff">
+        <path d="M640 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cL)"
+      />
+      <mask id="cM" fill="#fff">
+        <path d="M704 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cM)"
+      />
+      <mask id="cN" fill="#fff">
+        <path d="M768 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cN)"
+      />
+      <mask id="cO" fill="#fff">
+        <path d="M832 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cO)"
+      />
+      <mask id="cP" fill="#fff">
+        <path d="M896 768h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 832v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cP)"
+      />
+      <mask id="cQ" fill="#fff">
+        <path d="M0 832h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#cQ)"
+      />
+      <mask id="cR" fill="#fff">
+        <path d="M64 832h64v64H64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M64 832h64v64H64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M128 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#cR)"
+      />
+      <mask id="cS" fill="#fff">
+        <path d="M128 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cS)"
+      />
+      <mask id="cT" fill="#fff">
+        <path d="M192 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cT)"
+      />
+      <mask id="cU" fill="#fff">
+        <path d="M256 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cU)"
+      />
+      <mask id="cV" fill="#fff">
+        <path d="M320 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cV)"
+      />
+      <mask id="cW" fill="#fff">
+        <path d="M384 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cW)"
+      />
+      <mask id="cX" fill="#fff">
+        <path d="M448 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M512 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cX)"
+      />
+      <mask id="cY" fill="#fff">
+        <path d="M512 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cY)"
+      />
+      <mask id="cZ" fill="#fff">
+        <path d="M576 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#cZ)"
+      />
+      <mask id="da" fill="#fff">
+        <path d="M640 832h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M640 832h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M704 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#da)"
+      />
+      <mask id="db" fill="#fff">
+        <path d="M704 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#db)"
+      />
+      <mask id="dc" fill="#fff">
+        <path d="M768 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dc)"
+      />
+      <mask id="dd" fill="#fff">
+        <path d="M832 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dd)"
+      />
+      <mask id="de" fill="#fff">
+        <path d="M896 832h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M960 896v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#de)"
+      />
+      <mask id="df" fill="#fff">
+        <path d="M0 896h64v64H0v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M64 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H0v2h64v-2Z"
+        mask="url(#df)"
+      />
+      <mask id="dg" fill="#fff">
+        <path d="M64 896h64v64H64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M128 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63H64v2h64v-2Z"
+        mask="url(#dg)"
+      />
+      <mask id="dh" fill="#fff">
+        <path d="M128 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M192 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dh)"
+      />
+      <mask id="di" fill="#fff">
+        <path d="M192 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M256 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#di)"
+      />
+      <mask id="dj" fill="#fff">
+        <path d="M256 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M320 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dj)"
+      />
+      <mask id="dk" fill="#fff">
+        <path d="M320 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M384 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dk)"
+      />
+      <mask id="dl" fill="#fff">
+        <path d="M384 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M448 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dl)"
+      />
+      <mask id="dm" fill="#fff">
+        <path d="M448 896h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M448 896h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M512 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dm)"
+      />
+      <mask id="dn" fill="#fff">
+        <path d="M512 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M576 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dn)"
+      />
+      <mask id="do" fill="#fff">
+        <path d="M576 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M640 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#do)"
+      />
+      <mask id="dp" fill="#fff">
+        <path d="M640 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M704 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dp)"
+      />
+      <mask id="dq" fill="#fff">
+        <path d="M704 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M768 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dq)"
+      />
+      <mask id="dr" fill="#fff">
+        <path d="M768 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M832 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dr)"
+      />
+      <mask id="ds" fill="#fff">
+        <path d="M832 896h64v64h-64v-64Z" />
+      </mask>
+      <path
+        fill="#d0d5dd"
+        d="M896 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#ds)"
+      />
+      <mask id="dt" fill="#fff">
+        <path d="M896 896h64v64h-64v-64Z" />
+      </mask>
+      <path fill="#f2f4f7" d="M896 896h64v64h-64v-64Z" />
+      <path
+        fill="#d0d5dd"
+        d="M960 960v1h1v-1h-1Zm-1-64v64h2v-64h-2Zm1 63h-64v2h64v-2Z"
+        mask="url(#dt)"
+      />
+    </g>
+    <path stroke="#D0D5DD" d="M.5.5h959v959H.5z" />
+  </g>
+  <defs>
+    <radialGradient
+      id="a"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientTransform="matrix(0 -960 500.97 0 480 960)"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop />
+      <stop offset=".958" stop-opacity="0" />
+    </radialGradient>
+    <clipPath id="c">
+      <path fill="#fff" d="M0 0h960v960H0z" />
+    </clipPath>
+  </defs>
+</svg>
