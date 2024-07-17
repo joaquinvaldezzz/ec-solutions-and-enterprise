@@ -1,7 +1,11 @@
+'use client'
+
 import { type ReactNode } from 'react'
 import Link from 'next/link'
+import { ArrowDownCircleIcon } from '@heroicons/react/24/solid'
 
 import { Button } from '@/components/ui/button'
+import { OurClients } from '@/components/block/our-clients'
 
 import SMGeometricShapes from '@/public/images/backgrounds/sm-geometric-shapes.svg'
 import SMGridCheckBackground from '@/public/images/backgrounds/sm-grid-check-bg.svg'
@@ -78,7 +82,7 @@ export default function Home() {
             </div>
           </Link>
 
-          <h1 className="mt-4 text-display-md font-medium tracking-tight text-gray-900">
+          <h1 className="mt-4 text-balance text-display-md font-medium tracking-tight text-gray-900">
             Partner with us and experience the future of technology today
           </h1>
 
@@ -103,11 +107,18 @@ export default function Home() {
 
       <section className="py-16">
         <div className="container text-center">
-          <h2 className="font-medium text-brand-700">Who we are</h2>
-          <p className="mt-8 text-display-sm font-medium">
+          <h2 className="flex items-center justify-center gap-2 font-medium text-brand-700">
+            <div className="h-px w-16 border-t" />
+            Who we are
+            <div className="h-px w-16 border-t" />
+          </h2>
+          <p className="mt-8 text-balance text-display-sm font-medium">
             We&apos;ve been using Untitled to kick start every new project and can&apos;t imagine
             working without it.
           </p>
+          <Button className="mt-8">
+            Technologies we use <ArrowDownCircleIcon className="size-5" />
+          </Button>
         </div>
       </section>
 
@@ -138,19 +149,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container">
-          <div className="text-center">
-            <h2 className="text-sm font-semibold text-brand-700">Our Clients</h2>
-            <p className="mt-3 text-display-sm font-semibold text-gray-900">
-              We&apos;ve helped hundreds of global companies
-            </p>
-            <p className="mt-4 text-lg text-gray-600">
-              Interviews, tips, guides, industry best practices, and news.
-            </p>
-          </div>
-        </div>
-      </section>
+      <OurClients />
     </div>
   )
 }
