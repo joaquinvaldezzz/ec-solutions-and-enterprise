@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArrowDownCircleIcon } from '@heroicons/react/24/solid'
 
 import { Button } from '@/components/ui/button'
+import { ContactUs } from '@/components/block/contact-us'
 import { OurClients } from '@/components/block/our-clients'
 
 import SMGeometricShapes from '@/public/images/backgrounds/sm-geometric-shapes.svg'
@@ -150,6 +151,7 @@ export default function Home() {
       </section>
 
       <OurClients />
+      <ContactUs />
     </div>
   )
 }
