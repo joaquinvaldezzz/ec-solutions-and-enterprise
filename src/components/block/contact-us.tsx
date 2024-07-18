@@ -108,7 +108,7 @@ export function ContactUs() {
               />
               <FormField
                 control={form.control}
-                name="first_name"
+                name="message"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Message</FormLabel>
