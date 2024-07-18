@@ -55,9 +55,9 @@ export function ContactUs() {
             <h2 className="text-display-sm font-semibold">Contact us</h2>
             <p className="mt-4 text-lg text-gray-600">
               You can reach us anytime via{' '}
-              <a className="font-medium text-brand-700" href="mailto:hi@untitledui.com">
-                hi@untitledui.com
-              </a>
+              <Button size="lg" heirarchy="link-color" asChild>
+                <a href="mailto:hi@untitledui.com">hi@untitledui.com</a>
+              </Button>
             </p>
           </div>
 
