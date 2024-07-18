@@ -47,8 +47,25 @@ const config: Config = {
       'display-2xl': ['4.5rem', { lineHeight: '5.625rem' }],
     },
     extend: {
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
+      aria: {
+        invalid: 'invalid="true"',
+      },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
       },
       letterSpacing: {
         tight: '-0.02em',
@@ -62,7 +79,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 }
 
 export default config
