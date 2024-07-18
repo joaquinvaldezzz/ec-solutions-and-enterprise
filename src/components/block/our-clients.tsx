@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
 
 import { type Client } from '@/types/client'
+import { determineBadgeColor } from '@/lib/utils'
 
 import { Badge } from '..//ui/badge'
 import { Button } from '../ui/button'
@@ -31,25 +32,6 @@ const clients: Client[] = [
     tags: ['Software Development', 'Tools'],
   },
 ]
-
-function determineTagColor(tag: string) {
-  switch (tag) {
-    case 'Design':
-      return 'brand'
-    case 'Research':
-      return 'indigo'
-    case 'Presentation':
-    case 'Saas':
-    case 'Tools':
-      return 'pink'
-    case 'Product':
-      return 'blue-light'
-    case 'Software Development':
-      return 'success'
-    default:
-      return 'gray'
-  }
-}
 
 export function OurClients() {
   return (
@@ -83,7 +65,7 @@ export function OurClients() {
                   <p className="mt-2 line-clamp-2 text-gray-600">{client.description}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
                     {client.tags.map((tag, i) => (
-                      <Badge size="md" color={determineTagColor(tag)} key={i}>
+                      <Badge size="md" color={determineBadgeColor(tag)} key={i}>
                         {tag}
                       </Badge>
                     ))}

@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 import { cn } from '@/lib/utils'
 
-const badgeVariants = cva(
+export const badgeVariants = cva(
   'inline-flex items-center rounded-full text-center font-medium ring-1 ring-inset',
   {
     variants: {
