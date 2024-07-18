@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
 import localFont from 'next/font/local'
 
+import { Footer } from '@/components/ui/footer'
 import { Header } from '@/components/ui/header'
 
 import '@/styles/main.css'
@@ -35,6 +36,7 @@ export default function Layout({
       <body className="min-w-80 bg-white text-gray-900 antialiased">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )
