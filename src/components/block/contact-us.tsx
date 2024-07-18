@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, type SubmitHandler } from 'react-hook-form'
 import { z } from 'zod'
@@ -12,8 +13,10 @@ import {
 } from '@/components/ui/form'
 
 import { Button } from '../ui/button'
+import { Checkbox } from '../ui/checkbox'
 import { Container, Section } from '../ui/container'
 import { Input } from '../ui/input'
+import { Textarea } from '../ui/textarea'
 
 const formSchema = z.object({
   first_name: z.string().min(4),
@@ -21,6 +24,9 @@ const formSchema = z.object({
   email: z.string().email(),
   phone: z.string().min(10),
   message: z.string().min(10),
+  terms: z.boolean().refine((value) => value, {
+    message: 'You must accept the privacy policy.',
+  }),
 })
 type FormSchema = z.infer<typeof formSchema>
 
@@ -33,6 +39,7 @@ export function ContactUs() {
       email: '',
       phone: '',
       message: '',
+      terms: false,
     },
   })
 
@@ -106,13 +113,38 @@ export function ContactUs() {
                   <FormItem>
                     <FormLabel>Message</FormLabel>
                     <FormControl>
-                      <Input
-                        padding="md"
-                        type="text"
-                        placeholder="Leave us a message..."
-                        {...field}
-                      />
+                      <Textarea placeholder="Leave us a message..." {...field} />
                     </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="terms"
+                render={({ field }) => (
+                  <FormItem>
+                    <div className="flex gap-3">
+                      <FormControl>
+                        <Checkbox
+                          className="mt-0.5"
+                          size="md"
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <FormLabel className="text-md font-normal text-gray-700">
+                        You agree to our friendly{' '}
+                        <Button
+                          className="font-normal underline"
+                          size="lg"
+                          heirarchy="link-gray"
+                          asChild
+                        >
+                          <Link href="#">privacy policy</Link>
+                        </Button>
+                      </FormLabel>
+                    </div>
                     <FormMessage />
                   </FormItem>
                 )}

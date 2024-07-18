@@ -54,6 +54,9 @@ const config: Config = {
       aria: {
         invalid: 'invalid="true"',
       },
+      data: {
+        checked: 'state="checked"',
+      },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
