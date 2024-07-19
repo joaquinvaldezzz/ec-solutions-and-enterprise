@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1216 304">
+  <path fill="#80a78e" d="M456 0h152v152H456z" />
+  <path fill="#fff" d="M456 76h76c0 41.974-34.026 76-76 76V76Z" />
+  <path fill="#2f573d" d="M532 0c41.974 0 76 34.026 76 76h-76V0Z" />
+  <path fill="#a8c2b1" d="M456 152h152v152H456z" />
+  <path fill="#427b56" d="M532 228h76c0 41.974-34.026 76-76 76v-76Z" />
+  <path fill="#2f573d" d="M532 228c-41.974 0-76 34.026-76 76h76v-76Z" />
+  <path fill="#fff" d="M152 152h152v152H152z" />
+  <path fill="#427b56" d="M304 228h-76c0 41.974 34.026 76 76 76v-76Z" />
+  <path fill="#2f573d" d="M228 152c41.974 0 76 34.026 76 76h-76v-76Z" />
+  <path fill="#fff" d="M304 0h152v152H304z" />
+  <path fill="#427b56" d="M380 76h76l-76 76V76Zm0-76v76h-76l76-76Z" />
+  <path fill="#80a78e" d="M304 152h152v152H304z" />
+  <path fill="#2f573d" d="M380 304c-41.974 0-76-34.026-76-76s34.026-76 76-76v152Z" />
+  <circle cx="380" cy="228" r="38" fill="#fff" />
+  <path fill="#fff" d="M0 0h152v152H0z" />
+  <path fill="#427b56" d="M76 76h76v76H76z" />
+  <path fill="#a8c2b1" d="M0 0h76v76H0zm0 152h152v152H0z" />
+  <circle cx="76" cy="228" r="38" fill="#fff" />
+  <path fill="#2f573d" d="M152 304H0l76-76 76 76Z" />
+  <path fill="#80a78e" d="M152 0h152v152H152z" />
+  <path fill="#2f573d" d="M304 0v152H152L304 0Z" />
+  <circle cx="228" cy="76" r="38" fill="#fff" />
+  <path fill="#a8c2b1" d="M912 0h152v152H912z" />
+  <path fill="#fff" d="M988 76V0l76 76h-76Z" />
+  <path fill="#427b56" d="M912 76h76v76l-76-76Z" />
+  <path fill="#a8c2b1" d="M608 152h152v152H608z" />
+  <path fill="#427b56" d="M608 228c0-41.974 34.026-76 76-76s76 34.026 76 76H608Z" />
+  <circle cx="684" cy="266" r="38" fill="#fff" />
+  <path fill="#fff" d="M760 152h152v152H760z" />
+  <path fill="#427b56" d="M760 228c0-41.974 34.026-76 76-76s76 34.026 76 76H760Z" />
+  <path fill="#2f573d" d="M836 304c-41.974 0-76-34.026-76-76s34.026-76 76-76v152Z" />
+  <circle cx="874" cy="266" r="38" fill="#80a78e" />
+  <path fill="#fff" d="M608 0h152v152H608z" />
+  <path fill="#2f573d" d="M760 152c-41.974 0-76-34.026-76-76s34.026-76 76-76v152Z" />
+  <circle cx="646" cy="76" r="38" fill="#80a78e" />
+  <path fill="#80a78e" d="M760 0h152v152H760z" />
+  <path fill="#2f573d" d="M760 152c41.974 0 76-34.026 76-76S801.974 0 760 0v152Z" />
+  <path fill="#fff" d="M912 0v152l-76-76 76-76Z" />
+  <path fill="#a8c2b1" d="M912 152h152v152H912z" />
+  <path fill="#2f573d" d="M912 152h76v76h-76z" />
+  <path fill="#fff" d="M988 228h76v76h-76zm76-76h152v152h-152z" />
+  <circle cx="1140" cy="228" r="38" fill="#c4d6cb" />
+  <path fill="#2f573d" d="M1216 304h-152l76-76 76 76Z" />
+  <path fill="#427b56" d="M1216 228h-152l76-76 76 76Z" />
+  <path fill="#fff" d="M1064 0h152v152h-152z" />
+  <path fill="#427b56" d="M1064 0h152v152L1064 0Z" />
+  <circle cx="1140" cy="76" r="38" fill="#2f573d" />
+</svg>
