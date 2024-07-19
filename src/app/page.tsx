@@ -18,7 +18,7 @@ import SMGridCheckBackground from '@/public/images/backgrounds/sm-grid-check-bg.
 export default function Home() {
   return (
     <div>
-      <Section className="relative overflow-hidden lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
+      <Section className="relative overflow-hidden pt-[calc(theme(spacing.16)+var(--header-height))] lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
         <SMGridCheckBackground className="absolute bottom-16 left-1/2 size-[60rem] -translate-x-1/2 lg:hidden" />
         <MDGridCheckBackground className="absolute left-1/2 top-0 hidden h-[90rem] w-[120rem] -translate-x-1/2 lg:block" />
 

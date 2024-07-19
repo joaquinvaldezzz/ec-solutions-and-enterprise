@@ -41,7 +41,7 @@ export function Header() {
           <Bars3Icon className="size-6" />
         </Button>
 
-        <nav className="flex items-center gap-8">
+        <nav className="hidden lg:flex lg:items-center lg:gap-8">
           {links.map((link, index) => (
             <Button size="lg" heirarchy="link-gray" asChild key={index}>
               <Link href={link.url}>{link.title}</Link>
@@ -49,7 +49,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="lg:flex lg:justify-end">
+        <div className="hidden lg:flex lg:justify-end">
           <Button size="lg">Talk to an Expert</Button>
         </div>
       </div>
