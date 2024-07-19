@@ -91,6 +91,7 @@ const config: Config = {
         5.5: '1.375rem',
         15: '3.75rem',
         18: '4.5rem',
+        120: '30rem',
       },
     },
   },
