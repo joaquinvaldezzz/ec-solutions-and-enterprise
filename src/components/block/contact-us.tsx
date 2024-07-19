@@ -113,7 +113,7 @@ export function ContactUs() {
                   <FormItem>
                     <FormLabel>First name</FormLabel>
                     <FormControl>
-                      <Input padding="md" type="text" placeholder="First name" {...field} />
+                      <Input padding="md" type="text" placeholder="John" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -126,7 +126,7 @@ export function ContactUs() {
                   <FormItem>
                     <FormLabel>Last name</FormLabel>
                     <FormControl>
-                      <Input padding="md" type="text" placeholder="Last name" {...field} />
+                      <Input padding="md" type="text" placeholder="Doe" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -140,7 +140,7 @@ export function ContactUs() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input padding="md" type="email" placeholder="you@company.com" {...field} />
+                    <Input padding="md" type="email" placeholder="johndoe@company.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
