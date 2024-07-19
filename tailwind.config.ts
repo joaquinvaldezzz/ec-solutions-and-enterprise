@@ -82,8 +82,8 @@ const config: Config = {
           to: { height: '0' },
         },
       },
-      letterSpacing: {
-        tight: '-0.02em',
+      ringWidth: {
+        6: '6px',
       },
       spacing: {
         3.5: '0.875rem',
