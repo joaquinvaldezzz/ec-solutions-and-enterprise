@@ -56,6 +56,10 @@ const config: Config = {
       aria: {
         invalid: 'invalid="true"',
       },
+      content: {
+        'open-quote': 'open-quote',
+        'close-quote': 'close-quote',
+      },
       data: {
         checked: 'state="checked"',
         open: 'state="open"',
