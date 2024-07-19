@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ContactUs } from '@/components/block/contact-us'
 import { OurClients } from '@/components/block/our-clients'
+import { Testimonials } from '@/components/block/testimonials'
 import { WhatWeDo } from '@/components/block/what-we-do'
 import { WhoWeAre } from '@/components/block/who-we-are'
 
@@ -64,6 +65,7 @@ export default function Home() {
       <WhoWeAre />
       <WhatWeDo />
       <OurClients />
+      <Testimonials />
       <ContactUs />
     </div>
   )
