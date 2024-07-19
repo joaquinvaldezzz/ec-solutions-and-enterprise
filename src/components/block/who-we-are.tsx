@@ -1,5 +1,10 @@
+'use client'
+
+import { useState } from 'react'
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline'
 import * as Collapsible from '@radix-ui/react-collapsible'
+
+import { cn } from '@/lib/utils'
 
 import { Button } from '../ui/button'
 import { Container, Section } from '../ui/container'
@@ -13,8 +18,10 @@ import MySQL from '@/public/images/logos/my-sql.svg'
 import Php from '@/public/images/logos/php.svg'
 
 export function WhoWeAre() {
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
+
   return (
-    <Collapsible.Root>
+    <Collapsible.Root open={isCollapsed} onOpenChange={setIsCollapsed}>
       <Section>
         <Container className="text-center">
           <h2 className="flex items-center justify-center gap-2 font-medium text-brand-700">
@@ -27,8 +34,16 @@ export function WhoWeAre() {
             working without it.
           </p>
           <Collapsible.Trigger asChild>
-            <Button className="mt-8">
-              Technologies we use <ArrowDownCircleIcon className="size-5" />
+            <Button
+              className="mt-8"
+              onClick={() => {
+                setIsCollapsed(!isCollapsed)
+              }}
+            >
+              Technologies we use{' '}
+              <ArrowDownCircleIcon
+                className={cn('size-5 transition', isCollapsed && 'rotate-180')}
+              />
             </Button>
           </Collapsible.Trigger>
         </Container>
