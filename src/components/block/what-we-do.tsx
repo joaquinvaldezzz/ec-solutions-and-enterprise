@@ -45,18 +45,21 @@ export function WhatWeDo() {
   return (
     <Section>
       <Container className="text-center">
-        <h2 className="font-medium text-brand-700">What we do</h2>
-        <p className="mt-3 text-display-sm font-semibold text-gray-900">Our Services</p>
-        <p className="mt-4 text-lg text-gray-600">
+        <h2 className="text-sm font-semibold text-brand-700 lg:text-md">What we do</h2>
+        <p className="mt-3 text-display-sm font-semibold text-gray-900 lg:text-display-md">
+          Our Services
+        </p>
+        <p className="mt-4 text-balance text-lg text-gray-600 lg:mt-5 lg:text-xl">
           Powerful, self-serve product and growth analytics to help you convert, engage, and retain
           more users. Trusted by over 4,000 startups.
         </p>
-        <div className="mt-12 grid gap-10">
+
+        <div className="mt-12 grid gap-10 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
           {services.map((service, index) => (
             <div className="flex flex-col items-center" key={index}>
               <div className="size-10 rounded-full bg-brand-100 ring-6 ring-inset ring-brand-50" />
-              <h3 className="mt-4 text-lg font-semibold">{service.title}</h3>
-              <p className="mt-1 text-gray-600">{service.description}</p>
+              <h3 className="mt-4 text-lg font-semibold lg:mt-5">{service.title}</h3>
+              <p className="mt-1 text-gray-600 lg:mt-2">{service.description}</p>
             </div>
           ))}
         </div>
