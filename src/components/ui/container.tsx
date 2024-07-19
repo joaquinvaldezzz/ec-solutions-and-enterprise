@@ -13,7 +13,7 @@ interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
 const Section = forwardRef<HTMLDivElement, ContainerProps>(
   ({ className, asDiv = false, asChild = false, ...props }, ref) => {
     const Component = asDiv ? 'div' : asChild ? Slot : 'section'
-    return <Component className={cn('py-16', className)} ref={ref} {...props} />
+    return <Component className={cn('py-16 lg:py-24', className)} ref={ref} {...props} />
   },
 )
 Section.displayName = 'Section'
