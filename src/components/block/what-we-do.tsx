@@ -46,7 +46,7 @@ export function WhatWeDo() {
     <Section>
       <Container className="text-center">
         <h2 className="text-sm font-semibold text-brand-700 lg:text-md">What we do</h2>
-        <p className="mt-3 text-display-sm font-semibold text-gray-900 lg:text-display-md">
+        <p className="mt-3 text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
           Our Services
         </p>
         <p className="mt-4 text-balance text-lg text-gray-600 lg:mt-5 lg:text-xl">
