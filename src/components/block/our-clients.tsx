@@ -13,6 +13,9 @@ import { Container, Section } from '../ui/container'
 
 import CollegeOfSanBenildoRizal from '@/public/images/logos/college-of-san-benildo-rizal.png'
 import DepartmentOfHealth from '@/public/images/logos/department-of-health.png'
+import DreamRiserBuildersInc from '@/public/images/logos/dream-riser-builders-inc.jpg'
+import EscobarsSteakhouse from '@/public/images/logos/escobars-steakhouse.jpg'
+import Maximum88Corporation from '@/public/images/logos/maximum-88-corporation.png'
 import NorzagarayCollege from '@/public/images/logos/norzagaray-college.png'
 import OurLadyOfFatimaUniversity from '@/public/images/logos/our-lady-of-fatima-university.png'
 import PhilippineNavy from '@/public/images/logos/philippine-navy.png'
@@ -73,6 +76,33 @@ const clients: Client[] = [
       'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
     tags: ['Design', 'Research', 'Presentation'],
   },
+  {
+    project: 'Inventory of Goods, Payroll and Accounting System for Food and Beverages',
+    image: EscobarsSteakhouse,
+    name: "Escobar's Steakhouse",
+    url: '#',
+    description:
+      'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
+    tags: ['Design', 'Research', 'Presentation'],
+  },
+  {
+    project: 'Materials Inventory, Payroll and Accounting System for Construction',
+    image: DreamRiserBuildersInc,
+    name: 'Dream Riser Builders Inc.',
+    url: '#',
+    description:
+      'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
+    tags: ['Design', 'Research', 'Presentation'],
+  },
+  {
+    project: 'Inventory of Goods, Payroll and Accounting System for Retail',
+    image: Maximum88Corporation,
+    name: 'Maximum 88 Corporation',
+    url: '#',
+    description:
+      'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
+    tags: ['Design', 'Research', 'Presentation'],
+  },
 ]
 
 export function OurClients() {
@@ -93,7 +123,11 @@ export function OurClients() {
           <div className="mt-12 grid gap-y-12 md:grid-cols-2 md:gap-x-8 lg:mt-16 lg:grid-cols-3">
             {clients.map((client, index) => (
               <div key={index}>
-                <Image className="size-16 object-contain" src={client.image} alt={client.name} />
+                <Image
+                  className="h-16 w-auto object-contain"
+                  src={client.image}
+                  alt={client.name}
+                />
                 <div className="mt-5">
                   <div className="text-sm font-semibold text-brand-700">{client.project}</div>
                   <div className="mt-2 flex items-start justify-between gap-4">
@@ -118,11 +152,11 @@ export function OurClients() {
             ))}
           </div>
 
-          <div className="mt-12 lg:mt-16 lg:flex lg:justify-center">
+          {/* <div className="mt-12 lg:mt-16 lg:flex lg:justify-center">
             <Button className="w-full lg:w-auto" size="xl" asChild>
               <Link href="#">View all clients</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </Container>
     </Section>
