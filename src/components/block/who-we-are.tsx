@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline'
 import * as Collapsible from '@radix-ui/react-collapsible'
 
@@ -16,6 +17,8 @@ import Javascript from '@/public/images/logos/javascript.svg'
 import MicrosoftAzure from '@/public/images/logos/microsoft-azure.svg'
 import MySQL from '@/public/images/logos/my-sql.svg'
 import Php from '@/public/images/logos/php.svg'
+import Python from '@/public/images/logos/python.svg'
+import EdilbertoChuaJr from '@/public/images/profiles-pictures/edilberto-chua-jr.jpg'
 
 export function WhoWeAre() {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
@@ -29,10 +32,25 @@ export function WhoWeAre() {
             Who we are
             <div className="h-px w-16 border-t" />
           </h2>
-          <p className="mt-8 text-balance text-display-sm font-medium lg:text-display-lg lg:tracking-tight">
-            We&apos;ve been using Untitled to kick start every new project and can&apos;t imagine
-            working without it.
-          </p>
+          <figure className="mt-8">
+            <blockquote className="text-balance text-display-sm font-medium lg:text-display-lg lg:tracking-tight">
+              <p>
+                We established EC Solutions and Enterprise with a vision to become a renowned
+                technology firm by delivering high-quality and cost-efficient software to small and
+                medium enterprises.
+              </p>
+            </blockquote>
+            <figcaption className="mt-8 flex flex-col items-center">
+              <Image
+                className="size-16 rounded-full border border-black/10"
+                src={EdilbertoChuaJr}
+                alt="Edilberto N. Chua, Jr."
+              />
+              <div className="mt-4 text-lg font-semibold">Edilberto N. Chua, Jr.</div>
+              <div className="mt-1 text-gray-600">Company Owner</div>
+            </figcaption>
+          </figure>
+
           <Collapsible.Trigger asChild>
             <Button
               className="mt-8"
@@ -73,6 +91,11 @@ export function WhoWeAre() {
               <div className="flex items-center gap-2">
                 <Php className="size-8" />
                 <p className="text-gray-600">PHP</p>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Python className="size-8" />
+                <p className="text-gray-600">Python</p>
               </div>
 
               <div className="flex items-center gap-2">
