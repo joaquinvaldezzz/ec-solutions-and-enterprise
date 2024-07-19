@@ -52,7 +52,7 @@ export function OurClients() {
             <p className="mt-3 text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
               We&apos;ve helped hundreds of global companies
             </p>
-            <p className="mt-4 text-lg text-gray-600 lg:mt-5 lg:text-xl">
+            <p className="mt-4 text-balance text-lg text-gray-600 lg:mt-5 lg:text-xl">
               Interviews, tips, guides, industry best practices, and news.
             </p>
           </div>
