@@ -29,13 +29,14 @@ export function WhoWeAre() {
             Who we are
             <div className="h-px w-16 border-t" />
           </h2>
-          <p className="mt-8 text-balance text-display-sm font-medium">
+          <p className="mt-8 text-balance text-display-sm font-medium lg:text-display-lg lg:tracking-tight">
             We&apos;ve been using Untitled to kick start every new project and can&apos;t imagine
             working without it.
           </p>
           <Collapsible.Trigger asChild>
             <Button
               className="mt-8"
+              size="lg"
               onClick={() => {
                 setIsCollapsed(!isCollapsed)
               }}
