@@ -12,11 +12,15 @@ import { Button } from '../ui/button'
 import { Container, Section } from '../ui/container'
 
 import CollegeOfSanBenildoRizal from '@/public/images/logos/college-of-san-benildo-rizal.png'
+import DepartmentOfHealth from '@/public/images/logos/department-of-health.png'
 import NorzagarayCollege from '@/public/images/logos/norzagaray-college.png'
+import OurLadyOfFatimaUniversity from '@/public/images/logos/our-lady-of-fatima-university.png'
 import PhilippineNavy from '@/public/images/logos/philippine-navy.png'
+import UniversityOfThePhilippines from '@/public/images/logos/university-of-the-philippines.png'
 
 const clients: Client[] = [
   {
+    project: 'School Information System',
     image: NorzagarayCollege,
     name: 'Norzagaray College',
     url: '#',
@@ -25,6 +29,7 @@ const clients: Client[] = [
     tags: ['Design', 'Research', 'Presentation'],
   },
   {
+    project: 'School Information System',
     image: CollegeOfSanBenildoRizal,
     name: 'College of San Benildo - Rizal',
     url: '#',
@@ -33,12 +38,40 @@ const clients: Client[] = [
     tags: ['Product', 'Tools', 'Saas'],
   },
   {
+    project: 'Database System',
     image: PhilippineNavy,
     name: 'Philippine Navy',
     url: '#',
     description:
       'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
     tags: ['Software Development', 'Tools'],
+  },
+  {
+    project: 'Cloud Services and Health Emergency Information System',
+    image: DepartmentOfHealth,
+    name: 'Department of Health',
+    url: '#',
+    description:
+      'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
+    tags: ['Product', 'Tools', 'Saas'],
+  },
+  {
+    project: 'OLFU Journal Research System',
+    image: OurLadyOfFatimaUniversity,
+    name: 'Our Lady of Fatima University',
+    url: '#',
+    description:
+      'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
+    tags: ['Software Development', 'Tools'],
+  },
+  {
+    project: 'G6PD Database Management System for Newborn Screening and Research Center (NSRC)',
+    image: UniversityOfThePhilippines,
+    name: 'University of the Philippines',
+    url: '#',
+    description:
+      'The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing them.',
+    tags: ['Design', 'Research', 'Presentation'],
   },
 ]
 
@@ -57,16 +90,14 @@ export function OurClients() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-12 md:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+          <div className="mt-12 grid gap-y-12 md:grid-cols-2 md:gap-x-8 lg:mt-16 lg:grid-cols-3">
             {clients.map((client, index) => (
               <div key={index}>
                 <Image className="size-16 object-contain" src={client.image} alt={client.name} />
                 <div className="mt-5">
-                  {client.date !== undefined && (
-                    <div className="mb-2 text-sm font-semibold text-brand-700">Olivia Rhye</div>
-                  )}
-                  <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-xl font-semibold">{client.name}</h3>
+                  <div className="text-sm font-semibold text-brand-700">{client.project}</div>
+                  <div className="mt-2 flex items-start justify-between gap-4">
+                    <h3 className="text-xl font-semibold lg:text-display-xs">{client.name}</h3>
                     <Button heirarchy="link-gray" asChild>
                       <Link className="mt-0.5" href={client.url}>
                         <span className="sr-only">Visit external link</span>

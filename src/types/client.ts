@@ -1,7 +1,7 @@
 import { type StaticImageData } from 'next/image'
 
 export interface Client {
-  date?: string
+  project: string
   image: string | StaticImageData
   name: string
   url: string
