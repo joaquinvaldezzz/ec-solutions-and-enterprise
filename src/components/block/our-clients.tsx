@@ -129,7 +129,9 @@ export function OurClients() {
                   alt={client.name}
                 />
                 <div className="mt-5">
-                  <div className="text-sm font-semibold text-brand-700">{client.project}</div>
+                  <div className="text-balance text-sm font-semibold text-brand-700">
+                    {client.project}
+                  </div>
                   <div className="mt-2 flex items-start justify-between gap-4">
                     <h3 className="text-xl font-semibold lg:text-display-xs">{client.name}</h3>
                     <Button heirarchy="link-gray" asChild>
