@@ -7,11 +7,12 @@ import { cn } from '@/lib/utils'
 
 interface ContainerProps extends HTMLAttributes<HTMLDivElement> {
   asChild?: boolean
+  asDiv?: boolean
 }
 
 const Section = forwardRef<HTMLDivElement, ContainerProps>(
-  ({ className, asChild = false, ...props }, ref) => {
-    const Component = asChild ? Slot : 'div'
+  ({ className, asDiv = false, asChild = false, ...props }, ref) => {
+    const Component = asDiv ? 'div' : asChild ? Slot : 'section'
     return <Component className={cn('py-16', className)} ref={ref} {...props} />
   },
 )

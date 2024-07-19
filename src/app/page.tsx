@@ -2,11 +2,11 @@
 
 import { type ReactNode } from 'react'
 import Link from 'next/link'
-import { ArrowDownCircleIcon } from '@heroicons/react/24/solid'
 
 import { Button } from '@/components/ui/button'
 import { ContactUs } from '@/components/block/contact-us'
 import { OurClients } from '@/components/block/our-clients'
+import { WhoWeAre } from '@/components/block/who-we-are'
 
 import SMGeometricShapes from '@/public/images/backgrounds/sm-geometric-shapes.svg'
 import SMGridCheckBackground from '@/public/images/backgrounds/sm-grid-check-bg.svg'
@@ -106,29 +106,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container text-center">
-          <h2 className="flex items-center justify-center gap-2 font-medium text-brand-700">
-            <div className="h-px w-16 border-t" />
-            Who we are
-            <div className="h-px w-16 border-t" />
-          </h2>
-          <p className="mt-8 text-balance text-display-sm font-medium">
-            We&apos;ve been using Untitled to kick start every new project and can&apos;t imagine
-            working without it.
-          </p>
-          <Button className="mt-8">
-            Technologies we use <ArrowDownCircleIcon className="size-5" />
-          </Button>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container text-center">
-          <h2 className="font-medium text-brand-700">Technologies we use</h2>
-          <div className="mt-8 grid gap-x-8 gap-y-4"></div>
-        </div>
-      </section>
+      <WhoWeAre />
 
       <section className="py-16">
         <div className="container text-center">
