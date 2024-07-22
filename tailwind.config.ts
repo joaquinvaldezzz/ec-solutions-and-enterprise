@@ -10,9 +10,6 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  future: {
-    disableColorOpacityUtilitiesByDefault: true,
-  },
   theme: {
     container: {
       screens: {
