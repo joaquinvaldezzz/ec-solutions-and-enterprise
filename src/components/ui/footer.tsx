@@ -46,8 +46,7 @@ export function Footer() {
 
           <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5 lg:col-span-2 lg:mt-0">
             <div>
-              <h3 className="text-sm font-semibold text-gray-300">Product</h3>
-              <nav className="mt-4">
+              <nav>
                 <ul className="flex flex-col gap-3">
                   {products.map((product, index) => (
                     <li key={index}>
@@ -66,8 +65,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-gray-300">Product</h3>
-              <nav className="mt-4">
+              <nav>
                 <ul className="flex flex-col gap-3">
                   {products.map((product, index) => (
                     <li key={index}>
@@ -86,8 +84,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-gray-300">Product</h3>
-              <nav className="mt-4">
+              <nav>
                 <ul className="flex flex-col gap-3">
                   {products.map((product, index) => (
                     <li key={index}>
@@ -106,8 +103,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-gray-300">Product</h3>
-              <nav className="mt-4">
+              <nav>
                 <ul className="flex flex-col gap-3">
                   {products.map((product, index) => (
                     <li key={index}>
@@ -126,8 +122,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-gray-300">Product</h3>
-              <nav className="mt-4">
+              <nav>
                 <ul className="flex flex-col gap-3">
                   {products.map((product, index) => (
                     <li key={index}>
