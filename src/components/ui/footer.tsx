@@ -5,7 +5,7 @@ import { type NavItem } from '@/types/nav'
 import { Button } from './button'
 import { Container } from './container'
 
-const products: NavItem[] = [
+export const products: NavItem[] = [
   {
     url: '#',
     title: 'Overview',
