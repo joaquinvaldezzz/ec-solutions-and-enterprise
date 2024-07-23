@@ -57,7 +57,7 @@ const services: Service[] = [
     label: 'Content creation',
   },
   {
-    id: 'Strategy and consulting',
+    id: 'strategy-and-consulting',
     label: 'Strategy and consulting',
   },
   {
