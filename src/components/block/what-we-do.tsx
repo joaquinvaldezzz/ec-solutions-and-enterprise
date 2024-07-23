@@ -43,7 +43,7 @@ const services: Service[] = [
 
 export function WhatWeDo() {
   return (
-    <Section>
+    <Section id="our-services">
       <Container className="text-center">
         <h2 className="text-sm font-semibold text-brand-700 lg:text-md">What we do</h2>
         <p className="mt-3 text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">

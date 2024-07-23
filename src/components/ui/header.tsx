@@ -9,19 +9,19 @@ import { Button } from './button'
 
 const links: NavItem[] = [
   {
-    url: '#',
+    url: '#about-us',
     title: 'About Us',
   },
   {
-    url: '#',
+    url: '#our-services',
     title: 'Our Services',
   },
   {
-    url: '#',
+    url: '#our-clients',
     title: 'Our Clients',
   },
   {
-    url: '#',
+    url: '#contact-us',
     title: 'Contact Us',
   },
 ]

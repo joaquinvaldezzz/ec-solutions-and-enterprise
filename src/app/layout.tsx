@@ -7,6 +7,8 @@ import { Header } from '@/components/ui/header'
 
 import '@/styles/main.css'
 
+import { cn } from '@/lib/utils'
+
 export const metadata: Metadata = {
   title: 'EC Solutions and Enterprise',
   description:
@@ -43,7 +45,7 @@ export default function Layout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={cn(inter.variable, 'scroll-smooth')}>
       <body className="min-w-80 bg-white text-gray-900 antialiased [--header-height:4.5rem] lg:[--header-height:5rem]">
         <Header />
         {children}

@@ -107,7 +107,7 @@ const clients: Client[] = [
 
 export function OurClients() {
   return (
-    <Section>
+    <Section id="our-clients">
       <Container>
         <div>
           <div className="text-center">
