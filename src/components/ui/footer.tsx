@@ -1,13 +1,4 @@
 import Link from 'next/link'
-import {
-  faAngellist,
-  faDribbble,
-  faFacebook,
-  faGithub,
-  faLinkedin,
-  faXTwitter,
-} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { type NavItem } from '@/types/nav'
 
@@ -157,14 +148,6 @@ export function Footer() {
         </div>
 
         <div className="py-10 lg:flex lg:items-center lg:justify-between lg:py-12">
-          <div className="flex items-center gap-6 lg:order-2">
-            <FontAwesomeIcon icon={faXTwitter} className="size-6 text-gray-400" />
-            <FontAwesomeIcon icon={faLinkedin} className="size-6 text-gray-400" />
-            <FontAwesomeIcon icon={faFacebook} className="size-6 text-gray-400" />
-            <FontAwesomeIcon icon={faGithub} className="size-6 text-gray-400" />
-            <FontAwesomeIcon icon={faAngellist} className="size-6 text-gray-400" />
-            <FontAwesomeIcon icon={faDribbble} className="size-6 text-gray-400" />
-          </div>
           <p className="mt-6 text-gray-300 lg:order-1 lg:mt-0">
             &copy; 2024 EC Solutions and Enterprise. All rights reserved.
           </p>
