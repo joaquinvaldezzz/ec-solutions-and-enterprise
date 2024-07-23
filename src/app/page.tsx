@@ -55,7 +55,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-16">
+          <div className="mt-16 grayscale">
             <SMGeometricShapes className="md:hidden" />
             <MDGeometricShapes className="hidden md:block" />
           </div>
