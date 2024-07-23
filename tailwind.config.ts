@@ -21,15 +21,9 @@ const config: Config = {
         xl: '2rem',
       },
     },
-    blur: {
-      ...blurs,
-    },
-    boxShadow: {
-      ...boxShadows,
-    },
-    colors: {
-      ...colors,
-    },
+    blur: { ...blurs },
+    boxShadow: { ...boxShadows },
+    colors: { ...colors },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1.125rem' }],
       sm: ['0.875rem', { lineHeight: '1.25rem' }],
