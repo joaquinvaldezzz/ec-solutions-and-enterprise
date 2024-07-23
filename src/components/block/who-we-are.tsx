@@ -71,7 +71,7 @@ export function WhoWeAre() {
       <Collapsible.Content className="overflow-hidden data-open:animate-slide-down data-closed:animate-slide-up">
         <Section>
           <Container className="text-center">
-            <h2 className="flex items-center justify-center gap-2 font-medium uppercase tracking-wide text-brand-700">
+            <h2 className="flex items-center justify-center gap-2 text-balance font-medium uppercase tracking-wide text-brand-700">
               <div className="h-px w-16 border-t" />
               Technologies we use
               <div className="h-px w-16 border-t" />
