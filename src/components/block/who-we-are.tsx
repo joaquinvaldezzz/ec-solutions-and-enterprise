@@ -27,7 +27,7 @@ export function WhoWeAre() {
     <Collapsible.Root open={isCollapsed} onOpenChange={setIsCollapsed} id="about-us">
       <Section>
         <Container className="text-center">
-          <h2 className="flex items-center justify-center gap-2 font-medium text-brand-700">
+          <h2 className="flex items-center justify-center gap-2 font-medium uppercase tracking-wide text-brand-700">
             <div className="h-px w-16 border-t" />
             Who we are
             <div className="h-px w-16 border-t" />
@@ -71,7 +71,11 @@ export function WhoWeAre() {
       <Collapsible.Content className="overflow-hidden data-open:animate-slide-down data-closed:animate-slide-up">
         <Section>
           <Container className="text-center">
-            <h2 className="font-medium text-brand-700">Technologies we use</h2>
+            <h2 className="flex items-center justify-center gap-2 font-medium uppercase tracking-wide text-brand-700">
+              <div className="h-px w-16 border-t" />
+              Technologies we use
+              <div className="h-px w-16 border-t" />
+            </h2>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
               <div className="flex items-center gap-2">
                 <HTML5 className="size-8" />

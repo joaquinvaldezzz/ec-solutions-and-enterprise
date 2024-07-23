@@ -111,7 +111,11 @@ export function OurClients() {
       <Container>
         <div>
           <div className="text-center">
-            <h2 className="text-sm font-semibold text-brand-700 lg:text-md">Our Clients</h2>
+            <h2 className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wide text-brand-700 lg:text-md">
+              <div className="h-px w-16 border-t" />
+              Our Clients
+              <div className="h-px w-16 border-t" />
+            </h2>
             <p className="mt-3 text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
               We&apos;ve helped hundreds of global companies
             </p>
