@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 
-import { Button } from '@/components/ui/button'
 import { Container, Section } from '@/components/ui/container'
 import { ContactUs } from '@/components/block/contact-us'
 import { OurClients } from '@/components/block/our-clients'
@@ -54,15 +53,6 @@ export default function Home() {
             <p className="mt-4 max-w-120 text-balance text-lg text-gray-600 lg:mt-6 lg:text-xl">
               Join the many businesses that have already transformed their operations with us.
             </p>
-          </div>
-
-          <div className="mt-8 flex flex-col gap-3 lg:mt-12 lg:flex-row-reverse lg:justify-center">
-            <Button size="xl" asChild>
-              <Link href="#">Chat to us</Link>
-            </Button>
-            <Button size="xl" heirarchy="secondary-gray" asChild>
-              <Link href="#">Show reel</Link>
-            </Button>
           </div>
 
           <div className="mt-16">
