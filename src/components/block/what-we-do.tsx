@@ -1,43 +1,73 @@
+import {
+  faBriefcaseMedical,
+  faBuildingUser,
+  faCashRegister,
+  faCircleExclamation,
+  faCloud,
+  faComputer,
+  faMoneyBillWave,
+  faReceipt,
+  faSchool,
+  faUsersLine,
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { type Service } from '@/types/service'
 
 import { Container, Section } from '../ui/container'
 
 const services: Service[] = [
   {
-    icon: '',
-    title: 'Share team inboxes',
-    description:
-      'Whether you have a team of 2 or 200, our shared team inboxes keep everyone on the same page and in the loop.',
+    icon: faSchool,
+    title: 'School Information System',
+    description: 'A complete solution for managing schools, colleges, and universities.',
   },
   {
-    icon: '',
-    title: 'Deliver instant answers',
-    description:
-      'An all-in-one customer service platform that helps you balance everything your customers need to be happy.',
+    icon: faCashRegister,
+    title: 'Payment Gateway Integration',
+    description: 'Integrate payment gateways to your website or mobile app.',
   },
   {
-    icon: '',
-    title: 'Manage your team with reports',
+    icon: faBriefcaseMedical,
+    title: 'Healthcare Information System',
     description:
-      "Measure what matters with Untitled's easy-to-use reports. You can filter, export, and drilldown on the data in a couple clicks.",
+      'A complete solution for managing hospitals, clinics, and other healthcare facilities.',
   },
   {
-    icon: '',
-    title: 'Connect with customers',
+    icon: faCloud,
+    title: 'Cloud Hosting (Azure, AWS)',
     description:
-      'Solve a problem or close a sale in real-time with chat. If no one is available, customers are seamlessly routed to email without confusion.',
+      'Host your website, web application, or mobile app on the cloud for better performance and scalability.',
   },
   {
-    icon: '',
-    title: 'Connect the tools you already use',
-    description:
-      'Explore 100+ integrations that make your day-to-day workflow more efficient and familiar. Plus, our extensive developer tools.',
+    icon: faBuildingUser,
+    title: 'Engineering Construciton (ERP)',
+    description: 'A complete solution for managing engineering and construction projects.',
   },
   {
-    icon: '',
-    title: 'Our people make the difference',
-    description:
-      "We're an extension of your customer service team, and all of our resources are free. Chat to our friendly team 24/7 when you need help.",
+    icon: faUsersLine,
+    title: 'Human Resource, Payrool, and Loan System',
+    description: 'A complete solution for managing HR, payroll, and loan processing.',
+  },
+  {
+    icon: faReceipt,
+    title: 'Online Accounting System',
+    description: 'A complete solution for managing HR, payroll, and loan processing.',
+  },
+  {
+    icon: faMoneyBillWave,
+    title: 'Web Portal and Payment Solutions',
+    description: 'A complete solution for managing HR, payroll, and loan processing.',
+  },
+  {
+    icon: faCircleExclamation,
+    title: 'Vulnerability Assessment and Penetration Testing (VAPT)',
+    description: 'A complete solution for managing HR, payroll, and loan processing.',
+  },
+  {
+    icon: faComputer,
+    title: 'System Integration',
+    description: 'A complete solution for managing HR, payroll, and loan processing.',
   },
 ]
 
@@ -54,15 +84,17 @@ export function WhatWeDo() {
           Our Services
         </p>
         <p className="mt-4 text-balance text-lg text-gray-600 lg:mt-5 lg:text-xl">
-          Powerful, self-serve product and growth analytics to help you convert, engage, and retain
-          more users. Trusted by over 4,000 startups.
+          Our clientele ranges from midsize to large companies. Our core expertise is open-source
+          platforms (PHP, Python, and MySQL). Our domain of expertise ranges from:
         </p>
 
         <div className="mt-12 grid gap-10 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
           {services.map((service, index) => (
             <div className="flex flex-col items-center" key={index}>
-              <div className="size-10 rounded-full bg-brand-100 ring-6 ring-inset ring-brand-50" />
-              <h3 className="mt-4 text-lg font-semibold lg:mt-5">{service.title}</h3>
+              <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
+                <FontAwesomeIcon className="size-5 text-brand-600 lg:size-6" icon={service.icon} />
+              </div>
+              <h3 className="mt-4 text-balance text-lg font-semibold lg:mt-5">{service.title}</h3>
               <p className="mt-1 text-gray-600 lg:mt-2">{service.description}</p>
             </div>
           ))}

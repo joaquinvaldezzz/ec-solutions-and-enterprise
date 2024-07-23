@@ -1,7 +1,7 @@
-import { type ReactNode } from 'react'
+import { type IconProp } from '@fortawesome/fontawesome-svg-core'
 
 export interface Service {
-  icon: ReactNode
+  icon: IconProp
   title: string
   description: string
 }
