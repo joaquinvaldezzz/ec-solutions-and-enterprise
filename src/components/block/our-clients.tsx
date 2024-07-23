@@ -1,14 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
 
 import { type Client } from '@/types/client'
 import { determineBadgeColor } from '@/lib/utils'
 
 import { Badge } from '..//ui/badge'
-import { Button } from '../ui/button'
 import { Container, Section } from '../ui/container'
 
 import CollegeOfSanBenildoRizal from '@/public/images/logos/college-of-san-benildo-rizal.png'
@@ -138,12 +135,6 @@ export function OurClients() {
                   </div>
                   <div className="mt-2 flex items-start justify-between gap-4">
                     <h3 className="text-xl font-semibold lg:text-display-xs">{client.name}</h3>
-                    <Button heirarchy="link-gray" asChild>
-                      <Link className="mt-0.5" href={client.url}>
-                        <span className="sr-only">Visit external link</span>
-                        <ArrowUpRightIcon className="size-6" />
-                      </Link>
-                    </Button>
                   </div>
                   <p className="mt-2 line-clamp-2 text-gray-600">{client.description}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
