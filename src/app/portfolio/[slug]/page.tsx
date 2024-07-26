@@ -1,7 +1,13 @@
+import { type Metadata } from 'next'
+import Image from 'next/image'
+
+import { Badge } from '@/components/ui/badge'
 import { Container, Section } from '@/components/ui/container'
 import { CustomMDX } from '@/components/ui/mdx'
 
 import { getPosts } from '../utils'
+
+import JoaquinValdez from '@/public/images/profiles-pictures/joaquin-valdez.jpg'
 
 export async function generateStaticParams() {
   const posts = getPosts()
@@ -11,18 +17,89 @@ export async function generateStaticParams() {
   }))
 }
 
+export function generateMetadata({ params }: { params: { slug: string } }) {
+  const post = getPosts().find((item) => item.slug === params.slug)
+
+  if (post != null) {
+    const metadata: Metadata = {
+      title: post.metadata.title,
+      description: post.metadata.summary,
+    }
+
+    return metadata
+  }
+
+  return {}
+}
+
 export default function Page({ params }: { params: { slug: string } }) {
   const post = getPosts().find((item) => item.slug === params.slug)
 
   return (
-    <div className="pt-header-height">
+    <main className="pt-header-height">
       <Section>
+        <Container>
+          <div className="mx-auto max-w-3xl text-balance text-center">
+            <div className="text-sm font-semibold text-brand-700 lg:text-md">
+              Norzagaray College
+            </div>
+            <h1 className="mt-3 text-display-md font-semibold tracking-tight lg:text-display-lg">
+              {post?.metadata.title}
+            </h1>
+            <p className="mt-4 text-lg text-gray-600 lg:mt-6 lg:text-xl">
+              {post?.metadata.summary}
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+              <Badge size="md" color="brand">
+                Design
+              </Badge>
+              <Badge size="md" color="indigo">
+                Reserch
+              </Badge>
+              <Badge size="md" color="pink">
+                Presentation
+              </Badge>
+            </div>
+
+            <figure className="mt-8 hidden items-center justify-center gap-4">
+              <div className="relative size-14 *:rounded-full">
+                <Image
+                  className="object-cover"
+                  src={JoaquinValdez}
+                  alt="Joaquin Valdez"
+                  fill
+                  priority
+                  placeholder="blur"
+                />
+              </div>
+              <figcaption className="text-left">
+                <div className="text-lg font-semibold">John Joaquin Valdez</div>
+                <div className="text-gray-600">July 26, 2024</div>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="relative mt-12 h-60 lg:mt-16 lg:h-[40rem]">
+            <Image
+              className="object-cover"
+              src={JoaquinValdez}
+              alt="Joaquin Valdez"
+              fill
+              priority
+              placeholder="blur"
+            />
+          </div>
+        </Container>
+      </Section>
+
+      <section className="pb-16 lg:pb-24">
         <Container>
           <article className="mx-auto max-w-[720px]">
             {post?.content != null && <CustomMDX source={post.content} />}
           </article>
         </Container>
-      </Section>
-    </div>
+      </section>
+    </main>
   )
 }

@@ -1,13 +1,26 @@
 ---
-title: Test
+project: School Information System
+title: Norzagaray College
 publishedAt: 2024-07-26
-summary: This is a test post.
+summary: EC Solutions and Enterprise., a Software Development Company and Cloud Hosting Provider, was established June 12, 2018 with a vision to be one of the renowned Technology firm by delivering a high quality and cost efficient software to small and medium enterprise.
 ---
 
 # EC Solutions and Enterprise
 
-Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.
+EC Solutions and Enterprise, a Software Development Company and Cloud Hosting Provider was established on June 12, 2018. Its vision is to be a renowned Technology firm that delivers high-quality and cost-efficient software to small and medium enterprises.
 
-Elit nisi in eleifend sed nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis risus. Sed condimentum enim dignissim adipiscing faucibus consequat, urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate posuere purus sit congue convallis aliquet. Arcu id augue ut feugiat donec porttitor neque. Mauris, neque ultricies eu vestibulum, bibendum quam lorem id. Dolor lacus, eget nunc lectus in tellus, pharetra, porttitor.
+With a diverse clientele ranging from mid-size to large companies, we have proven our expertise in open-source platforms (PHP, Python, MySQL), earning the trust and confidence of our clients.
 
-Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget consectetur turpis. Sapien, dictum molestie sem tempor. Diam elit, orci, tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit erat nam nibh orci.
+Our domain of expertise ranges from:
+
+## Company Profile
+
+EC Solutions and Enterprise, a Software Development Company and Cloud Hosting Provider was established on June 12, 2018. Its vision is to be a renowned Technology firm that delivers high-quality and cost-efficient software to small and medium enterprises.
+
+## Organizational Structure
+
+EC Solutions and Enterprise, a Software Development Company and Cloud Hosting Provider was established on June 12, 2018. Its vision is to be a renowned Technology firm that delivers high-quality and cost-efficient software to small and medium enterprises.
+
+## Technologies we use
+
+EC Solutions and Enterprise, a Software Development Company and Cloud Hosting Provider was established on June 12, 2018. Its vision is to be a renowned Technology firm that delivers high-quality and cost-efficient software to small and medium enterprises.
