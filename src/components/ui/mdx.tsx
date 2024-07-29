@@ -14,6 +14,17 @@ const components: MDXComponents = {
   p: (props) => (
     <p className="mt-4 text-gray-600 first:mt-0 last:mb-0 not-last:mb-4 lg:text-lg" {...props} />
   ),
+
+  img: (props) => (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      className="rounded-xl not-first:mt-10 not-last:mb-10"
+      src={props.src}
+      alt={props.alt}
+      decoding="async"
+      {...props}
+    />
+  ),
 }
 
 export function CustomMDX(props: MDXRemoteProps) {
