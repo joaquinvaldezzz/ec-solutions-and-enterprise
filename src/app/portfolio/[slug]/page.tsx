@@ -84,7 +84,7 @@ export default function Page({ params }: { params: { slug: string } }) {
                   priority
                 />
               </div>
-              <figcaption className="text-left">
+              <figcaption>
                 <div className="text-lg font-semibold">{post.metadata.author}</div>
                 <div className="text-gray-600">{formatDate(post.metadata.publishedAt)}</div>
               </figcaption>
