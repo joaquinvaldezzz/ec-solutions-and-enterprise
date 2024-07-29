@@ -27,5 +27,6 @@
     "",
     "^@/public/(.*)$"
   ],
+  "tailwindAttributes": ["tw"],
   "tailwindFunctions": ["cva"]
 }
