@@ -23,8 +23,12 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   if (post != null) {
     const metadata: Metadata = {
-      title: post.metadata.name,
+      title: post.metadata.project,
       description: post.metadata.description,
+      openGraph: {
+        title: post.metadata.project,
+        description: post.metadata.description,
+      },
     }
 
     return metadata
@@ -44,8 +48,15 @@ export default function Page({ params }: { params: { slug: string } }) {
     <main className="pt-header-height">
       <Section>
         <Container>
-          <div className="mx-auto max-w-3xl text-balance text-center">
-            <div className="text-sm font-semibold text-brand-700 lg:text-md">
+          <div className="mx-auto max-w-[720px] text-pretty">
+            <Image
+              className="h-16 w-auto object-contain"
+              src={post.metadata.image}
+              alt={post.metadata.name}
+              width={64}
+              height={64}
+            />
+            <div className="mt-5 text-sm font-semibold text-brand-700 lg:text-md">
               {post?.metadata.name}
             </div>
             <h1 className="mt-3 text-display-md font-semibold tracking-tight lg:text-display-lg">
@@ -55,7 +66,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               {post?.metadata.description}
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+            <div className="mt-8 flex flex-wrap items-center gap-2">
               <Badge size="md" color="brand">
                 Design
               </Badge>
@@ -67,7 +78,7 @@ export default function Page({ params }: { params: { slug: string } }) {
               </Badge>
             </div>
 
-            <figure className="mt-8 flex items-center justify-center gap-4 lg:hidden">
+            <figure className="mt-8 flex items-center gap-4">
               <div className="size-14">
                 <Image
                   className="rounded-full object-cover"
@@ -84,16 +95,6 @@ export default function Page({ params }: { params: { slug: string } }) {
                 <div className="text-gray-600">July 26, 2024</div>
               </figcaption>
             </figure>
-          </div>
-
-          <div className="relative mt-12 h-60 lg:mt-16 lg:h-[40rem]">
-            <Image
-              className="object-cover object-center"
-              src={post.metadata.image}
-              alt=""
-              fill
-              priority
-            />
           </div>
         </Container>
       </Section>

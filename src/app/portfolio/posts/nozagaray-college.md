@@ -1,8 +1,8 @@
 ---
 project: School Information System
-image: '/images/backgrounds/placeholder-image.jpeg'
+image: /images/logos/norzagaray-college.png
 name: Norzagaray College
-description: EC Solutions and Enterprise., a Software Development Company and Cloud Hosting Provider, was established June 12, 2018 with a vision to be one of the renowned Technology firm by delivering a high quality and cost efficient software to small and medium enterprise.
+description: A School Information System that manages student records, grades, and schedules.
 ---
 
 # EC Solutions and Enterprise
