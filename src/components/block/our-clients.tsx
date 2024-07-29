@@ -30,37 +30,40 @@ export function OurClients() {
           </div>
 
           <div className="mt-12 grid gap-y-12 md:grid-cols-2 md:gap-x-8 lg:mt-16 lg:grid-cols-3">
-            {posts.map((post, index) => (
-              <Link href={`/portfolio/${post.slug}`} key={index}>
-                <Image
-                  className="h-16 w-auto object-contain"
-                  src={post.metadata.image}
-                  alt={post.metadata.name}
-                  width={64}
-                  height={64}
-                />
-                <div className="mt-5">
-                  <div className="text-balance text-sm font-semibold text-brand-700">
-                    {post.metadata.project}
+            {posts
+              .sort((a, z) =>
+                new Date(a.metadata.publishedAt) > new Date(z.metadata.publishedAt) ? -1 : 1,
+              )
+              .map((post, index) => (
+                <Link href={`/portfolio/${post.slug}`} key={index}>
+                  <Image
+                    className="h-16 w-auto object-contain"
+                    src={post.metadata.image}
+                    alt={post.metadata.name}
+                    width={64}
+                    height={64}
+                  />
+                  <div className="mt-5">
+                    <div className="text-balance text-sm font-semibold text-brand-700">
+                      {post.metadata.project}
+                    </div>
+                    <div className="mt-2 flex items-start justify-between gap-4">
+                      <h3 className="text-xl font-semibold lg:text-display-xs">
+                        {post.metadata.name}
+                      </h3>
+                    </div>
+                    <p className="mt-2 line-clamp-2 text-gray-600">{post.metadata.description}</p>
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {post.metadata.tags.split(', ').map((tag, i) => (
+                        <Badge size="md" color={determineBadgeColor(tag)} key={i}>
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
-                  <div className="mt-2 flex items-start justify-between gap-4">
-                    <h3 className="text-xl font-semibold lg:text-display-xs">
-                      {post.metadata.name}
-                    </h3>
-                  </div>
-                  <p className="mt-2 line-clamp-2 text-gray-600">{post.metadata.description}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {post.metadata.tags.split(', ').map((tag, i) => (
-                      <Badge size="md" color={determineBadgeColor(tag)} key={i}>
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
           </div>
-
           <div className="mt-12 lg:mt-16 lg:flex lg:justify-center">
             <Button className="w-full lg:w-auto" size="xl" asChild>
               <Link href="">View all clients</Link>
