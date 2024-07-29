@@ -3,7 +3,7 @@ project: School Information System
 image: /images/logos/college-of-san-benildo-rizal.png
 name: College of San Benildo - Rizal
 description: A School Information System that manages student records, grades, and schedules.
-tags: Design, Research, Presentation
+tags: 'Design, Research, Presentation'
 ---
 
 # Overview

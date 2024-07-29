@@ -1,5 +1,8 @@
+import Image, { type ImageProps } from 'next/image'
 import { type MDXComponents } from 'mdx/types'
 import { MDXRemote, type MDXRemoteProps } from 'next-mdx-remote/rsc'
+
+import { rehypeImageSize } from '@/lib/rehype-image-size'
 
 const components: MDXComponents = {
   blockquote: (props) => (
@@ -23,18 +26,20 @@ const components: MDXComponents = {
   p: (props) => (
     <p className="my-4 text-gray-600 first:mt-0 last:mb-0 lg:my-4.5 lg:text-lg" {...props} />
   ),
-  img: (props) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      className="my-10 rounded-xl lg:my-12"
-      src={props.src}
-      alt={props.alt}
-      decoding="async"
-      {...props}
-    />
-  ),
+  // eslint-disable-next-line jsx-a11y/alt-text
+  img: (props) => <Image className="my-10 rounded-xl lg:my-12" {...(props as ImageProps)} />,
 }
 
 export function CustomMDX(props: MDXRemoteProps) {
-  return <MDXRemote components={{ ...components }} {...props} />
+  return (
+    <MDXRemote
+      components={{ ...components }}
+      options={{
+        mdxOptions: {
+          rehypePlugins: [[rehypeImageSize, { root: 'public' }]],
+        },
+      }}
+      {...props}
+    />
+  )
 }
