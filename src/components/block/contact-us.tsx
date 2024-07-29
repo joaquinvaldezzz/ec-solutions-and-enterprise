@@ -95,7 +95,7 @@ export function ContactUs() {
           </h2>
           <p className="mt-4 text-lg text-gray-600 lg:text-xl">
             You can reach us anytime via{' '}
-            <Button size="lg" heirarchy="link-color" asChild>
+            <Button size="lg" hierarchy="link-color" asChild>
               <a href="mailto:hi@untitledui.com">hi@untitledui.com</a>
             </Button>
           </p>
@@ -237,7 +237,7 @@ export function ContactUs() {
                       <Button
                         className="font-normal underline"
                         size="lg"
-                        heirarchy="link-gray"
+                        hierarchy="link-gray"
                         asChild
                       >
                         <Link href="#">privacy policy</Link>

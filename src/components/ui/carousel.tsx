@@ -188,7 +188,7 @@ const CarouselItem = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 CarouselItem.displayName = 'CarouselItem'
 
 const CarouselPrevious = forwardRef<HTMLButtonElement, ComponentProps<typeof Button>>(
-  ({ className, size = 'sm', heirarchy = 'link-gray', ...props }, ref) => {
+  ({ className, size = 'sm', hierarchy: heirarchy = 'link-gray', ...props }, ref) => {
     const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 
     return (
@@ -201,7 +201,7 @@ const CarouselPrevious = forwardRef<HTMLButtonElement, ComponentProps<typeof But
           className,
         )}
         size={size}
-        heirarchy={heirarchy}
+        hierarchy={heirarchy}
         disabled={!canScrollPrev}
         onClick={scrollPrev}
         ref={ref}
@@ -216,7 +216,7 @@ const CarouselPrevious = forwardRef<HTMLButtonElement, ComponentProps<typeof But
 CarouselPrevious.displayName = 'CarouselPrevious'
 
 const CarouselNext = forwardRef<HTMLButtonElement, ComponentProps<typeof Button>>(
-  ({ className, size = 'sm', heirarchy = 'link-gray', ...props }, ref) => {
+  ({ className, size = 'sm', hierarchy: heirarchy = 'link-gray', ...props }, ref) => {
     const { orientation, scrollNext, canScrollNext } = useCarousel()
 
     return (
@@ -229,7 +229,7 @@ const CarouselNext = forwardRef<HTMLButtonElement, ComponentProps<typeof Button>
           className,
         )}
         size={size}
-        heirarchy={heirarchy}
+        hierarchy={heirarchy}
         disabled={!canScrollNext}
         onClick={scrollNext}
         ref={ref}

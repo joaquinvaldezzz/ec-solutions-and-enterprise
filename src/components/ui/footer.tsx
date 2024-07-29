@@ -53,7 +53,7 @@ export function Footer() {
                       <Button
                         className="text-gray-200 hover:text-gray-300"
                         size="lg"
-                        heirarchy="link-gray"
+                        hierarchy="link-gray"
                         asChild
                       >
                         <Link href={product.url}>{product.title}</Link>
@@ -72,7 +72,7 @@ export function Footer() {
                       <Button
                         className="text-gray-200 hover:text-gray-300"
                         size="lg"
-                        heirarchy="link-gray"
+                        hierarchy="link-gray"
                         asChild
                       >
                         <Link href={product.url}>{product.title}</Link>
@@ -91,7 +91,7 @@ export function Footer() {
                       <Button
                         className="text-gray-200 hover:text-gray-300"
                         size="lg"
-                        heirarchy="link-gray"
+                        hierarchy="link-gray"
                         asChild
                       >
                         <Link href={product.url}>{product.title}</Link>
@@ -110,7 +110,7 @@ export function Footer() {
                       <Button
                         className="text-gray-200 hover:text-gray-300"
                         size="lg"
-                        heirarchy="link-gray"
+                        hierarchy="link-gray"
                         asChild
                       >
                         <Link href={product.url}>{product.title}</Link>
@@ -129,7 +129,7 @@ export function Footer() {
                       <Button
                         className="text-gray-200 hover:text-gray-300"
                         size="lg"
-                        heirarchy="link-gray"
+                        hierarchy="link-gray"
                         asChild
                       >
                         <Link href={product.url}>{product.title}</Link>

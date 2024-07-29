@@ -37,7 +37,7 @@ export function Header() {
       <header className="absolute inset-x-0 top-0 z-50 flex h-header-height items-center bg-white">
         <div className="container flex items-center justify-between lg:grid lg:grid-cols-[theme(spacing.48)_auto_theme(spacing.48)]">
           <div>
-            <Button size="lg" heirarchy="link-color" asChild>
+            <Button size="lg" hierarchy="link-color" asChild>
               <Link href="#">EC Solutions</Link>
             </Button>
           </div>
@@ -45,7 +45,7 @@ export function Header() {
           <Dialog.Trigger asChild>
             <Button
               className="-mr-1 size-10 lg:hidden"
-              heirarchy="link-gray"
+              hierarchy="link-gray"
               type="button"
               onClick={() => {
                 setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -67,7 +67,7 @@ export function Header() {
 
           <nav className="hidden lg:flex lg:items-center lg:gap-8">
             {links.map((link, index) => (
-              <Button size="lg" heirarchy="link-gray" asChild key={index}>
+              <Button size="lg" hierarchy="link-gray" asChild key={index}>
                 <Link href={link.url}>{link.title}</Link>
               </Button>
             ))}
@@ -106,7 +106,7 @@ export function Header() {
                     <li key={index}>
                       <Button
                         size="lg"
-                        heirarchy="link-gray"
+                        hierarchy="link-gray"
                         asChild
                         onClick={() => {
                           setIsMobileMenuOpen(false)
@@ -123,7 +123,7 @@ export function Header() {
                     <li key={index}>
                       <Button
                         size="lg"
-                        heirarchy="link-gray"
+                        hierarchy="link-gray"
                         asChild
                         onClick={() => {
                           setIsMobileMenuOpen(false)
