@@ -38,7 +38,7 @@ export function Header() {
         <div className="container flex items-center justify-between lg:grid lg:grid-cols-[theme(spacing.48)_auto_theme(spacing.48)]">
           <div>
             <Button size="lg" hierarchy="link-color" asChild>
-              <Link href="#">EC Solutions</Link>
+              <Link href="/">EC Solutions</Link>
             </Button>
           </div>
 
