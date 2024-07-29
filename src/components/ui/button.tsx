@@ -48,13 +48,24 @@ interface ButtonProps
   asChild?: boolean
 }
 
+/**
+ * Button component.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <Button size="small" hierarchy="primary" onClick={handleClick}>
+ *   Click me
+ * </Button>
+ * ```
+ */
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, size, hierarchy: heirarchy, asChild = false, ...props }, ref) => {
+  ({ className, size, hierarchy, asChild = false, ...props }, ref) => {
     const Component = asChild ? Slot : 'button'
 
     return (
       <Component
-        className={cn(buttonVariants({ size, hierarchy: heirarchy }), className)}
+        className={cn(buttonVariants({ size, hierarchy }), className)}
         ref={ref}
         {...props}
       />
