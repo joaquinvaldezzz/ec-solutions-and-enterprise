@@ -61,7 +61,7 @@ export default function Home() {
                   <Image
                     className="object-cover"
                     src={PlaceholderImage}
-                    alt="Joaquin Valdez"
+                    alt=""
                     fill
                     priority
                     placeholder="blur"
@@ -71,7 +71,7 @@ export default function Home() {
                   <Image
                     className="object-cover"
                     src={PlaceholderImage}
-                    alt="Joaquin Valdez"
+                    alt=""
                     fill
                     priority
                     placeholder="blur"
@@ -81,7 +81,7 @@ export default function Home() {
                   <Image
                     className="object-cover"
                     src={PlaceholderImage}
-                    alt="Joaquin Valdez"
+                    alt=""
                     fill
                     priority
                     placeholder="blur"
@@ -94,7 +94,7 @@ export default function Home() {
                   <Image
                     className="object-cover"
                     src={PlaceholderImage}
-                    alt="Joaquin Valdez"
+                    alt=""
                     fill
                     priority
                     placeholder="blur"
@@ -104,7 +104,7 @@ export default function Home() {
                   <Image
                     className="object-cover"
                     src={PlaceholderImage}
-                    alt="Joaquin Valdez"
+                    alt=""
                     fill
                     priority
                     placeholder="blur"
@@ -114,7 +114,7 @@ export default function Home() {
                   <Image
                     className="object-cover"
                     src={PlaceholderImage}
-                    alt="Joaquin Valdez"
+                    alt=""
                     fill
                     priority
                     placeholder="blur"
@@ -127,7 +127,7 @@ export default function Home() {
                   <Image
                     className="object-cover"
                     src={PlaceholderImage}
-                    alt="Joaquin Valdez"
+                    alt=""
                     fill
                     priority
                     placeholder="blur"
@@ -137,7 +137,7 @@ export default function Home() {
                   <Image
                     className="object-cover"
                     src={PlaceholderImage}
-                    alt="Joaquin Valdez"
+                    alt=""
                     fill
                     priority
                     placeholder="blur"
@@ -150,7 +150,7 @@ export default function Home() {
                   <Image
                     className="object-cover"
                     src={PlaceholderImage}
-                    alt="Joaquin Valdez"
+                    alt=""
                     fill
                     priority
                     placeholder="blur"
