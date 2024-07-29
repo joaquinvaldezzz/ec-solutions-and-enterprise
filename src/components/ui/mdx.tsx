@@ -2,6 +2,12 @@ import { type MDXComponents } from 'mdx/types'
 import { MDXRemote, type MDXRemoteProps } from 'next-mdx-remote/rsc'
 
 const components: MDXComponents = {
+  blockquote: (props) => (
+    <blockquote
+      className="my-10 border-l-2 border-brand-700 py-2 pl-4 text-xl font-medium italic text-gray-900 first:mt-0 lg:my-12 lg:pl-5 lg:*:text-display-xs"
+      {...props}
+    />
+  ),
   h1: (props) => (
     <h1
       className="mb-4 text-balance text-display-sm font-semibold lg:mb-5 lg:text-display-sm"
@@ -17,7 +23,6 @@ const components: MDXComponents = {
   p: (props) => (
     <p className="my-4 text-gray-600 first:mt-0 last:mb-0 lg:my-4.5 lg:text-lg" {...props} />
   ),
-
   img: (props) => (
     // eslint-disable-next-line @next/next/no-img-element
     <img
