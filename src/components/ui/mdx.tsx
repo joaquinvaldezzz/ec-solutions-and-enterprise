@@ -1,6 +1,7 @@
 import Image, { type ImageProps } from 'next/image'
 import { type MDXComponents } from 'mdx/types'
 import { MDXRemote, type MDXRemoteProps } from 'next-mdx-remote/rsc'
+import remarkUnwrapImages from 'remark-unwrap-images'
 
 import { rehypeImageSize } from '@/lib/rehype-image-size'
 
@@ -26,8 +27,12 @@ const components: MDXComponents = {
   p: (props) => (
     <p className="my-4 text-gray-600 first:mt-0 last:mb-0 lg:my-4.5 lg:text-lg" {...props} />
   ),
-  // eslint-disable-next-line jsx-a11y/alt-text
-  img: (props) => <Image className="my-10 rounded-xl lg:my-12" {...(props as ImageProps)} />,
+  img: (props) => (
+    <div className="my-10 first:mt-0 last:mb-0 lg:my-12">
+      {/* eslint-disable-next-line jsx-a11y/alt-text */}
+      <Image className="rounded-xl" {...(props as ImageProps)} />
+    </div>
+  ),
 }
 
 export function CustomMDX(props: MDXRemoteProps) {
@@ -37,6 +42,7 @@ export function CustomMDX(props: MDXRemoteProps) {
       options={{
         mdxOptions: {
           rehypePlugins: [[rehypeImageSize, { root: 'public' }]],
+          remarkPlugins: [remarkUnwrapImages],
         },
       }}
       {...props}
