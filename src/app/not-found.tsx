@@ -10,6 +10,10 @@ import { Container, Section } from '@/components/ui/container'
 export default function NotFound() {
   const router = useRouter()
 
+  function handleClick() {
+    router.back()
+  }
+
   return (
     <main className="pt-header-height">
       <Section>
@@ -29,13 +33,7 @@ export default function NotFound() {
             <Button size="xl" asChild>
               <Link href="/">Go home</Link>
             </Button>
-            <Button
-              size="xl"
-              hierarchy="secondary-gray"
-              onClick={() => {
-                router.back()
-              }}
-            >
+            <Button size="xl" hierarchy="secondary-gray" onClick={handleClick}>
               <ArrowLeft className="size-5" />
               Go back
             </Button>
