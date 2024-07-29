@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
+import { notFound } from 'next/navigation'
 
 import { Badge } from '@/components/ui/badge'
 import { Container, Section } from '@/components/ui/container'
@@ -35,13 +36,17 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 export default function Page({ params }: { params: { slug: string } }) {
   const post = getPosts().find((item) => item.slug === params.slug)
 
+  if (post == null) {
+    notFound()
+  }
+
   return (
     <main className="pt-header-height">
       <Section>
         <Container>
           <div className="mx-auto max-w-3xl text-balance text-center">
             <div className="text-sm font-semibold text-brand-700 lg:text-md">
-              Norzagaray College
+              {post?.metadata.title}
             </div>
             <h1 className="mt-3 text-display-md font-semibold tracking-tight lg:text-display-lg">
               {post?.metadata.title}
@@ -55,14 +60,14 @@ export default function Page({ params }: { params: { slug: string } }) {
                 Design
               </Badge>
               <Badge size="md" color="indigo">
-                Reserch
+                Research
               </Badge>
               <Badge size="md" color="pink">
                 Presentation
               </Badge>
             </div>
 
-            <figure className="mt-8 hidden items-center justify-center gap-4">
+            <figure className="mt-8 flex items-center justify-center gap-4 lg:hidden">
               <div className="relative size-14 *:rounded-full">
                 <Image
                   className="object-cover"
