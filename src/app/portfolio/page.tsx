@@ -18,7 +18,7 @@ export default function Page() {
           .map((post) => (
             <Link className="flex flex-col gap-1" href={`/portfolio/${post.slug}`} key={post.slug}>
               <div className="flex w-full flex-col space-x-0 md:flex-row md:space-x-2">
-                <p className="tabular-nums">{formatDate(post.metadata.publishedAt, false)}</p>
+                <p className="">{formatDate(post.metadata.publishedAt, false)}</p>
                 <p className="line-clamp-4">{post.metadata.summary}</p>
               </div>
             </Link>
