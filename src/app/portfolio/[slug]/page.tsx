@@ -23,8 +23,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   if (post != null) {
     const metadata: Metadata = {
-      title: post.metadata.title,
-      description: post.metadata.summary,
+      title: post.metadata.name,
+      description: post.metadata.description,
     }
 
     return metadata
@@ -46,13 +46,13 @@ export default function Page({ params }: { params: { slug: string } }) {
         <Container>
           <div className="mx-auto max-w-3xl text-balance text-center">
             <div className="text-sm font-semibold text-brand-700 lg:text-md">
-              {post?.metadata.title}
+              {post?.metadata.name}
             </div>
             <h1 className="mt-3 text-display-md font-semibold tracking-tight lg:text-display-lg">
-              {post?.metadata.title}
+              {post?.metadata.project}
             </h1>
             <p className="mt-4 text-lg text-gray-600 lg:mt-6 lg:text-xl">
-              {post?.metadata.summary}
+              {post?.metadata.description}
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
@@ -68,12 +68,13 @@ export default function Page({ params }: { params: { slug: string } }) {
             </div>
 
             <figure className="mt-8 flex items-center justify-center gap-4 lg:hidden">
-              <div className="relative size-14 *:rounded-full">
+              <div className="size-14">
                 <Image
-                  className="object-cover"
+                  className="rounded-full object-cover"
                   src={JoaquinValdez}
-                  alt="Joaquin Valdez"
-                  fill
+                  alt="John Joaquin Valdez"
+                  width={56}
+                  height={56}
                   priority
                   placeholder="blur"
                 />
@@ -87,12 +88,11 @@ export default function Page({ params }: { params: { slug: string } }) {
 
           <div className="relative mt-12 h-60 lg:mt-16 lg:h-[40rem]">
             <Image
-              className="object-cover"
-              src={JoaquinValdez}
-              alt="Joaquin Valdez"
+              className="object-cover object-center"
+              src={post.metadata.image}
+              alt=""
               fill
               priority
-              placeholder="blur"
             />
           </div>
         </Container>
