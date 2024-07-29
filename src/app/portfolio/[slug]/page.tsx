@@ -24,10 +24,10 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   if (post != null) {
     const metadata: Metadata = {
-      title: post.metadata.project,
+      title: `${post.metadata.project} | ${post.metadata.name}`,
       description: post.metadata.description,
       openGraph: {
-        title: post.metadata.project,
+        title: `${post.metadata.project} | ${post.metadata.name}`,
         description: post.metadata.description,
       },
     }
