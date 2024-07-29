@@ -2,10 +2,11 @@ import fs from 'fs'
 import path from 'path'
 
 interface Metadata {
-  title: string
-  image?: string
-  publishedAt: string
-  summary: string
+  project: string
+  image: string
+  name: string
+  description: string
+  tags: string
 }
 
 function parseFrontmatter(fileContent: string) {
