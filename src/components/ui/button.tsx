@@ -29,9 +29,9 @@ const buttonVariants = cva(
         'tertiary-color':
           'border-transparent text-brand-700 shadow-transparent hover:bg-brand-50 hover:text-brand-800 disabled:text-gray-400',
         'link-gray':
-          'h-auto rounded border-transparent p-0 text-gray-600 shadow-transparent hover:text-gray-700 disabled:text-gray-400',
+          'h-auto rounded border-transparent p-0 text-gray-600 shadow-transparent hover:text-gray-700 focus:ring-2 disabled:text-gray-400',
         'link-color':
-          'h-auto rounded border-transparent p-0 text-gray-700 shadow-transparent hover:text-brand-800 disabled:text-gray-400',
+          'h-auto rounded border-transparent p-0 text-gray-700 shadow-transparent hover:text-brand-800 focus:ring-2 disabled:text-gray-400',
         button: 'border-transparent shadow-transparent hover:bg-gray-50 focus:ring-gray-400/15',
       },
     },
