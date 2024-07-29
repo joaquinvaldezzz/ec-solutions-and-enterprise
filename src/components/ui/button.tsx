@@ -7,7 +7,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  'relative inline-flex items-center justify-center rounded-lg border font-semibold shadow-xs transition focus:outline-none focus:ring-4',
+  'relative inline-flex items-center justify-center rounded-lg border font-semibold shadow-xs focus:outline-none focus:ring-4',
   {
     variants: {
       size: {
@@ -17,7 +17,7 @@ const buttonVariants = cva(
         xl: 'h-12 gap-1.5 px-4.5 py-3',
         '2xl': 'h-15 gap-2.5 px-5.5 py-4 text-lg',
       },
-      heirarchy: {
+      hierarchy: {
         primary:
           'border-brand-600 bg-brand-600 text-white hover:border-brand-700 hover:bg-brand-700 focus:ring-brand-500/25 disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-400',
         'secondary-gray':
@@ -37,7 +37,7 @@ const buttonVariants = cva(
     },
     defaultVariants: {
       size: 'sm',
-      heirarchy: 'primary',
+      hierarchy: 'primary',
     },
   },
 )
@@ -49,12 +49,12 @@ interface ButtonProps
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, size, heirarchy, asChild = false, ...props }, ref) => {
+  ({ className, size, hierarchy: heirarchy, asChild = false, ...props }, ref) => {
     const Component = asChild ? Slot : 'button'
 
     return (
       <Component
-        className={cn(buttonVariants({ size, heirarchy }), className)}
+        className={cn(buttonVariants({ size, hierarchy: heirarchy }), className)}
         ref={ref}
         {...props}
       />
