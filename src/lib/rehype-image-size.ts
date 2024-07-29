@@ -7,8 +7,8 @@ import { visit } from 'unist-util-visit'
  * @param options - The options for configuring the image size calculation.
  * @returns A function that can be used as a rehype plugin.
  */
-export function rehypeImageSize(options) {
-  return (tree) => {
+export function rehypeImageSize(options: { root: any }) {
+  return (tree: any) => {
     // This matches all images that use the markdown standard format ![label](path).
     visit(tree, { type: 'element', tagName: 'img' }, (node) => {
       if (Boolean(node.properties.width) || Boolean(node.properties.height)) {
@@ -24,11 +24,17 @@ export function rehypeImageSize(options) {
     // This matches all MDX' <Image /> components.
     // Feel free to update it if you're using a different component name.
     visit(tree, { type: 'mdxJsxFlowElement', name: 'Image' }, (node) => {
-      const srcAttribute = node.attributes?.find((attribute) => attribute.name === 'src')
+      const srcAttribute = node.attributes?.find(
+        (attribute: { name: string }) => attribute.name === 'src',
+      )
       const imagePath = `${String(options?.root) ?? ''}${String(srcAttribute.value)}`
       const imageSize = getImageSize(imagePath)
-      const widthAttribute = node.attributes?.find((attribute) => attribute.name === 'width')
-      const heightAttribute = node.attributes?.find((attribute) => attribute.name === 'height')
+      const widthAttribute = node.attributes?.find(
+        (attribute: { name: string }) => attribute.name === 'width',
+      )
+      const heightAttribute = node.attributes?.find(
+        (attribute: { name: string }) => attribute.name === 'height',
+      )
 
       if (Boolean(widthAttribute) || Boolean(heightAttribute)) {
         // If `width` or `height` have already been set explicitly we
