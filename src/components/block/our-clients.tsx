@@ -50,15 +50,11 @@ export function OurClients() {
                   </div>
                   <p className="mt-2 line-clamp-2 text-gray-600">{post.metadata.description}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
-                    <Badge size="md" color={determineBadgeColor('Design')}>
-                      Design
-                    </Badge>
-                    <Badge size="md" color={determineBadgeColor('Research')}>
-                      Research
-                    </Badge>
-                    <Badge size="md" color={determineBadgeColor('Presentation')}>
-                      Presentation
-                    </Badge>
+                    {post.metadata.tags.split(', ').map((tag, i) => (
+                      <Badge size="md" color={determineBadgeColor(tag)} key={i}>
+                        {tag}
+                      </Badge>
+                    ))}
                   </div>
                 </div>
               </Link>

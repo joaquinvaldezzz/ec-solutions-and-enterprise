@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
+import { determineBadgeColor } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { Container, Section } from '@/components/ui/container'
 import { CustomMDX } from '@/components/ui/mdx'
@@ -67,15 +68,11 @@ export default function Page({ params }: { params: { slug: string } }) {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-2">
-              <Badge size="md" color="brand">
-                Design
-              </Badge>
-              <Badge size="md" color="indigo">
-                Research
-              </Badge>
-              <Badge size="md" color="pink">
-                Presentation
-              </Badge>
+              {post.metadata.tags.split(', ').map((tag, index) => (
+                <Badge size="md" color={determineBadgeColor(tag)} key={index}>
+                  {tag}
+                </Badge>
+              ))}
             </div>
 
             <figure className="mt-8 flex items-center gap-4">
