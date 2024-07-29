@@ -9,8 +9,6 @@ import { CustomMDX } from '@/components/ui/mdx'
 
 import { formatDate, getPosts } from '../utils'
 
-import JoaquinValdez from '@/public/images/profiles-pictures/joaquin-valdez.jpg'
-
 export async function generateStaticParams() {
   const posts = getPosts()
 
@@ -79,12 +77,11 @@ export default function Page({ params }: { params: { slug: string } }) {
               <div className="size-14">
                 <Image
                   className="rounded-full object-cover"
-                  src={JoaquinValdez}
-                  alt="John Joaquin Valdez"
+                  src={post.metadata.authorsPicture}
+                  alt={post.metadata.author}
                   width={56}
                   height={56}
                   priority
-                  placeholder="blur"
                 />
               </div>
               <figcaption className="text-left">

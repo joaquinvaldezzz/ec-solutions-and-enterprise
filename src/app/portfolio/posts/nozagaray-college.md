@@ -4,8 +4,8 @@ image: /images/logos/norzagaray-college.png
 name: Norzagaray College
 description: A School Information System that manages student records, grades, and schedules.
 tags: Software Development, Product, Saas
-authorsPicture: /images/profiles-pictures/joaquin-valdez.jpg
-author: John Joaquin Valdez
+authorsPicture: /images/profiles-pictures/edilberto-chua-jr.jpg
+author: Edilberto N. Chua, Jr.
 publishedAt: 2024-07-28
 ---
 
