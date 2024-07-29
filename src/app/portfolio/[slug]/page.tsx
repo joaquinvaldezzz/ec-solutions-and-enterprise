@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { Container, Section } from '@/components/ui/container'
 import { CustomMDX } from '@/components/ui/mdx'
 
-import { getPosts } from '../utils'
+import { formatDate, getPosts } from '../utils'
 
 import JoaquinValdez from '@/public/images/profiles-pictures/joaquin-valdez.jpg'
 
@@ -88,8 +88,8 @@ export default function Page({ params }: { params: { slug: string } }) {
                 />
               </div>
               <figcaption className="text-left">
-                <div className="text-lg font-semibold">John Joaquin Valdez</div>
-                <div className="text-gray-600">July 26, 2024</div>
+                <div className="text-lg font-semibold">{post.metadata.author}</div>
+                <div className="text-gray-600">{formatDate(post.metadata.publishedAt)}</div>
               </figcaption>
             </figure>
           </div>

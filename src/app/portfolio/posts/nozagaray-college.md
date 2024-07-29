@@ -3,7 +3,10 @@ project: School Information System
 image: /images/logos/norzagaray-college.png
 name: Norzagaray College
 description: A School Information System that manages student records, grades, and schedules.
-tags: Design, Research, Presentation
+tags: Software Development, Product, Saas
+authorsPicture: /images/profiles-pictures/joaquin-valdez.jpg
+author: John Joaquin Valdez
+publishedAt: 2024-07-28
 ---
 
 # EC Solutions and Enterprise

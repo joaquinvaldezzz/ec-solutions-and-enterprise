@@ -7,6 +7,9 @@ interface Metadata {
   name: string
   description: string
   tags: string
+  authorsPicture: string
+  author: string
+  publishedAt: string
 }
 
 function parseFrontmatter(fileContent: string) {
