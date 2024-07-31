@@ -18,7 +18,6 @@ import { Button } from '../ui/button'
 import { Checkbox } from '../ui/checkbox'
 import { Container, Section } from '../ui/container'
 import { Input } from '../ui/input'
-import { labelVariants } from '../ui/label'
 import { Textarea } from '../ui/textarea'
 
 const formSchema = z.object({
@@ -177,7 +176,7 @@ export function ContactUs() {
               )}
             />
 
-            <fieldset>
+            {/* <fieldset>
               <legend className={labelVariants()}>Services</legend>
               <div className="mt-4">
                 <FormField
@@ -218,7 +217,7 @@ export function ContactUs() {
                   )}
                 />
               </div>
-            </fieldset>
+            </fieldset> */}
 
             <FormField
               control={form.control}
