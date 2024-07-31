@@ -24,7 +24,12 @@ export function WhoWeAre() {
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false)
 
   return (
-    <Collapsible.Root id="about-us" open={isCollapsed} onOpenChange={setIsCollapsed}>
+    <Collapsible.Root
+      className="scroll-mt-header-height"
+      id="about-us"
+      open={isCollapsed}
+      onOpenChange={setIsCollapsed}
+    >
       <Section>
         <Container className="text-center">
           <h2 className="flex items-center justify-center gap-2 font-medium uppercase tracking-wide text-brand-700">
