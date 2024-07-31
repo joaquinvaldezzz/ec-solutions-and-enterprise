@@ -35,7 +35,7 @@ const formSchema = z.object({
 })
 type FormSchema = z.infer<typeof formSchema>
 
-interface Service {
+/* interface Service {
   id: string
   label: string
 }
@@ -65,7 +65,7 @@ const services: Service[] = [
     id: 'other',
     label: 'Other',
   },
-]
+] */
 
 export function ContactUs() {
   const form = useForm<z.infer<typeof formSchema>>({
