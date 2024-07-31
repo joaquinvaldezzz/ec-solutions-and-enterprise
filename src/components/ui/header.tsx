@@ -83,7 +83,7 @@ export function Header() {
         <Dialog.Content>
           <Dialog.Title className="sr-only">Mobile menu</Dialog.Title>
           <Dialog.Description className="sr-only">Use arrow keys to navigate</Dialog.Description>
-          <div className="absolute inset-x-0 top-header-height z-50 w-full bg-white shadow-lg lg:hidden">
+          <div className="fixed inset-x-0 top-header-height z-50 w-full bg-white shadow-lg lg:hidden">
             <nav className="flex flex-col gap-2 py-6">
               {links.map((link, index) => (
                 <Link
