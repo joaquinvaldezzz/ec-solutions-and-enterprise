@@ -22,10 +22,11 @@ export function OurClients() {
               <div className="h-px w-16 border-t" />
             </h2>
             <p className="mt-3 text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
-              We&apos;ve helped hundreds of global companies
+              We&apos;ve helped a few of these local companies
             </p>
             <p className="mt-4 text-balance text-lg text-gray-600 lg:mt-5 lg:text-xl">
-              Interviews, tips, guides, industry best practices, and news.
+              Empowering your tech journey with expert tips, best practices, and the latest it
+              trends
             </p>
           </div>
 
