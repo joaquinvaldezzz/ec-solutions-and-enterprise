@@ -96,7 +96,9 @@ export function ContactUs() {
           <p className="mt-4 text-lg text-gray-600 lg:text-xl">
             You can reach us anytime via{' '}
             <Button size="lg" hierarchy="link-color" asChild>
-              <a href="mailto:hi@untitledui.com">hi@untitledui.com</a>
+              <a href="mailto:bert.chua@ecsolutionsconsulting.com">
+                bert.chua@ecsolutionsconsulting.com
+              </a>
             </Button>
           </p>
         </div>
