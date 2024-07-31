@@ -53,7 +53,7 @@ export function WhoWeAre() {
 
           <Collapsible.Trigger asChild>
             <Button
-              className="mt-8"
+              className="mt-8 capitalize"
               size="lg"
               onClick={() => {
                 setIsCollapsed(!isCollapsed)
