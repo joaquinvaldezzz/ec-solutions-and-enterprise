@@ -156,7 +156,7 @@ export function ContactUs() {
                 <FormItem>
                   <FormLabel>Phone number</FormLabel>
                   <FormControl>
-                    <Input padding="md" type="tel" placeholder="+1 (555) 000-0000" {...field} />
+                    <Input padding="md" type="tel" placeholder="+63 912 234 5678" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
