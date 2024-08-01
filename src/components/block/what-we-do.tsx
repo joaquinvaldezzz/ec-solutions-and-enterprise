@@ -75,18 +75,20 @@ export function WhatWeDo() {
   return (
     <Section id="our-services">
       <Container className="text-center">
-        <h2 className="flex items-center justify-center gap-2 font-medium uppercase tracking-wide text-brand-700">
-          <div className="h-px w-16 border-t" />
-          What we do
-          <div className="h-px w-16 border-t" />
-        </h2>
-        <p className="mt-3 text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
-          Our Services
-        </p>
-        <p className="mt-4 text-balance text-lg text-gray-600 lg:mt-5 lg:text-xl">
-          Our clientele ranges from midsize to large companies. Our core expertise is open-source
-          platforms (PHP, Python, and MySQL). Our domain of expertise ranges from:
-        </p>
+        <div className="mx-auto max-w-3xl">
+          <h2 className="flex items-center justify-center gap-2 font-medium uppercase tracking-wide text-brand-700">
+            <div className="h-px w-16 border-t" />
+            What we do
+            <div className="h-px w-16 border-t" />
+          </h2>
+          <p className="mt-3 text-pretty text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
+            Our Services
+          </p>
+          <p className="mt-4 text-pretty text-lg text-gray-600 lg:mt-5 lg:text-xl">
+            Our clientele ranges from midsize to large companies. Our core expertise is open-source
+            platforms (PHP, Python, and MySQL). Our domain of expertise ranges from:
+          </p>
+        </div>
 
         <div className="mt-12 grid gap-10 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
           {services.map((service, index) => (
