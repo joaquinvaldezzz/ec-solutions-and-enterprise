@@ -1,3 +1,4 @@
+import { faUnity } from '@fortawesome/free-brands-svg-icons'
 import {
   faBriefcaseMedical,
   faBuildingUser,
@@ -6,6 +7,7 @@ import {
   faCloud,
   faComputer,
   faMoneyBillWave,
+  faPenNib,
   faReceipt,
   faSchool,
   faUsersLine,
@@ -69,6 +71,16 @@ const services: Service[] = [
     title: 'System Integration',
     description: 'A complete solution for managing HR, payroll, and loan processing.',
   },
+  {
+    icon: faPenNib,
+    title: 'Graphic Design',
+    description: '',
+  },
+  {
+    icon: faUnity,
+    title: '3D Modeling',
+    description: '',
+  },
 ]
 
 export function WhatWeDo() {
@@ -96,8 +108,10 @@ export function WhatWeDo() {
               <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
                 <FontAwesomeIcon className="size-5 text-brand-600 lg:size-6" icon={service.icon} />
               </div>
-              <h3 className="mt-4 text-balance text-lg font-semibold lg:mt-5">{service.title}</h3>
-              <p className="mt-1 text-gray-600 lg:mt-2">{service.description}</p>
+              <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
+              <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
             </div>
           ))}
         </div>
