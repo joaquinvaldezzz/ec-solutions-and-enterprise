@@ -15,17 +15,17 @@ export function OurClients() {
     <Section id="our-clients">
       <Container>
         <div>
-          <div className="text-center">
+          <div className="mx-auto max-w-3xl text-center">
             <h2 className="flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wide text-brand-700 lg:text-md">
               <div className="h-px w-16 border-t" />
               Our Clients
               <div className="h-px w-16 border-t" />
             </h2>
-            <p className="mt-3 text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
-              We&apos;ve helped a few of these local companies
+            <p className="mt-3 text-pretty text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
+              We&apos;ve helped a few of these local organizations and businesses
             </p>
-            <p className="mt-4 text-balance text-lg text-gray-600 lg:mt-5 lg:text-xl">
-              Empowering your tech journey with expert tips, best practices, and the latest it
+            <p className="mt-4 text-pretty text-lg text-gray-600 lg:mt-5 lg:text-xl">
+              Empowering your Tech Journey with Expert Tips, Best Practices, and the latest IT
               trends
             </p>
           </div>
@@ -37,13 +37,15 @@ export function OurClients() {
               )
               .map((post, index) => (
                 <Link href={`/portfolio/${post.slug}`} key={index}>
-                  <Image
-                    className="h-16 w-auto object-contain"
-                    src={post.metadata.image}
-                    alt={post.metadata.name}
-                    width={64}
-                    height={64}
-                  />
+                  <div className="flex h-60 items-center justify-center rounded-2xl bg-brand-50">
+                    <Image
+                      className="h-32 w-auto rounded-full object-contain ring-6 ring-white lg:h-40 lg:ring-8"
+                      src={post.metadata.image}
+                      alt={post.metadata.name}
+                      width={160}
+                      height={160}
+                    />
+                  </div>
                   <div className="mt-5">
                     <div className="text-balance text-sm font-semibold text-brand-700">
                       {post.metadata.project}
