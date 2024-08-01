@@ -69,7 +69,16 @@ export function Header() {
 
           <nav className="hidden lg:flex lg:items-center lg:gap-8">
             {links.map((link, index) => (
-              <Button size="lg" hierarchy="link-gray" asChild key={index}>
+              <Button
+                size="lg"
+                hierarchy="link-gray"
+                asChild
+                onClick={(event) => {
+                  event.preventDefault()
+                  document.getElementById(link.url.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                key={index}
+              >
                 <Link href={link.url}>{link.title}</Link>
               </Button>
             ))}
@@ -88,8 +97,12 @@ export function Header() {
                   className="px-4 py-3 font-semibold hover:bg-gray-50 focus:outline-none"
                   href={link.url}
                   key={index}
-                  onClick={() => {
+                  onClick={(event) => {
                     setIsMobileMenuOpen(false)
+                    event.preventDefault()
+                    document
+                      .getElementById(link.url.slice(1))
+                      ?.scrollIntoView({ behavior: 'smooth' })
                   }}
                 >
                   {link.title}
