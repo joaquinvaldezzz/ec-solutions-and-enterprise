@@ -6,5 +6,5 @@ description: A Database System that manages the inventory of the Philippine Navy
 tags: Product, Software Development, Design
 authorsPicture: /images/profiles-pictures/joaquin-valdez.jpg
 author: John Joaquin Valdez
-publishedAt: 2024-08-01
+publishedAt: 2024-07-30
 ---
