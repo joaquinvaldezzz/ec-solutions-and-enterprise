@@ -43,12 +43,12 @@ const services: Service[] = [
   },
   {
     icon: faBuildingUser,
-    title: 'Engineering Construciton (ERP)',
+    title: 'Engineering Construction (ERP)',
     description: 'A complete solution for managing engineering and construction projects.',
   },
   {
     icon: faUsersLine,
-    title: 'Human Resource, Payrool, and Loan System',
+    title: 'Human Resource, Payroll, and Loan System',
     description: 'A complete solution for managing HR, payroll, and loan processing.',
   },
   {
