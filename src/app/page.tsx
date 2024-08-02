@@ -21,9 +21,6 @@ export default function Home() {
   return (
     <div>
       <Section className="relative overflow-hidden border-b pb-0 pt-[calc(theme(spacing.16)+var(--header-height))] lg:pb-16 lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
-        <SMGridCheckBackground className="absolute left-1/2 size-[60rem] -translate-x-1/2 lg:hidden" />
-        <MDGridCheckBackground className="absolute left-1/2 top-0 hidden h-[90rem] w-[120rem] -translate-x-1/2 lg:block" />
-
         <Container className="relative">
           <div className="lg:flex lg:flex-col lg:items-center lg:text-center">
             <h1 className="text-balance text-display-md font-medium capitalize tracking-tight text-gray-900 lg:text-display-xl lg:tracking-tight">
