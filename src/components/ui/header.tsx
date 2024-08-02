@@ -33,7 +33,7 @@ export function Header() {
 
   return (
     <Dialog.Root open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-      <header className="fixed inset-x-0 top-0 z-50 flex h-header-height items-center bg-white">
+      <header className="fixed inset-x-0 top-0 z-50 flex h-header-height items-center bg-white/75 shadow-xs backdrop-blur-md">
         <div className="container flex items-center justify-between">
           <Link className="relative" href="/">
             EC Solutions and Enterprise
