@@ -20,7 +20,7 @@ const images: StaticImageData[][] = [
 export default function Home() {
   return (
     <div>
-      <Section className="relative overflow-hidden pb-0 pt-[calc(theme(spacing.16)+var(--header-height))] lg:pb-16 lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
+      <Section className="relative overflow-hidden border-b pb-0 pt-[calc(theme(spacing.16)+var(--header-height))] lg:pb-16 lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
         <SMGridCheckBackground className="absolute left-1/2 size-[60rem] -translate-x-1/2 lg:hidden" />
         <MDGridCheckBackground className="absolute left-1/2 top-0 hidden h-[90rem] w-[120rem] -translate-x-1/2 lg:block" />
 
