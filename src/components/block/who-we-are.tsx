@@ -25,7 +25,7 @@ export function WhoWeAre() {
 
   return (
     <Collapsible.Root
-      className="scroll-mt-header-height"
+      className="scroll-mt-header-height bg-gray-25"
       id="about-us"
       open={isCollapsed}
       onOpenChange={setIsCollapsed}
@@ -74,56 +74,54 @@ export function WhoWeAre() {
       </Section>
 
       <Collapsible.Content className="overflow-hidden data-open:animate-slide-down data-closed:animate-slide-up">
-        <Section>
-          <Container className="text-center">
-            <h2 className="flex items-center justify-center gap-2 text-balance font-medium uppercase tracking-wide text-brand-700">
-              <div className="h-px w-16 border-t" />
-              Technologies we use
-              <div className="h-px w-16 border-t" />
-            </h2>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
-              <div className="flex items-center gap-2">
-                <HTML5 className="size-8" />
-                <p className="text-gray-600">HTML5</p>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <CSS3 className="size-8" />
-                <p className="text-gray-600">CSS3</p>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <Javascript className="size-8" />
-                <p className="text-gray-600">JavaScript</p>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <Php className="size-8" />
-                <p className="text-gray-600">PHP</p>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <Python className="size-8" />
-                <p className="text-gray-600">Python</p>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <MySQL className="size-8" />
-                <p className="text-gray-600">MySQL</p>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <Git className="size-8" />
-                <p className="text-gray-600">git</p>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <MicrosoftAzure className="size-8" />
-                <p className="text-gray-600">Microsoft Azure</p>
-              </div>
+        <Container className="pb-16 text-center lg:pb-24">
+          <h2 className="flex items-center justify-center gap-2 text-balance font-medium uppercase tracking-wide text-brand-700">
+            <div className="h-px w-16 border-t" />
+            Technologies we use
+            <div className="h-px w-16 border-t" />
+          </h2>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+            <div className="flex items-center gap-2">
+              <HTML5 className="size-8" />
+              <p className="text-gray-600">HTML5</p>
             </div>
-          </Container>
-        </Section>
+
+            <div className="flex items-center gap-2">
+              <CSS3 className="size-8" />
+              <p className="text-gray-600">CSS3</p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Javascript className="size-8" />
+              <p className="text-gray-600">JavaScript</p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Php className="size-8" />
+              <p className="text-gray-600">PHP</p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Python className="size-8" />
+              <p className="text-gray-600">Python</p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <MySQL className="size-8" />
+              <p className="text-gray-600">MySQL</p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Git className="size-8" />
+              <p className="text-gray-600">git</p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <MicrosoftAzure className="size-8" />
+              <p className="text-gray-600">Microsoft Azure</p>
+            </div>
+          </div>
+        </Container>
       </Collapsible.Content>
     </Collapsible.Root>
   )
