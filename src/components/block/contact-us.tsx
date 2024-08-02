@@ -241,7 +241,7 @@ export function ContactUs() {
                         hierarchy="link-gray"
                         asChild
                       >
-                        <Link href="#">privacy policy</Link>
+                        <Link href="/privacy-policy">privacy policy</Link>
                       </Button>
                     </FormLabel>
                   </div>
