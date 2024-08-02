@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import * as Dialog from '@radix-ui/react-dialog'
@@ -10,8 +9,6 @@ import { type NavItem } from '@/types/nav'
 
 import { Button } from './button'
 import { products } from './footer'
-
-import ECSAELogomark from '@/public/images/logos/ecsae-logotype.png'
 
 const links: NavItem[] = [
   {
@@ -40,8 +37,7 @@ export function Header() {
       <header className="fixed inset-x-0 top-0 z-50 flex h-header-height items-center bg-white">
         <div className="container flex items-center justify-between">
           <Link className="relative" href="/">
-            <span className="sr-only">EC Solutions and Enterprise</span>
-            <Image className="h-10 w-24 object-contain" src={ECSAELogomark} alt="EC Solutions" />
+            EC Solutions and Enterprise
           </Link>
 
           <Dialog.Trigger asChild>

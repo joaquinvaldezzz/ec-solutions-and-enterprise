@@ -1,6 +1,10 @@
+import Image from 'next/image'
+
 import { type NavItem } from '@/types/nav'
 
 import { Container } from './container'
+
+import ECSAELogomark from '@/public/images/logos/ecsae-logotype.png'
 
 export const products: NavItem[] = [
   {
@@ -32,118 +36,18 @@ export const products: NavItem[] = [
 export function Footer() {
   return (
     <footer className="bg-brand-950">
-      <Container>
-        {/* <div className="grid py-12 lg:grid-cols-3 lg:gap-16 lg:pt-16">
-          <div className="">
-            <h2 className="font-semibold text-gray-200">EC Solutions</h2>
-            <p className="mt-6 text-gray-200">
-              Design amazing digital experiences that create more happy in the world.
-            </p>
-          </div>
-
-          <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5 lg:col-span-2 lg:mt-0">
-            <div>
-              <nav>
-                <ul className="flex flex-col gap-3">
-                  {products.map((product, index) => (
-                    <li key={index}>
-                      <Button
-                        className="text-gray-200 hover:text-gray-300"
-                        size="lg"
-                        hierarchy="link-gray"
-                        asChild
-                      >
-                        <Link href={product.url}>{product.title}</Link>
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-
-            <div>
-              <nav>
-                <ul className="flex flex-col gap-3">
-                  {products.map((product, index) => (
-                    <li key={index}>
-                      <Button
-                        className="text-gray-200 hover:text-gray-300"
-                        size="lg"
-                        hierarchy="link-gray"
-                        asChild
-                      >
-                        <Link href={product.url}>{product.title}</Link>
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-
-            <div>
-              <nav>
-                <ul className="flex flex-col gap-3">
-                  {products.map((product, index) => (
-                    <li key={index}>
-                      <Button
-                        className="text-gray-200 hover:text-gray-300"
-                        size="lg"
-                        hierarchy="link-gray"
-                        asChild
-                      >
-                        <Link href={product.url}>{product.title}</Link>
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-
-            <div>
-              <nav>
-                <ul className="flex flex-col gap-3">
-                  {products.map((product, index) => (
-                    <li key={index}>
-                      <Button
-                        className="text-gray-200 hover:text-gray-300"
-                        size="lg"
-                        hierarchy="link-gray"
-                        asChild
-                      >
-                        <Link href={product.url}>{product.title}</Link>
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-
-            <div>
-              <nav>
-                <ul className="flex flex-col gap-3">
-                  {products.map((product, index) => (
-                    <li key={index}>
-                      <Button
-                        className="text-gray-200 hover:text-gray-300"
-                        size="lg"
-                        hierarchy="link-gray"
-                        asChild
-                      >
-                        <Link href={product.url}>{product.title}</Link>
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div> */}
-
-        <div className="py-10 lg:py-12">
-          <p className="text-center text-gray-300">
-            &copy; 2024 EC Solutions and Enterprise. All rights reserved.
-          </p>
+      <Container className="flex flex-col gap-12 py-12 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex justify-center">
+          <Image
+            className="h-20 w-40 object-contain"
+            src={ECSAELogomark}
+            alt="EC Solutions and Enterprise"
+          />
         </div>
+
+        <p className="text-balance text-center text-gray-300">
+          &copy; 2024 EC Solutions and Enterprise. All rights reserved.
+        </p>
       </Container>
     </footer>
   )
