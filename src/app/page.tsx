@@ -6,9 +6,7 @@ import { OurClients } from '@/components/block/our-clients'
 import { WhatWeDo } from '@/components/block/what-we-do'
 import { WhoWeAre } from '@/components/block/who-we-are'
 
-import MDGridCheckBackground from '@/public/images/backgrounds/md-grid-check-bg.svg'
 import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
-import SMGridCheckBackground from '@/public/images/backgrounds/sm-grid-check-bg.svg'
 
 const images: StaticImageData[][] = [
   [PlaceholderImage, PlaceholderImage, PlaceholderImage],
