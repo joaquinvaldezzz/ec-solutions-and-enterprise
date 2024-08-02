@@ -8,7 +8,6 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { type NavItem } from '@/types/nav'
 
 import { Button } from './button'
-import { products } from './footer'
 
 const links: NavItem[] = [
   {
@@ -83,6 +82,7 @@ export function Header() {
       </header>
 
       <Dialog.Portal>
+        <Dialog.Overlay className="fixed inset-0 size-full bg-black/50" />
         <Dialog.Content>
           <Dialog.Title className="sr-only">Mobile menu</Dialog.Title>
           <Dialog.Description className="sr-only">Use arrow keys to navigate</Dialog.Description>
@@ -105,55 +105,6 @@ export function Header() {
                 </Link>
               ))}
             </nav>
-
-            <div className="px-4 py-6">
-              <nav className="grid grid-cols-2 gap-x-6">
-                <ul className="flex flex-col gap-y-3">
-                  {products.map((product, index) => (
-                    <li key={index}>
-                      <Button
-                        size="lg"
-                        hierarchy="link-gray"
-                        asChild
-                        onClick={() => {
-                          setIsMobileMenuOpen(false)
-                        }}
-                      >
-                        <Link href={product.url}>{product.title}</Link>
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
-
-                <ul className="flex flex-col gap-y-3">
-                  {products.map((product, index) => (
-                    <li key={index}>
-                      <Button
-                        size="lg"
-                        hierarchy="link-gray"
-                        asChild
-                        onClick={() => {
-                          setIsMobileMenuOpen(false)
-                        }}
-                      >
-                        <Link href={product.url}>{product.title}</Link>
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-
-              <div className="mt-8 flex flex-col">
-                <Button
-                  size="lg"
-                  onClick={() => {
-                    setIsMobileMenuOpen(false)
-                  }}
-                >
-                  Talk to an Expert
-                </Button>
-              </div>
-            </div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>
