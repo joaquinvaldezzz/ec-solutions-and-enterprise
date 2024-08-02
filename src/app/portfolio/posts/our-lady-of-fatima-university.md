@@ -1,5 +1,5 @@
 ---
-project: OLFU Journal Research System
+project: Research, and School Information System
 image: /images/logos/our-lady-of-fatima-university.png
 name: Our Lady of Fatima University
 description: A Journal Research System that manages research papers and publications.

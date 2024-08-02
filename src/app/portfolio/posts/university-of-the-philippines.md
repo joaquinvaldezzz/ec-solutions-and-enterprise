@@ -1,5 +1,5 @@
 ---
-project: G6PD Database Management System for Newborn Screening and Research Center (NSRC)
+project: Database Management System
 image: /images/logos/university-of-the-philippines.png
 name: University of the Philippines
 description: A Database Management System that manages the G6PD records of newborns and research data.

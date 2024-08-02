@@ -1,5 +1,5 @@
 ---
-project: Cloud Services and Health Emergency Information System
+project: Inventory, Payroll, and Accounting System
 image: /images/logos/escobars-steakhouse.jpg
 name: Escobar's Steakhouse
 description: Inventory of Goods, Payroll and Accounting System for Food and Beverages.
