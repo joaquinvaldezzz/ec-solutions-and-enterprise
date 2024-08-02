@@ -102,18 +102,74 @@ export function WhatWeDo() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-10 md:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-          {services.map((service, index) => (
-            <div className="flex flex-col items-center" key={index}>
-              <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
-                <FontAwesomeIcon className="size-5 text-brand-600 lg:size-6" icon={service.icon} />
+        <div className="mt-12 grid lg:mt-16 lg:grid-cols-3 lg:divide-y">
+          <div className="col-span-full grid divide-y border-b lg:grid-cols-3 lg:divide-x lg:divide-y-0 lg:border-b-0">
+            {services.slice(0, 3).map((service, index) => (
+              <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={index}>
+                <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
+                  <FontAwesomeIcon
+                    className="size-5 text-brand-600 lg:size-6"
+                    icon={service.icon}
+                  />
+                </div>
+                <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
+                <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
               </div>
-              <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
-              <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="col-span-full grid divide-y border-b lg:grid-cols-3 lg:divide-x lg:divide-y-0 lg:border-b-0">
+            {services.slice(3, 6).map((service, index) => (
+              <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={index}>
+                <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
+                  <FontAwesomeIcon
+                    className="size-5 text-brand-600 lg:size-6"
+                    icon={service.icon}
+                  />
+                </div>
+                <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
+                <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="col-span-full grid divide-y border-b lg:grid-cols-3 lg:divide-x lg:divide-y-0 lg:border-b-0">
+            {services.slice(6, 9).map((service, index) => (
+              <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={index}>
+                <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
+                  <FontAwesomeIcon
+                    className="size-5 text-brand-600 lg:size-6"
+                    icon={service.icon}
+                  />
+                </div>
+                <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
+                <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="col-span-full grid divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0">
+            {services.slice(9, 12).map((service, index) => (
+              <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={index}>
+                <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
+                  <FontAwesomeIcon
+                    className="size-5 text-brand-600 lg:size-6"
+                    icon={service.icon}
+                  />
+                </div>
+                <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
+                <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </Section>
