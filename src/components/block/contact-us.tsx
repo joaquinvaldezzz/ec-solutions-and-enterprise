@@ -94,7 +94,7 @@ export function ContactUs() {
           </h2>
           <p className="mt-4 text-lg text-gray-600 lg:text-xl">
             You can reach us anytime via{' '}
-            <Button size="lg" hierarchy="link-color" asChild>
+            <Button className="break-all" size="lg" hierarchy="link-color" asChild>
               <a href="mailto:bert.chua@ecsolutionsconsulting.com">
                 bert.chua@ecsolutionsconsulting.com
               </a>
