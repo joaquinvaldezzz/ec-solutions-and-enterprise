@@ -1,14 +1,8 @@
-import { faUnity } from '@fortawesome/free-brands-svg-icons'
 import {
   faBriefcaseMedical,
   faBuildingUser,
   faCashRegister,
-  faCircleExclamation,
   faCloud,
-  faComputer,
-  faMoneyBillWave,
-  faPenNib,
-  faReceipt,
   faSchool,
   faUsersLine,
 } from '@fortawesome/free-solid-svg-icons'
@@ -18,69 +12,58 @@ import { type Service } from '@/types/service'
 
 import { Container, Section } from '../ui/container'
 
-const services: Service[] = [
-  {
-    icon: faSchool,
-    title: 'School Information System',
-    description: 'A complete solution for managing schools, colleges, and universities.',
-  },
-  {
-    icon: faCashRegister,
-    title: 'Payment Gateway Integration',
-    description: 'Integrate payment gateways to your website or mobile app.',
-  },
-  {
-    icon: faBriefcaseMedical,
-    title: 'Healthcare Information System',
-    description:
-      'A complete solution for managing hospitals, clinics, and other healthcare facilities.',
-  },
-  {
-    icon: faCloud,
-    title: 'Cloud Hosting (Azure, AWS)',
-    description:
-      'Host your website, web application, or mobile app on the cloud for better performance and scalability.',
-  },
-  {
-    icon: faBuildingUser,
-    title: 'Engineering Construction (ERP)',
-    description: 'A complete solution for managing engineering and construction projects.',
-  },
-  {
-    icon: faUsersLine,
-    title: 'Human Resource, Payroll, and Loan System',
-    description: 'A complete solution for managing HR, payroll, and loan processing.',
-  },
-  {
-    icon: faReceipt,
-    title: 'Online Accounting System',
-    description: 'A complete solution for managing HR, payroll, and loan processing.',
-  },
-  {
-    icon: faMoneyBillWave,
-    title: 'Web Portal and Payment Solutions',
-    description: 'A complete solution for managing HR, payroll, and loan processing.',
-  },
-  {
-    icon: faCircleExclamation,
-    title: 'Vulnerability Assessment and Penetration Testing (VAPT)',
-    description: 'A complete solution for managing HR, payroll, and loan processing.',
-  },
-  {
-    icon: faComputer,
-    title: 'System Integration',
-    description: 'A complete solution for managing HR, payroll, and loan processing.',
-  },
-  {
-    icon: faPenNib,
-    title: 'Graphic Design',
-    description: '',
-  },
-  {
-    icon: faUnity,
-    title: '3D Modeling',
-    description: '',
-  },
+const services: Service[][] = [
+  [
+    {
+      icon: faSchool,
+      title: 'Artificial Intelligence (AI) Tools',
+      description: 'A complete solution for managing schools, colleges, and universities.',
+      categories: ['AI Marketing'],
+    },
+    {
+      icon: faCashRegister,
+      title: 'Graphic Design and Visualization',
+      description: 'Integrate payment gateways to your website or mobile app.',
+      categories: [
+        'Branding and Logo design',
+        'Packaging Design',
+        'Web Design',
+        '3D models Architectural Design',
+      ],
+    },
+    {
+      icon: faBriefcaseMedical,
+      title: 'Financial',
+      description:
+        'A complete solution for managing hospitals, clinics, and other healthcare facilities.',
+      categories: [
+        'Web Portal and Payment Solutions',
+        'Payment Gateway Integration',
+        'Payroll and Accounting System',
+      ],
+    },
+  ],
+  [
+    {
+      icon: faCloud,
+      title: 'Cybersecurity',
+      description:
+        'Host your website, web application, or mobile app on the cloud for better performance and scalability.',
+      categories: ['Vulnerability Assessment and Penetration Testing (VAPT)'],
+    },
+    {
+      icon: faBuildingUser,
+      title: 'Cloud Hosting',
+      description: 'A complete solution for managing engineering and construction projects.',
+      categories: ['Azure', 'AWS'],
+    },
+    {
+      icon: faUsersLine,
+      title: 'Enterprise Resource Planning (ERP)',
+      description: 'A complete solution for managing HR, payroll, and loan processing.',
+      categories: ['Food and Beverage', 'Engineering Construction', 'School Information System'],
+    },
+  ],
 ]
 
 export function WhatWeDo() {
@@ -103,73 +86,24 @@ export function WhatWeDo() {
         </div>
 
         <div className="mt-12 grid lg:mt-16 lg:grid-cols-3 lg:divide-y">
-          <div className="col-span-full grid divide-y border-b lg:grid-cols-3 lg:divide-x lg:divide-y-0 lg:border-b-0">
-            {services.slice(0, 3).map((service, index) => (
-              <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={index}>
-                <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
-                  <FontAwesomeIcon
-                    className="size-5 text-brand-600 lg:size-6"
-                    icon={service.icon}
-                  />
+          {services.map((service, index) => (
+            <div
+              className="col-span-full grid divide-y not-first:border-t lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+              key={index}
+            >
+              {service.map((item, i) => (
+                <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={i}>
+                  <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
+                    <FontAwesomeIcon className="size-5 text-brand-600 lg:size-6" icon={item.icon} />
+                  </div>
+                  <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{item.title}</h3>
+                  <div className="mt-1 text-pretty text-gray-600 lg:mt-2">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  </div>
                 </div>
-                <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
-                <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="col-span-full grid divide-y border-b lg:grid-cols-3 lg:divide-x lg:divide-y-0 lg:border-b-0">
-            {services.slice(3, 6).map((service, index) => (
-              <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={index}>
-                <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
-                  <FontAwesomeIcon
-                    className="size-5 text-brand-600 lg:size-6"
-                    icon={service.icon}
-                  />
-                </div>
-                <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
-                <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="col-span-full grid divide-y border-b lg:grid-cols-3 lg:divide-x lg:divide-y-0 lg:border-b-0">
-            {services.slice(6, 9).map((service, index) => (
-              <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={index}>
-                <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
-                  <FontAwesomeIcon
-                    className="size-5 text-brand-600 lg:size-6"
-                    icon={service.icon}
-                  />
-                </div>
-                <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
-                <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="col-span-full grid divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0">
-            {services.slice(9, 12).map((service, index) => (
-              <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={index}>
-                <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
-                  <FontAwesomeIcon
-                    className="size-5 text-brand-600 lg:size-6"
-                    icon={service.icon}
-                  />
-                </div>
-                <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{service.title}</h3>
-                <p className="mt-1 text-pretty text-gray-600 lg:mt-2">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                </p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ))}
         </div>
       </Container>
     </Section>

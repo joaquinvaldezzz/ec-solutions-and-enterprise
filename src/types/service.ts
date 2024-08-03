@@ -4,4 +4,5 @@ export interface Service {
   icon: IconProp
   title: string
   description: string
+  categories?: string[]
 }
