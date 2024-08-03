@@ -6,5 +6,5 @@ description: A Cloud Services and Health Emergency Information System that manag
 tags: Product, Software Development, Design
 authorsPicture: /images/profiles-pictures/joaquin-valdez.jpg
 author: John Joaquin Valdez
-publishedAt: 2024-08-01
+publishedAt: 2024-07-28
 ---

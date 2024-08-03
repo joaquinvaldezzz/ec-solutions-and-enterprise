@@ -6,7 +6,7 @@ description: A School Information System that manages student records, grades, a
 tags: Design, Research, Presentation
 authorsPicture: /images/profiles-pictures/joaquin-valdez.jpg
 author: John Joaquin Valdez
-publishedAt: 2024-07-29
+publishedAt: 2024-07-31
 ---
 
 # Overview

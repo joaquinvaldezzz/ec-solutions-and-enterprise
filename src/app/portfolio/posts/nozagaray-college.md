@@ -6,7 +6,7 @@ description: A School Information System that manages student records, grades, a
 tags: Software Development, Product, Saas
 authorsPicture: /images/profiles-pictures/edilberto-chua-jr.jpg
 author: Edilberto N. Chua, Jr.
-publishedAt: 2024-07-28
+publishedAt: 2024-08-01
 ---
 
 # EC Solutions and Enterprise

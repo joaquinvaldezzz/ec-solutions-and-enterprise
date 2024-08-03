@@ -50,7 +50,7 @@ export function OurClients() {
                       />
                     </div>
                     <div className="mt-5">
-                      <div className="text-balance text-sm font-semibold text-brand-700">
+                      <div className="line-clamp-1 text-balance text-sm font-semibold text-brand-700">
                         {post.metadata.project}
                       </div>
                       <div className="mt-2 flex items-start justify-between gap-4">
