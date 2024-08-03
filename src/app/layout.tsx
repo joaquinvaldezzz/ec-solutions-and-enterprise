@@ -1,6 +1,7 @@
 import { type Metadata } from 'next'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Footer } from '@/components/ui/footer'
 import { Header } from '@/components/ui/header'
@@ -49,6 +50,7 @@ export default function Layout({
         {children}
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
