@@ -98,7 +98,7 @@ export function WhatWeDo() {
                     {item.categories?.map((category, x) => (
                       <li className="text-pretty" key={x}>
                         <Button hierarchy="link-gray" asChild>
-                          <Link href={`/portfolio/?view=${slugify(category)}`}>{category}</Link>
+                          <Link href={`/portfolio/?filter=${slugify(category)}`}>{category}</Link>
                         </Button>
                       </li>
                     ))}
