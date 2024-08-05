@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 interface Metadata {
+  featured?: boolean | string
   project: string
   image: string
   name: string

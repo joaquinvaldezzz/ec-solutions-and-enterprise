@@ -1,4 +1,5 @@
 ---
+featured: true
 project: Inventory, Payroll, and Accounting System
 image: /images/logos/escobars-steakhouse.jpg
 name: Escobar's Steakhouse
