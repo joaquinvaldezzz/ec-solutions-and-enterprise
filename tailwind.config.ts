@@ -56,6 +56,7 @@ const config: Config = {
         checked: 'state="checked"',
         open: 'state="open"',
         closed: 'state="closed"',
+        active: 'state="active"',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
