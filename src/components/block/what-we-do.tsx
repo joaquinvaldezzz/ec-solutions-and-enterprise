@@ -1,27 +1,30 @@
+import Link from 'next/link'
 import {
-  faBriefcaseMedical,
-  faBuildingUser,
-  faCashRegister,
+  faBrain,
   faCloud,
-  faSchool,
+  faCoins,
+  faPenNib,
+  faShieldHalved,
   faUsersLine,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { type Service } from '@/types/service'
+import { slugify } from '@/lib/utils'
 
+import { Button } from '../ui/button'
 import { Container, Section } from '../ui/container'
 
 const services: Service[][] = [
   [
     {
-      icon: faSchool,
+      icon: faBrain,
       title: 'Artificial Intelligence (AI) Tools',
-      description: 'A complete solution for managing schools, colleges, and universities.',
+      description: 'A complete solution for managing schools and educational institutions.',
       categories: ['AI Marketing'],
     },
     {
-      icon: faCashRegister,
+      icon: faPenNib,
       title: 'Graphic Design and Visualization',
       description: 'Integrate payment gateways to your website or mobile app.',
       categories: [
@@ -32,7 +35,7 @@ const services: Service[][] = [
       ],
     },
     {
-      icon: faBriefcaseMedical,
+      icon: faCoins,
       title: 'Financial',
       description:
         'A complete solution for managing hospitals, clinics, and other healthcare facilities.',
@@ -45,14 +48,14 @@ const services: Service[][] = [
   ],
   [
     {
-      icon: faCloud,
+      icon: faShieldHalved,
       title: 'Cybersecurity',
       description:
         'Host your website, web application, or mobile app on the cloud for better performance and scalability.',
       categories: ['Vulnerability Assessment and Penetration Testing (VAPT)'],
     },
     {
-      icon: faBuildingUser,
+      icon: faCloud,
       title: 'Cloud Hosting',
       description: 'A complete solution for managing engineering and construction projects.',
       categories: ['Azure', 'AWS'],
@@ -69,13 +72,9 @@ const services: Service[][] = [
 export function WhatWeDo() {
   return (
     <Section id="our-services">
-      <Container className="text-center">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="flex items-center justify-center gap-2 font-medium uppercase tracking-wide text-brand-700">
-            <div className="h-px w-16 border-t" />
-            Our Services
-            <div className="h-px w-16 border-t" />
-          </h2>
+      <Container className="">
+        <div className="max-w-3xl">
+          <h2 className="font-semibold text-brand-700">Our Services</h2>
           <p className="mt-3 text-pretty text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
             What we do
           </p>
@@ -85,21 +84,25 @@ export function WhatWeDo() {
           </p>
         </div>
 
-        <div className="mt-12 grid lg:mt-16 lg:grid-cols-3 lg:divide-y">
+        <div className="mt-12 grid lg:mt-16 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div
-              className="col-span-full grid divide-y not-first:border-t lg:grid-cols-3 lg:divide-x lg:divide-y-0"
-              key={index}
-            >
+            <div className="col-span-full grid lg:grid-cols-3" key={index}>
               {service.map((item, i) => (
-                <div className="flex flex-col items-center py-5 lg:px-4 lg:py-8" key={i}>
+                <div className="flex flex-col py-5 lg:px-4 lg:py-8" key={i}>
                   <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
                     <FontAwesomeIcon className="size-5 text-brand-600 lg:size-6" icon={item.icon} />
                   </div>
                   <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{item.title}</h3>
-                  <div className="mt-1 text-pretty text-gray-600 lg:mt-2">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  </div>
+                  <div className="mt-1 text-pretty text-gray-600 lg:mt-2">{item.description}</div>
+                  <ul className="ml-4 mt-5 list-disc space-y-2 text-gray-600">
+                    {item.categories?.map((category, x) => (
+                      <li className="text-pretty" key={x}>
+                        <Button hierarchy="link-gray" asChild>
+                          <Link href={`/portfolio/?view=${slugify(category)}`}>{category}</Link>
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
