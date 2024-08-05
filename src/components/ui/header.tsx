@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import * as Dialog from '@radix-ui/react-dialog'
 
@@ -30,6 +31,7 @@ const links: NavItem[] = [
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
+  const pathname = usePathname()
 
   return (
     <Dialog.Root open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -62,22 +64,26 @@ export function Header() {
             </Button>
           </Dialog.Trigger>
 
-          <nav className="hidden lg:flex lg:items-center lg:gap-8">
-            {links.map((link, index) => (
-              <Button
-                size="lg"
-                hierarchy="link-gray"
-                asChild
-                onClick={(event) => {
-                  event.preventDefault()
-                  document.getElementById(link.url.slice(1))?.scrollIntoView({ behavior: 'smooth' })
-                }}
-                key={index}
-              >
-                <Link href={link.url}>{link.title}</Link>
-              </Button>
-            ))}
-          </nav>
+          {pathname === '/' && (
+            <nav className="hidden lg:flex lg:items-center lg:gap-8">
+              {links.map((link, index) => (
+                <Button
+                  size="lg"
+                  hierarchy="link-gray"
+                  asChild
+                  onClick={(event) => {
+                    event.preventDefault()
+                    document
+                      .getElementById(link.url.slice(1))
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  key={index}
+                >
+                  <Link href={link.url}>{link.title}</Link>
+                </Button>
+              ))}
+            </nav>
+          )}
         </div>
       </header>
 
