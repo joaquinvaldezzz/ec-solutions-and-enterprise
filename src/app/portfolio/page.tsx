@@ -14,12 +14,18 @@ export const metadata: Metadata = {
   description: 'Resources and insights',
 }
 
-export default function Page() {
+export default function Page({
+  searchParams,
+}: {
+  searchParams: Record<string, string | string[] | undefined>
+}) {
   const featuredPost = getPosts().filter((post) => post.metadata.featured)[0]
   const allPosts = getPosts()
   const categories = Array.from(
     new Set(allPosts.map((post) => post.metadata.tags.split(', ')).flat()),
   ).sort()
+
+  console.log(searchParams)
 
   return (
     <main className="mt-header-height">
