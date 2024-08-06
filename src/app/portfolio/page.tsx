@@ -175,13 +175,21 @@ export default function Page({
                   )
                   .map((post, index) => (
                     <Link href={`/portfolio/${post.slug}`} key={index}>
-                      <div className="flex h-60 items-center justify-center rounded-2xl bg-brand-50">
-                        <Image
+                      <div className="relative flex h-60 items-center justify-center overflow-hidden rounded-2xl bg-brand-50">
+                        {/* <Image
                           className="size-32 rounded-full object-contain ring-6 ring-white lg:size-40 lg:ring-8"
                           src={post.metadata.image}
                           alt={post.metadata.name}
                           width={160}
                           height={160}
+                        /> */}
+                        <Image
+                          className="object-cover"
+                          src={PlaceholderImage}
+                          alt={post.metadata.name}
+                          fill
+                          sizes="(max-width: 1024px) 50vw, 100vw"
+                          priority
                         />
                       </div>
                       <div className="mt-5">

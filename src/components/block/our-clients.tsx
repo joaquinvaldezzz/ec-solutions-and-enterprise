@@ -8,6 +8,8 @@ import { Badge } from '../ui/badge'
 import { Button } from '../ui/button'
 import { Container, Section } from '../ui/container'
 
+import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
+
 export function OurClients() {
   const posts = getPosts()
 
@@ -38,13 +40,14 @@ export function OurClients() {
               .slice(0, 3)
               .map((post, index) => (
                 <Link href={`/portfolio/${post.slug}`} key={index}>
-                  <div className="flex h-60 items-center justify-center rounded-2xl bg-brand-50">
+                  <div className="relative flex h-60 items-center justify-center overflow-hidden rounded-2xl bg-brand-50">
                     <Image
-                      className="size-32 rounded-full object-contain ring-6 ring-white lg:size-40 lg:ring-8"
-                      src={post.metadata.image}
+                      className="object-cover"
+                      src={PlaceholderImage}
                       alt={post.metadata.name}
-                      width={160}
-                      height={160}
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 100vw"
+                      priority
                     />
                   </div>
                   <div className="mt-5">
