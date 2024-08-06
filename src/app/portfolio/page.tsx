@@ -9,6 +9,8 @@ import { Container } from '@/components/ui/container'
 
 import { formatDate, getPosts } from './utils'
 
+import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
+
 export const metadata: Metadata = {
   title: 'All of our works',
   description: 'Resources and insights',
@@ -49,7 +51,7 @@ export default function Page({
             <div className="relative h-60 overflow-hidden rounded-2xl">
               <Image
                 className="object-cover"
-                src={featuredPost.metadata.authorsPicture}
+                src={PlaceholderImage}
                 alt={featuredPost.metadata.name}
                 fill
                 sizes="(min-width: 640px) 640px, 100vw"
@@ -88,13 +90,13 @@ export default function Page({
           >
             <Image
               className="object-cover"
-              src={featuredPost.metadata.authorsPicture}
+              src={PlaceholderImage}
               alt={featuredPost.metadata.name}
               fill
               sizes="(min-width: 640px) 640px, 100vw"
               priority
             />
-            <div className="relative bg-gradient-to-t from-black pt-24">
+            <div className="relative bg-gradient-to-t from-black/40 pt-24">
               <div className="p-8 text-white">
                 <h2 className="text-display-xs font-semibold">{featuredPost.metadata.name}</h2>
                 <p className="mt-2">{featuredPost.metadata.description}</p>
