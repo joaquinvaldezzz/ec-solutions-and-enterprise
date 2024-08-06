@@ -28,6 +28,17 @@ export const metadata: Metadata = {
     siteName: 'EC Solutions and Enterprise',
     locale: 'en_US',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 const inter = localFont({
