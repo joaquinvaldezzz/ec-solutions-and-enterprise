@@ -86,7 +86,7 @@ export function ContactUs() {
   }
 
   return (
-    <Section className="bg-brand-25" id="contact-us">
+    <Section id="contact-us">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
