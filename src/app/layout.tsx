@@ -8,6 +8,8 @@ import { Header } from '@/components/ui/header'
 
 import '@/styles/main.css'
 
+import { baseUrl } from './sitemap'
+
 export const metadata: Metadata = {
   title: {
     default: 'EC Solutions and Enterprise',
@@ -15,7 +17,7 @@ export const metadata: Metadata = {
   },
   description:
     'EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.',
-  metadataBase: new URL('https://ecsae.vercel.app'),
+  metadataBase: new URL(baseUrl),
   openGraph: {
     title: {
       default: 'EC Solutions and Enterprise',
