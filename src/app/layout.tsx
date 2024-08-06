@@ -9,12 +9,18 @@ import { Header } from '@/components/ui/header'
 import '@/styles/main.css'
 
 export const metadata: Metadata = {
-  title: 'EC Solutions and Enterprise',
+  title: {
+    default: 'EC Solutions and Enterprise',
+    template: '%s | EC Solutions and Enterprise',
+  },
   description:
     'EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.',
   metadataBase: new URL('https://ecsae.vercel.app'),
   openGraph: {
-    title: 'EC Solutions and Enterprise',
+    title: {
+      default: 'EC Solutions and Enterprise',
+      template: '%s | EC Solutions and Enterprise',
+    },
     description:
       'EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.',
     siteName: 'EC Solutions and Enterprise',
