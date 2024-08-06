@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowLeft, ArrowRight, BookOpen } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { Container, Section } from '@/components/ui/container'
@@ -37,6 +37,20 @@ export default function NotFound() {
               <ArrowLeft className="size-5" />
               Go back
             </Button>
+          </div>
+
+          <div className="mt-16 grid gap-4 lg:grid-cols-3 lg:gap-8">
+            <div className="bg-gray-50 p-5 lg:col-start-2 lg:p-6">
+              <BookOpen className="size-6 stroke-brand-600" />
+              <h2 className="mt-8 text-lg font-semibold lg:mt-12 lg:text-xl">Our portfolio</h2>
+              <p className="mt-1 text-gray-600 lg:mt-2">Read the latest posts on our blog.</p>
+              <Button className="mt-4 lg:mt-5" size="lg" hierarchy="link-color" asChild>
+                <Link href="/portfolio">
+                  View latest post
+                  <ArrowRight className="size-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </Container>
       </Section>
