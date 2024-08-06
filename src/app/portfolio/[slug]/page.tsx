@@ -1,5 +1,6 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { determineBadgeColor } from '@/lib/utils'
@@ -8,6 +9,8 @@ import { Container, Section } from '@/components/ui/container'
 import { CustomMDX } from '@/components/ui/mdx'
 
 import { formatDate, getPosts } from '../utils'
+
+import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
 
 export async function generateStaticParams() {
   const posts = getPosts()
@@ -38,6 +41,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
 export default function Page({ params }: { params: { slug: string } }) {
   const post = getPosts().find((item) => item.slug === params.slug)
+  const allPosts = getPosts()
 
   if (post == null) {
     notFound()
@@ -100,6 +104,61 @@ export default function Page({ params }: { params: { slug: string } }) {
           </article>
         </Container>
       </section>
+
+      <Section>
+        <Container>
+          <h2 className="text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
+            Latest writings
+          </h2>
+          <p className="mt-4 text-lg text-gray-600 lg:mt-5">
+            The latest news, technologies, and resources from our team.
+          </p>
+        </Container>
+
+        <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 lg:mt-16 lg:gap-8 xl:px-8">
+          {allPosts
+            .filter((item) => item.slug !== post.slug)
+            .sort((a, z) =>
+              new Date(a.metadata.publishedAt) < new Date(z.metadata.publishedAt) ? -1 : 1,
+            )
+            .map((item, index) => (
+              <Link
+                className="w-80 shrink-0 snap-center lg:w-96"
+                href={`/portfolio/${item.slug}`}
+                key={index}
+              >
+                <div className="relative flex h-60 items-center justify-center overflow-hidden rounded-2xl bg-brand-50">
+                  <Image
+                    className="object-cover"
+                    src={PlaceholderImage}
+                    alt={item.metadata.name}
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 100vw"
+                    priority
+                  />
+                </div>
+                <div className="mt-5">
+                  <div className="line-clamp-1 text-balance text-sm font-semibold text-brand-700">
+                    {item.metadata.project}
+                  </div>
+                  <div className="mt-2 flex items-start justify-between gap-4">
+                    <h3 className="text-xl font-semibold lg:text-display-xs">
+                      {item.metadata.name}
+                    </h3>
+                  </div>
+                  <p className="mt-2 line-clamp-2 text-gray-600">{item.metadata.description}</p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {item.metadata.tags.split(', ').map((tag, i) => (
+                      <Badge size="md" color={determineBadgeColor(tag)} key={i}>
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </Link>
+            ))}
+        </div>
+      </Section>
     </main>
   )
 }
