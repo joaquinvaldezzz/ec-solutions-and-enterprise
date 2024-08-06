@@ -1,13 +1,13 @@
 import { type MetadataRoute } from 'next'
 
+import { baseUrl } from './sitemap'
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
-      // disallow: '/private/',
     },
-    // sitemap: 'https://acme.com/sitemap.xml',
-    host: 'https://ecsae.vercel.app',
+    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }
