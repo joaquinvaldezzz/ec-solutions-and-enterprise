@@ -64,7 +64,7 @@ const products: NavItem[] = [
 
 export function Footer() {
   return (
-    <footer className="py-12">
+    <footer className="py-12 lg:pt-16">
       <Container className="grid gap-12 lg:grid-cols-2">
         <div>
           <dl className="grid grid-cols-2 gap-8">
