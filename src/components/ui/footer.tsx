@@ -7,6 +7,30 @@ import { type NavItem } from '@/types/nav'
 import { Button } from './button'
 import { Container } from './container'
 
+interface CompanyInformation {
+  label: string
+  value: string
+}
+
+const companyInformation: CompanyInformation[] = [
+  {
+    label: 'Mobile number',
+    value: '+63 917 551 0320',
+  },
+  {
+    label: 'Office address',
+    value: 'Quezon City',
+  },
+  {
+    label: 'Date established',
+    value: 'August 18, 2011',
+  },
+  {
+    label: 'Company TIN',
+    value: '180-973-971',
+  },
+]
+
 const products: NavItem[] = [
   {
     url: '#',
@@ -38,7 +62,18 @@ export function Footer() {
   return (
     <footer className="py-12">
       <Container className="grid gap-12 lg:grid-cols-2">
-        <div>{/* Company logo goes here */}</div>
+        <div>
+          <dl className="grid grid-cols-2 gap-8">
+            {companyInformation.map((info, index) => (
+              <div>
+                <dt className="text-sm font-semibold text-gray-500" key={index}>
+                  {info.label}
+                </dt>
+                <dd className="mt-4 font-semibold slashed-zero text-gray-600">{info.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
 
         <nav className="grid grid-cols-2 gap-8 md:grid-cols-3">
           <div>
