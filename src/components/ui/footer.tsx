@@ -71,7 +71,15 @@ export function Footer() {
             {companyInformation.map((info, index) => (
               <div key={index}>
                 <dt className="text-sm font-semibold text-gray-500">{info.label}</dt>
-                <dd className="mt-4 font-semibold slashed-zero text-gray-600">{info.value}</dd>
+                <dd className="mt-4 font-semibold slashed-zero text-gray-600">
+                  {info.label.includes('address') ? (
+                    <address className="not-italic">{info.value}</address>
+                  ) : info.label.includes('established') ? (
+                    <time dateTime={String(new Date(info.value).toISOString())}>{info.value}</time>
+                  ) : (
+                    info.value
+                  )}
+                </dd>
               </div>
             ))}
           </dl>
