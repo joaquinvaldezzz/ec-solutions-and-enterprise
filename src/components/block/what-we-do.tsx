@@ -7,10 +7,9 @@ import {
   faShieldHalved,
   faUsersLine,
 } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Laptop } from 'lucide-react'
 
 import { type Service } from '@/types/service'
-import { slugify } from '@/lib/utils'
 
 import { Button } from '../ui/button'
 import { Container, Section } from '../ui/container'
@@ -71,42 +70,36 @@ const services: Service[][] = [
 
 export function WhatWeDo() {
   return (
-    <Section id="our-services">
-      <Container className="">
-        <div className="max-w-3xl">
-          <h2 className="font-semibold text-brand-700">Our Services</h2>
-          <p className="mt-3 text-pretty text-display-sm font-semibold text-gray-900 lg:text-display-md lg:tracking-tight">
-            What we do
-          </p>
-          <p className="mt-4 text-pretty text-lg text-gray-600 lg:mt-5 lg:text-xl">
-            Our clientele ranges from midsize to large companies. Our core expertise is open-source
-            platforms (PHP, Python, and MySQL). Our domain of expertise ranges from:
-          </p>
-        </div>
-
-        <div className="mt-12 grid lg:mt-16 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <div className="col-span-full grid lg:grid-cols-3" key={index}>
-              {service.map((item, i) => (
-                <div className="flex flex-col py-5 lg:px-4 lg:py-8" key={i}>
-                  <div className="flex size-10 items-center justify-center rounded-full border-brand-50 bg-brand-100 ring-6 ring-brand-50 lg:size-12 lg:ring-8">
-                    <FontAwesomeIcon className="size-5 text-brand-600 lg:size-6" icon={item.icon} />
-                  </div>
-                  <h3 className="mt-4 text-pretty text-lg font-semibold lg:mt-5">{item.title}</h3>
-                  <div className="mt-1 text-pretty text-gray-600 lg:mt-2">{item.description}</div>
-                  <ul className="ml-4 mt-5 list-disc space-y-2 text-gray-600">
-                    {item.categories?.map((category, x) => (
-                      <li className="text-pretty" key={x}>
-                        <Button hierarchy="link-gray" asChild>
-                          <Link href={`/portfolio/?filter=${slugify(category)}`}>{category}</Link>
-                        </Button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+    <Section>
+      <Container>
+        <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
+          <div className="lg:w-[22.5rem] lg:shrink-0">
+            <div className="flex size-12 items-center justify-center rounded-full border-4 border-brand-50 bg-brand-100 ring-4 ring-brand-50">
+              <Laptop className="size-6 text-brand-600" />
             </div>
-          ))}
+            <h2 className="mt-6 text-display-sm font-semibold">Our Services</h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Our clientele ranges from midsize to large companies. Our core expertise is
+              open-source platforms (PHP, Python, and MySQL). Our domain of expertise ranges from:
+            </p>
+          </div>
+          <div className="grid gap-y-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8">
+            {services.flat().map((service, index) => (
+              <div className="text-pretty" key={index}>
+                <h3 className="text-lg font-semibold">{service.title}</h3>
+                <p className="mt-1 text-gray-600">{service.description}</p>
+                <ul className="ml-4 mt-2 flex list-disc flex-col gap-1 text-gray-600">
+                  {service.categories?.map((category, i) => (
+                    <li key={i}>
+                      <Button hierarchy="link-gray" asChild>
+                        <Link href="#">{category}</Link>
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </Section>
