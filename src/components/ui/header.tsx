@@ -38,7 +38,7 @@ export function Header() {
       <header className="flex h-header-height items-center">
         <div className="container flex items-center justify-between">
           <Link className="relative" href="/" aria-label="Home">
-            EC Solutions and Enterprise
+            {/* Company logo goes here */}
           </Link>
 
           <Dialog.Trigger asChild>
@@ -59,7 +59,6 @@ export function Header() {
             <nav className="hidden lg:flex lg:items-center lg:gap-8">
               {links.map((link, index) => (
                 <Button
-                  size="lg"
                   hierarchy="link-gray"
                   asChild
                   onClick={(event) => {
