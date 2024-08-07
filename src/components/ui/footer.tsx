@@ -14,6 +14,10 @@ interface CompanyInformation {
 
 const companyInformation: CompanyInformation[] = [
   {
+    label: 'Number of employees',
+    value: '5 to 10',
+  },
+  {
     label: 'Mobile number',
     value: '+63 917 551 0320',
   },
@@ -65,10 +69,8 @@ export function Footer() {
         <div>
           <dl className="grid grid-cols-2 gap-8">
             {companyInformation.map((info, index) => (
-              <div>
-                <dt className="text-sm font-semibold text-gray-500" key={index}>
-                  {info.label}
-                </dt>
+              <div key={index}>
+                <dt className="text-sm font-semibold text-gray-500">{info.label}</dt>
                 <dd className="mt-4 font-semibold slashed-zero text-gray-600">{info.value}</dd>
               </div>
             ))}
