@@ -113,6 +113,9 @@ export function Header() {
                   key={index}
                   onClick={(event) => {
                     setIsMobileMenuOpen(false)
+
+                    if (link.url.startsWith('/')) return
+
                     event.preventDefault()
                     document
                       .getElementById(link.url.slice(1))
