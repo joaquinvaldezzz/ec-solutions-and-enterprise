@@ -80,19 +80,21 @@ export function WhatWeDo() {
             <h2 className="mt-6 text-display-sm font-semibold">Our Services</h2>
             <p className="mt-4 text-lg text-gray-600">
               Our clientele ranges from midsize to large companies. Our core expertise is
-              open-source platforms (PHP, Python, and MySQL). Our domain of expertise ranges from:
+              open-source platforms. Our domain of expertise ranges from:
             </p>
           </div>
-          <div className="grid gap-y-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8">
+          <div className="grid gap-y-10 md:grid-cols-2 lg:gap-x-16 lg:gap-y-8">
             {services.flat().map((service, index) => (
               <div className="text-pretty" key={index}>
-                <h3 className="text-lg font-semibold">{service.title}</h3>
-                <p className="mt-1 text-gray-600">{service.description}</p>
-                <ul className="ml-4 mt-2 flex list-disc flex-col gap-1 text-gray-600">
+                <h3 className="text-lg font-semibold lg:text-xl">{service.title}</h3>
+                <p className="mt-1 text-gray-600 lg:mt-2">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit voluptas sunt totam.
+                </p>
+                <ul className="ml-4 mt-4 flex list-disc flex-col gap-1">
                   {service.categories?.map((category, i) => (
-                    <li key={i}>
+                    <li className="marker:text-gray-300" key={i}>
                       <Button hierarchy="link-gray" asChild>
-                        <Link href="#">{category}</Link>
+                        <Link href="/portfolio">{category}</Link>
                       </Button>
                     </li>
                   ))}
