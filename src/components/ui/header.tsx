@@ -35,7 +35,7 @@ export function Header() {
 
   return (
     <Dialog.Root open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-      <header className="flex h-header-height items-center">
+      <header className="fixed inset-x-0 top-0 z-50 flex h-header-height w-full items-center bg-white/80 backdrop-blur-xl">
         <div className="container flex items-center justify-between">
           <Link className="relative" href="/" aria-label="Home">
             {/* Company logo goes here */}
