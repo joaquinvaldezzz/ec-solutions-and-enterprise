@@ -1,70 +1,203 @@
-import Image, { type StaticImageData } from 'next/image'
+import { type FC, type SVGProps } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import Marquee from 'react-fast-marquee'
 
+import { determineBadgeColor } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
 import { Container, Section } from '@/components/ui/container'
-import { ContactUs } from '@/components/block/contact-us'
-import { OurClients } from '@/components/block/our-clients'
-import { WhatWeDo } from '@/components/block/what-we-do'
-import { WhoWeAre } from '@/components/block/who-we-are'
+import { AboutUs } from '@/components/block/about-us'
+import { OurServices } from '@/components/block/our-services'
+import { getPosts } from '@/app/portfolio/utils'
 
 import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
+import CSS3 from '@/public/images/logos/css3.svg'
+import DepartmentOfHealthLogotype from '@/public/images/logos/department-of-health-logotype.png'
+import DreamRiserBuildersInc from '@/public/images/logos/dream-riser-builders-inc.jpg'
+import Git from '@/public/images/logos/git.svg'
+import HTML5 from '@/public/images/logos/html5.svg'
+import Javascript from '@/public/images/logos/javascript.svg'
+import MicrosoftAzure from '@/public/images/logos/microsoft-azure.svg'
+import MySQL from '@/public/images/logos/my-sql.svg'
+import OurLadyOfFatimaUniversityLogotype from '@/public/images/logos/our-lady-of-fatima-university-logotype.png'
+import Php from '@/public/images/logos/php.svg'
+import Python from '@/public/images/logos/python.svg'
 
-const images: StaticImageData[][] = [
-  [PlaceholderImage, PlaceholderImage, PlaceholderImage],
-  [PlaceholderImage, PlaceholderImage, PlaceholderImage],
-  [PlaceholderImage, PlaceholderImage],
-  [PlaceholderImage],
+interface Technology {
+  logo: FC<SVGProps<SVGElement>>
+  name: string
+}
+
+const technologies: Technology[] = [
+  {
+    logo: HTML5,
+    name: 'HTML5',
+  },
+  {
+    logo: CSS3,
+    name: 'CSS3',
+  },
+  {
+    logo: Javascript,
+    name: 'JavaScript',
+  },
+  {
+    logo: Php,
+    name: 'PHP',
+  },
+  {
+    logo: Python,
+    name: 'Python',
+  },
+  {
+    logo: MySQL,
+    name: 'MySQL',
+  },
+  {
+    logo: Git,
+    name: 'git',
+  },
+  {
+    logo: MicrosoftAzure,
+    name: 'Microsoft Azure',
+  },
 ]
 
-export default function Home() {
+const logotypes = [
+  DepartmentOfHealthLogotype,
+  OurLadyOfFatimaUniversityLogotype,
+  DreamRiserBuildersInc,
+]
+
+export default function Page() {
+  const posts = getPosts()
+
   return (
     <div>
-      <Section className="relative overflow-hidden border-b pb-0 pt-[calc(theme(spacing.16)+var(--header-height))] lg:pb-16 lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
-        <Container className="relative">
-          <div className="md:flex md:flex-col md:items-center md:text-center">
-            <h1 className="text-balance text-display-md font-medium tracking-tight text-gray-900 lg:text-display-xl lg:tracking-tight">
-              Partner with us and experience the future of technology today
-            </h1>
-
-            <p className="mt-4 max-w-120 text-lg text-gray-600 md:text-balance lg:mt-6 lg:text-xl">
-              Become one of the many businesses transforming their operations with our expertise.
-            </p>
-          </div>
-
-          <div className="relative -mx-4 mt-[calc(theme(spacing.16)-2.375rem)] h-[22.375rem] overflow-hidden pt-[2.375rem] md:pt-48 lg:mx-0 lg:mt-24 lg:h-120 lg:rounded-2xl">
-            <div className="absolute inset-x-0 bottom-0 h-80 w-full bg-gray-100 lg:h-120" />
-            <div className="mt-[-2.375rem] flex rotate-[30deg] flex-col gap-2.5 *:shrink-0 md:-mt-28 md:ml-32 lg:-ml-96 lg:-mt-64 lg:gap-4">
-              {images.map((row, index) => (
-                <div
-                  className="flex gap-2.5 *:shrink-0 odd:pl-[7.25rem] even:pl-5 lg:gap-4 lg:odd:pl-[40.25rem] lg:even:pl-[30.25rem]"
-                  key={index}
-                >
-                  {row.map((src, i) => (
-                    <div
-                      className="relative h-28 w-[11.625rem] overflow-hidden rounded-xl lg:h-[11.875rem] lg:w-[19.75rem]"
-                      key={i}
-                    >
-                      <Image
-                        className="object-cover"
-                        src={src}
-                        alt=""
-                        fill
-                        sizes="(max-width: 1024px) 50vw, 100vw"
-                        priority
-                        placeholder="blur"
-                      />
-                    </div>
-                  ))}
+      <Section className="pt-[calc(theme(spacing.16)+var(--header-height))] lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
+        <Container>
+          <h1 className="max-w-5xl text-display-md font-medium tracking-tight lg:text-display-xl">
+            We design digital experiences that create more happy in the world
+          </h1>
+          <p className="mt-4 max-w-[40rem] text-lg text-gray-600 lg:mt-6 lg:text-xl">
+            — Our agency specializes in crafting simple, functional, and stunning solutions using
+            the latest technologies.
+          </p>
+          <div className="mt-8 flex max-w-[40rem] flex-wrap gap-x-8 gap-y-4 lg:mt-12">
+            {technologies.map((technology, index) => {
+              const Tag = technology.logo
+              return (
+                <div className="flex items-center gap-2.5" key={index}>
+                  <Tag className="size-8" />
+                  <p className="text-gray-600">{technology.name}</p>
                 </div>
+              )
+            })}
+          </div>
+          <Image
+            className="mt-16 h-60 object-cover lg:h-[32.25rem]"
+            src={PlaceholderImage}
+            alt="Placeholder image"
+            priority
+          />
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <h2 className="font-medium text-gray-600">Join 4,000+ companies already growing</h2>
+          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 lg:gap-y-6">
+            <Marquee autoFill gradient gradientWidth="12rem">
+              {logotypes.map((logotype, index) => (
+                <Image className="h-9 w-auto last:mr-8 lg:h-12" src={logotype} alt="" key={index} />
               ))}
-            </div>
+            </Marquee>
           </div>
         </Container>
       </Section>
 
-      <WhoWeAre />
-      <WhatWeDo />
-      <OurClients />
-      <ContactUs />
+      <Section id="our-clients">
+        <Container>
+          <div className="lg:flex lg:justify-between">
+            <div className="max-w-3xl text-pretty">
+              <h2 className="text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
+                We&apos;ve helped a few of these local organizations and businesses
+              </h2>
+              <p className="mt-4 text-lg text-gray-600 lg:mt-5 lg:text-xl">
+                Empowering your Tech Journey with Expert Tips, Best Practices, and the latest IT
+                trends
+              </p>
+            </div>
+
+            <div className="hidden lg:block">
+              <Button size="xl" asChild>
+                <Link href="/portfolio">View all clients</Link>
+              </Button>
+            </div>
+          </div>
+          <div className="mt-12 grid gap-y-12 lg:grid-cols-3 lg:gap-x-8">
+            {posts
+              .sort((a, z) =>
+                new Date(a.metadata.publishedAt) < new Date(z.metadata.publishedAt) ? -1 : 1,
+              )
+              .slice(0, 3)
+              .map((post, index) => (
+                <Link href={`/portfolio/${post.slug}`} key={index}>
+                  <Image
+                    className="size-24 rounded-full"
+                    src={post.metadata.image}
+                    alt={post.metadata.name}
+                    width={96}
+                    height={96}
+                  />
+                  <div className="mt-5 text-pretty">
+                    <div className="text-balance text-sm font-semibold text-brand-700">
+                      {post.metadata.name}
+                    </div>
+                    <div className="mt-2 flex items-start justify-between gap-4">
+                      <h3 className="text-xl font-semibold lg:text-display-xs">
+                        {post.metadata.project}
+                      </h3>
+                    </div>
+                    <p className="mt-2 line-clamp-4 text-gray-600">{post.metadata.description}</p>
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {post.metadata.tags.split(', ').map((tag, i) => (
+                        <Badge color={determineBadgeColor(tag)} key={i}>
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+          </div>
+          <div className="mt-12 flex flex-col lg:hidden">
+            <Button size="xl" asChild>
+              <Link href="/portfolio">View all clients</Link>
+            </Button>
+          </div>
+        </Container>
+      </Section>
+
+      <AboutUs />
+      <OurServices />
+
+      <Section>
+        <Container>
+          <div className="rounded-2xl bg-gray-50 px-6 py-10 lg:p-16">
+            <div>
+              <h2 className="text-display-sm font-semibold">Tell us about your project</h2>
+              <p className="mt-4 text-lg text-gray-600 lg:text-xl">
+                Join over 4,000+ startups already growing with Untitled.
+              </p>
+            </div>
+            <div className="mt-8">
+              <Button size="xl">Say hello</Button>
+            </div>
+          </div>
+        </Container>
+      </Section>
     </div>
   )
 }

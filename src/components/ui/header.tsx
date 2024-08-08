@@ -35,10 +35,10 @@ export function Header() {
 
   return (
     <Dialog.Root open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-      <header className="fixed inset-x-0 top-0 z-50 flex h-header-height items-center bg-white/75 shadow-xs backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 flex h-header-height w-full items-center bg-white/80 backdrop-blur-xl">
         <div className="container flex items-center justify-between">
-          <Link className="relative" href="/">
-            EC Solutions and Enterprise
+          <Link className="relative" href="/" aria-label="Home">
+            {/* Company logo goes here */}
           </Link>
 
           <Dialog.Trigger asChild>
@@ -50,17 +50,8 @@ export function Header() {
                 setIsMobileMenuOpen(!isMobileMenuOpen)
               }}
             >
-              {isMobileMenuOpen ? (
-                <>
-                  <span className="sr-only">Close mobile menu</span>
-                  <XMarkIcon className="size-6" />
-                </>
-              ) : (
-                <>
-                  <span className="sr-only">Open mobile menu</span>
-                  <Bars3Icon className="size-6" />
-                </>
-              )}
+              <span className="sr-only">Open mobile menu</span>
+              <Bars3Icon className="size-6" />
             </Button>
           </Dialog.Trigger>
 
@@ -68,7 +59,6 @@ export function Header() {
             <nav className="hidden lg:flex lg:items-center lg:gap-8">
               {links.map((link, index) => (
                 <Button
-                  size="lg"
                   hierarchy="link-gray"
                   asChild
                   onClick={(event) => {
@@ -92,7 +82,26 @@ export function Header() {
         <Dialog.Content>
           <Dialog.Title className="sr-only">Mobile menu</Dialog.Title>
           <Dialog.Description className="sr-only">Use arrow keys to navigate</Dialog.Description>
-          <div className="fixed inset-x-0 top-header-height z-50 w-full bg-white shadow-lg lg:hidden">
+          <div className="fixed inset-x-0 top-0 z-50 w-full bg-white shadow-lg lg:hidden">
+            <div className="flex items-center justify-between p-4">
+              <Link className="relative" href="/" aria-label="Home">
+                EC Solutions and Enterprise
+              </Link>
+
+              <Dialog.Close asChild>
+                <Button
+                  className="-mr-1 size-10"
+                  hierarchy="link-gray"
+                  type="button"
+                  onClick={() => {
+                    setIsMobileMenuOpen(!isMobileMenuOpen)
+                  }}
+                >
+                  <span className="sr-only">Close mobile menu</span>
+                  <XMarkIcon className="size-6" />
+                </Button>
+              </Dialog.Close>
+            </div>
             <nav className="flex flex-col gap-2 py-6">
               {links.map((link, index) => (
                 <Link
