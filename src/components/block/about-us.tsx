@@ -6,9 +6,9 @@ import { Container, Section } from '../ui/container'
 
 import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
 
-export function WhoWeAre() {
+export function AboutUs() {
   return (
-    <Section>
+    <Section id="about-us">
       <Container>
         <figure className="flex flex-col gap-10 lg:flex-row lg:gap-16">
           <Image
