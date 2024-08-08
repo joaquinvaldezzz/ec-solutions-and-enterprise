@@ -1,8 +1,8 @@
-'use client'
-
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 import { type NavItem } from '@/types/nav'
+import { getPosts } from '@/app/portfolio/utils'
 
 import { Button } from './button'
 import { Container } from './container'
@@ -35,34 +35,23 @@ const companyInformation: CompanyInformation[] = [
   },
 ]
 
-const products: NavItem[] = [
-  {
-    url: '#',
-    title: 'Overview',
-  },
-  {
-    url: '#',
-    title: 'Features',
-  },
-  {
-    url: '#',
-    title: 'Solutions',
-  },
-  {
-    url: '#',
-    title: 'Tutorials',
-  },
-  {
-    url: '#',
-    title: 'Pricing',
-  },
-  {
-    url: '#',
-    title: 'Releases',
-  },
+const company: NavItem[] = [
+  { url: '#', title: 'About' },
+  { url: '#', title: 'Process' },
+  { url: '/portfolio', title: 'Portfolio' },
+  { url: '#', title: 'Contact us' },
+]
+
+const connect: NavItem[] = [
+  { url: '#', title: 'Facebook' },
+  { url: '#', title: 'Twitter' },
+  { url: '#', title: 'Instagram' },
+  { url: '#', title: 'LinkedIn' },
 ]
 
 export function Footer() {
+  const posts = getPosts()
+
   return (
     <footer className="py-12 lg:pt-16">
       <Container className="grid gap-12 lg:grid-cols-2">
@@ -87,12 +76,37 @@ export function Footer() {
 
         <nav className="grid grid-cols-2 gap-8 md:grid-cols-3">
           <div>
-            <h2 className="text-sm font-semibold text-gray-500">Product</h2>
+            <h2 className="text-sm font-semibold text-gray-500">Clients</h2>
             <ul className="mt-4 flex flex-col gap-3">
-              {products.map((product, index) => (
+              {posts
+                .sort((a, z) =>
+                  new Date(a.metadata.publishedAt) < new Date(z.metadata.publishedAt) ? -1 : 1,
+                )
+                .slice(0, 3)
+                .map((post, index) => (
+                  <li key={index}>
+                    <Button size="lg" hierarchy="link-gray" asChild>
+                      <Link href={`/portfolio/${post.slug}`}>{post.metadata.name}</Link>
+                    </Button>
+                  </li>
+                ))}
+              <li>
+                <Button size="lg" hierarchy="link-gray" asChild>
+                  <Link href="/portfolio">
+                    View all <ArrowRight className="size-5" />
+                  </Link>
+                </Button>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-sm font-semibold text-gray-500">Company</h2>
+            <ul className="mt-4 flex flex-col gap-3">
+              {company.map((item, index) => (
                 <li key={index}>
                   <Button size="lg" hierarchy="link-gray" asChild>
-                    <Link href={product.url}>{product.title}</Link>
+                    <Link href={item.url}>{item.title}</Link>
                   </Button>
                 </li>
               ))}
@@ -100,25 +114,12 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold text-gray-500">Product</h2>
+            <h2 className="text-sm font-semibold text-gray-500">Connect</h2>
             <ul className="mt-4 flex flex-col gap-3">
-              {products.map((product, index) => (
+              {connect.map((item, index) => (
                 <li key={index}>
                   <Button size="lg" hierarchy="link-gray" asChild>
-                    <Link href={product.url}>{product.title}</Link>
-                  </Button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-sm font-semibold text-gray-500">Product</h2>
-            <ul className="mt-4 flex flex-col gap-3">
-              {products.map((product, index) => (
-                <li key={index}>
-                  <Button size="lg" hierarchy="link-gray" asChild>
-                    <Link href={product.url}>{product.title}</Link>
+                    <Link href={item.url}>{item.title}</Link>
                   </Button>
                 </li>
               ))}
