@@ -194,11 +194,11 @@ export default function Page({
                       </div>
                       <div className="mt-5">
                         <div className="line-clamp-1 text-balance text-sm font-semibold text-brand-700">
-                          {post.metadata.project}
+                          {post.metadata.name}
                         </div>
                         <div className="mt-2 flex items-start justify-between gap-4">
                           <h3 className="text-xl font-semibold lg:text-display-xs">
-                            {post.metadata.name}
+                            {post.metadata.project}
                           </h3>
                         </div>
                         <p className="mt-2 line-clamp-2 text-gray-600">
