@@ -1,6 +1,7 @@
 import { type FC, type SVGProps } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Marquee from 'react-fast-marquee'
 
 import { determineBadgeColor } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
@@ -12,11 +13,14 @@ import { getPosts } from '@/app/portfolio/utils'
 
 import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
 import CSS3 from '@/public/images/logos/css3.svg'
+import DepartmentOfHealthLogotype from '@/public/images/logos/department-of-health-logotype.png'
+import DreamRiserBuildersInc from '@/public/images/logos/dream-riser-builders-inc.jpg'
 import Git from '@/public/images/logos/git.svg'
 import HTML5 from '@/public/images/logos/html5.svg'
 import Javascript from '@/public/images/logos/javascript.svg'
 import MicrosoftAzure from '@/public/images/logos/microsoft-azure.svg'
 import MySQL from '@/public/images/logos/my-sql.svg'
+import OurLadyOfFatimaUniversityLogotype from '@/public/images/logos/our-lady-of-fatima-university-logotype.png'
 import Php from '@/public/images/logos/php.svg'
 import Python from '@/public/images/logos/python.svg'
 
@@ -60,6 +64,12 @@ const technologies: Technology[] = [
   },
 ]
 
+const logotypes = [
+  DepartmentOfHealthLogotype,
+  OurLadyOfFatimaUniversityLogotype,
+  DreamRiserBuildersInc,
+]
+
 export default function Page() {
   const posts = getPosts()
 
@@ -94,6 +104,19 @@ export default function Page() {
         </Container>
       </Section>
 
+      <Section>
+        <Container>
+          <h2 className="font-medium text-gray-600">Join 4,000+ companies already growing</h2>
+          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 lg:gap-y-6">
+            <Marquee autoFill gradient gradientWidth="12rem">
+              {logotypes.map((logotype, index) => (
+                <Image className="h-9 w-auto last:mr-8 lg:h-12" src={logotype} alt="" key={index} />
+              ))}
+            </Marquee>
+          </div>
+        </Container>
+      </Section>
+
       <Section id="our-clients">
         <Container>
           <div className="lg:flex lg:justify-between">
@@ -121,16 +144,13 @@ export default function Page() {
               .slice(0, 3)
               .map((post, index) => (
                 <Link href={`/portfolio/${post.slug}`} key={index}>
-                  <div className="relative flex h-60 items-center justify-center overflow-hidden rounded-2xl bg-brand-50">
-                    <Image
-                      className="object-cover"
-                      src={PlaceholderImage}
-                      alt={post.metadata.name}
-                      fill
-                      sizes="(max-width: 1024px) 50vw, 100vw"
-                      priority
-                    />
-                  </div>
+                  <Image
+                    className="size-24 rounded-full"
+                    src={post.metadata.image}
+                    alt={post.metadata.name}
+                    width={96}
+                    height={96}
+                  />
                   <div className="mt-5 text-pretty">
                     <div className="text-balance text-sm font-semibold text-brand-700">
                       {post.metadata.name}
