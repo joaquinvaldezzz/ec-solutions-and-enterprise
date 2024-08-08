@@ -74,7 +74,7 @@ export default function Page() {
             — Our agency specializes in crafting simple, functional, and stunning solutions using
             the latest technologies.
           </p>
-          <div className="mt-8 flex max-w-[40rem] flex-wrap gap-x-8 gap-y-4">
+          <div className="mt-8 flex max-w-[40rem] flex-wrap gap-x-8 gap-y-4 lg:mt-12">
             {technologies.map((technology, index) => {
               const Tag = technology.logo
               return (
