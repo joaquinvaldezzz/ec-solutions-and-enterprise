@@ -10,6 +10,8 @@ import { type NavItem } from '@/types/nav'
 
 import { Button } from './button'
 
+import Next from '@/public/next.svg'
+
 const links: NavItem[] = [
   {
     url: '#about-us',
@@ -38,7 +40,8 @@ export function Header() {
       <header className="fixed inset-x-0 top-0 z-50 flex h-header-height w-full items-center bg-white/80 backdrop-blur-xl">
         <div className="container flex items-center justify-between">
           <Link className="relative" href="/" aria-label="Home">
-            {/* Company logo goes here */}
+            <span className="sr-only">Company Logo</span>
+            <Next className="h-8" />
           </Link>
 
           <Dialog.Trigger asChild>

@@ -7,6 +7,8 @@ import { getPosts } from '@/app/portfolio/utils'
 import { Button } from './button'
 import { Container } from './container'
 
+import Next from '@/public/next.svg'
+
 interface CompanyInformation {
   label: string
   value: string
@@ -47,7 +49,12 @@ export function Footer() {
   return (
     <footer className="py-12 lg:pt-16">
       <Container className="grid gap-12 lg:grid-cols-2">
-        <div>
+        <div className="flex flex-col items-start gap-y-12">
+          <div className="relative">
+            <span className="sr-only">Company Logo</span>
+            <Next className="h-8" />
+          </div>
+
           <dl className="grid grid-cols-2 gap-8 md:grid-cols-3">
             {companyInformation.map((info, index) => (
               <div key={index}>
