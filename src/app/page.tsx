@@ -205,7 +205,9 @@ export default function Page() {
               </p>
             </div>
             <div className="mt-8">
-              <Button size="xl">Say hello</Button>
+              <Button size="xl" asChild>
+                <Link href="/contact-us">Say hello</Link>
+              </Button>
             </div>
           </div>
         </Container>
