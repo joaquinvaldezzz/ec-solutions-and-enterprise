@@ -68,9 +68,9 @@ const services: Service[][] = [
   ],
 ]
 
-export function WhatWeDo() {
+export function OurServices() {
   return (
-    <Section>
+    <Section id="our-services">
       <Container>
         <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
           <div className="lg:w-[22.5rem] lg:shrink-0">
