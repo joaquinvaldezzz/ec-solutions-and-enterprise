@@ -16,15 +16,15 @@ const links: NavItem[] = [
     title: 'About Us',
   },
   {
-    url: '#our-services',
-    title: 'Our Services',
-  },
-  {
     url: '#our-clients',
     title: 'Our Clients',
   },
   {
-    url: '#contact-us',
+    url: '#our-services',
+    title: 'Our Services',
+  },
+  {
+    url: '/contact-us',
     title: 'Contact Us',
   },
 ]
@@ -62,7 +62,10 @@ export function Header() {
                   hierarchy="link-gray"
                   asChild
                   onClick={(event) => {
+                    if (link.url.startsWith('/')) return
+
                     event.preventDefault()
+
                     document
                       .getElementById(link.url.slice(1))
                       ?.scrollIntoView({ behavior: 'smooth' })
