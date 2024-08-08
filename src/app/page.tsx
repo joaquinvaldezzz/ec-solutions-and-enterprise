@@ -1,5 +1,5 @@
 import { type FC, type SVGProps } from 'react'
-import Image from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
 import Marquee from 'react-fast-marquee'
 
@@ -24,12 +24,10 @@ import OurLadyOfFatimaUniversityLogotype from '@/public/images/logos/our-lady-of
 import Php from '@/public/images/logos/php.svg'
 import Python from '@/public/images/logos/python.svg'
 
-interface Technology {
+const technologies: Array<{
   logo: FC<SVGProps<SVGElement>>
   name: string
-}
-
-const technologies: Technology[] = [
+}> = [
   {
     logo: HTML5,
     name: 'HTML5',
@@ -64,10 +62,19 @@ const technologies: Technology[] = [
   },
 ]
 
-const logotypes = [
-  DepartmentOfHealthLogotype,
-  OurLadyOfFatimaUniversityLogotype,
-  DreamRiserBuildersInc,
+const logotypes: Array<{ image: StaticImageData; name: string }> = [
+  {
+    image: DepartmentOfHealthLogotype,
+    name: 'Department of Health',
+  },
+  {
+    image: OurLadyOfFatimaUniversityLogotype,
+    name: 'Our Lady of Fatima University',
+  },
+  {
+    image: DreamRiserBuildersInc,
+    name: 'Dream Riser Builders, Inc.',
+  },
 ]
 
 export default function Page() {
@@ -109,8 +116,13 @@ export default function Page() {
           <h2 className="font-medium text-gray-600">Join 4,000+ companies already growing</h2>
           <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 lg:gap-y-6">
             <Marquee autoFill gradient gradientWidth="12rem">
-              {logotypes.map((logotype, index) => (
-                <Image className="h-9 w-auto last:mr-8 lg:h-12" src={logotype} alt="" key={index} />
+              {logotypes.map((item, index) => (
+                <Image
+                  className="h-9 w-auto last:mr-8 lg:h-12"
+                  src={item.image}
+                  alt={item.name}
+                  key={index}
+                />
               ))}
             </Marquee>
           </div>
