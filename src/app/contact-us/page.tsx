@@ -116,7 +116,13 @@ export default function Page() {
                       <FormItem>
                         <FormLabel>First name</FormLabel>
                         <FormControl>
-                          <Input padding="md" type="text" placeholder="John" {...field} />
+                          <Input
+                            padding="md"
+                            type="text"
+                            placeholder="John"
+                            autoComplete="given-name"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -129,7 +135,13 @@ export default function Page() {
                       <FormItem>
                         <FormLabel>Last name</FormLabel>
                         <FormControl>
-                          <Input padding="md" type="text" placeholder="Doe" {...field} />
+                          <Input
+                            padding="md"
+                            type="text"
+                            placeholder="Doe"
+                            autoComplete="family-name"
+                            {...field}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -147,6 +159,7 @@ export default function Page() {
                           padding="md"
                           type="email"
                           placeholder="johndoe@company.com"
+                          autoComplete="email"
                           {...field}
                         />
                       </FormControl>
@@ -161,7 +174,13 @@ export default function Page() {
                     <FormItem>
                       <FormLabel>Phone number</FormLabel>
                       <FormControl>
-                        <Input padding="md" type="tel" placeholder="+63 912 234 5678" {...field} />
+                        <Input
+                          padding="md"
+                          type="tel"
+                          placeholder="+63 912 234 5678"
+                          autoComplete="tel-national"
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
