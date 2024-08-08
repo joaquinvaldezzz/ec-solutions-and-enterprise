@@ -18,14 +18,6 @@ const companyInformation: CompanyInformation[] = [
     value: '5 to 10',
   },
   {
-    label: 'Mobile number',
-    value: '+63 917 551 0320',
-  },
-  {
-    label: 'Office address',
-    value: 'Quezon City',
-  },
-  {
     label: 'Date established',
     value: 'August 18, 2011',
   },
@@ -56,7 +48,7 @@ export function Footer() {
     <footer className="py-12 lg:pt-16">
       <Container className="grid gap-12 lg:grid-cols-2">
         <div>
-          <dl className="grid grid-cols-2 gap-8">
+          <dl className="grid grid-cols-2 gap-8 md:grid-cols-3">
             {companyInformation.map((info, index) => (
               <div key={index}>
                 <dt className="text-sm font-semibold text-gray-500">{info.label}</dt>
