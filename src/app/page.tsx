@@ -6,8 +6,8 @@ import { determineBadgeColor } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Container, Section } from '@/components/ui/container'
-import { WhatWeDo } from '@/components/block/what-we-do'
-import { WhoWeAre } from '@/components/block/who-we-are'
+import { AboutUs } from '@/components/block/about-us'
+import { OurServices } from '@/components/block/our-services'
 import { getPosts } from '@/app/portfolio/utils'
 
 import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
@@ -65,7 +65,7 @@ export default function Page() {
 
   return (
     <div>
-      <Section>
+      <Section className="pt-[calc(theme(spacing.16)+var(--header-height))] lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
         <Container>
           <h1 className="max-w-5xl text-display-md font-medium tracking-tight lg:text-display-xl">
             We design digital experiences that create more happy in the world
@@ -94,7 +94,7 @@ export default function Page() {
         </Container>
       </Section>
 
-      <Section>
+      <Section id="our-clients">
         <Container>
           <div className="lg:flex lg:justify-between">
             <div className="max-w-3xl text-pretty">
@@ -160,8 +160,8 @@ export default function Page() {
         </Container>
       </Section>
 
-      <WhoWeAre />
-      <WhatWeDo />
+      <AboutUs />
+      <OurServices />
 
       <Section>
         <Container>
