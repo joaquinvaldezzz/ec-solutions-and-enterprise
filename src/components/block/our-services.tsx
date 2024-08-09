@@ -74,12 +74,12 @@ export function OurServices() {
           <div className="divide-y lg:-mt-4">
             {services.map((row, x) => (
               <div
-                className="grid py-5 first:pt-0 last:pb-0 md:grid-cols-2 lg:divide-x lg:py-0"
+                className="grid py-5 first:pt-0 last:pb-0 md:grid-cols-2 md:divide-x md:py-0"
                 key={x}
               >
                 {row.map((service, y) => (
                   <div
-                    className="text-pretty py-5 first:pt-0 last:pb-0 not-first:border-t md:py-0 md:not-first:border-t-0 lg:px-8 lg:py-4 lg:first:pl-0 lg:first:pt-4 lg:last:pb-4 lg:last:pr-0"
+                    className="text-pretty py-5 first:pt-0 last:pb-0 not-first:border-t md:px-4 md:first:pl-0 md:first:pt-4 md:last:pb-4 md:last:pr-0 md:not-first:border-t-0 lg:px-8 lg:py-4"
                     key={y}
                   >
                     <h3 className="text-lg font-semibold lg:text-xl">{service.title}</h3>
