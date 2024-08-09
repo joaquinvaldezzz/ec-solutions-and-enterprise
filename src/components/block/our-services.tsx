@@ -1,12 +1,4 @@
 import Link from 'next/link'
-import {
-  faBrain,
-  faCloud,
-  faCoins,
-  faPenNib,
-  faShieldHalved,
-  faUsersLine,
-} from '@fortawesome/free-solid-svg-icons'
 import { Laptop } from 'lucide-react'
 
 import { type Service } from '@/types/service'
@@ -17,13 +9,11 @@ import { Container, Section } from '../ui/container'
 const services: Service[][] = [
   [
     {
-      icon: faBrain,
       title: 'Artificial Intelligence (AI) Tools',
       description: 'A complete solution for managing schools and educational institutions.',
       categories: ['AI Marketing'],
     },
     {
-      icon: faPenNib,
       title: 'Graphic Design and Visualization',
       description: 'Integrate payment gateways to your website or mobile app.',
       categories: [
@@ -33,8 +23,9 @@ const services: Service[][] = [
         '3D models Architectural Design',
       ],
     },
+  ],
+  [
     {
-      icon: faCoins,
       title: 'Financial',
       description:
         'A complete solution for managing hospitals, clinics, and other healthcare facilities.',
@@ -44,23 +35,20 @@ const services: Service[][] = [
         'Payroll and Accounting System',
       ],
     },
-  ],
-  [
     {
-      icon: faShieldHalved,
       title: 'Cybersecurity',
       description:
         'Host your website, web application, or mobile app on the cloud for better performance and scalability.',
       categories: ['Vulnerability Assessment and Penetration Testing (VAPT)'],
     },
+  ],
+  [
     {
-      icon: faCloud,
       title: 'Cloud Hosting',
       description: 'A complete solution for managing engineering and construction projects.',
       categories: ['Azure', 'AWS'],
     },
     {
-      icon: faUsersLine,
       title: 'Enterprise Resource Planning (ERP)',
       description: 'A complete solution for managing HR, payroll, and loan processing.',
       categories: ['Food and Beverage', 'Engineering Construction', 'School Information System'],
@@ -83,8 +71,37 @@ export function OurServices() {
               open-source platforms. Our domain of expertise ranges from:
             </p>
           </div>
-          <div className="grid gap-y-10 md:grid-cols-2 lg:gap-x-16 lg:gap-y-8">
-            {services.flat().map((service, index) => (
+          <div className="divide-y lg:-mt-4">
+            {services.map((row, x) => (
+              <div
+                className="grid py-5 first:pt-0 last:pb-0 md:grid-cols-2 lg:divide-x lg:py-0"
+                key={x}
+              >
+                {row.map((service, y) => (
+                  <div
+                    className="text-pretty py-5 first:pt-0 last:pb-0 not-first:border-t md:py-0 md:not-first:border-t-0 lg:px-8 lg:py-4 lg:first:pl-0 lg:first:pt-4 lg:last:pb-4 lg:last:pr-0"
+                    key={y}
+                  >
+                    <h3 className="text-lg font-semibold lg:text-xl">{service.title}</h3>
+                    <p className="mt-1 text-gray-600 lg:mt-2">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit voluptas sunt
+                      totam.
+                    </p>
+                    <ul className="ml-4 mt-4 flex list-disc flex-col gap-1">
+                      {service.categories?.map((category, i) => (
+                        <li className="marker:text-gray-300" key={i}>
+                          <Button hierarchy="link-gray" asChild>
+                            <Link href="/portfolio">{category}</Link>
+                          </Button>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            ))}
+
+            {/* {services.flat().map((service, index) => (
               <div className="text-pretty" key={index}>
                 <h3 className="text-lg font-semibold lg:text-xl">{service.title}</h3>
                 <p className="mt-1 text-gray-600 lg:mt-2">
@@ -100,7 +117,7 @@ export function OurServices() {
                   ))}
                 </ul>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </Container>
