@@ -91,7 +91,8 @@ export function Header() {
           <div className="fixed inset-x-0 top-0 z-50 w-full bg-white shadow-lg lg:hidden">
             <div className="flex items-center justify-between p-4">
               <Link className="relative" href="/" aria-label="Home">
-                EC Solutions and Enterprise
+                <span className="sr-only">Company Logo</span>
+                <Next className="h-8" />
               </Link>
 
               <Dialog.Close asChild>
