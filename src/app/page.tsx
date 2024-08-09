@@ -11,7 +11,7 @@ import { AboutUs } from '@/components/block/about-us'
 import { OurServices } from '@/components/block/our-services'
 import { getPosts } from '@/app/portfolio/utils'
 
-import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
+import HeroBanner from '@/public/images/backgrounds/flipboard-HejPSp2evf4-unsplash.jpg'
 import CSS3 from '@/public/images/logos/css3.svg'
 import DepartmentOfHealthLogotype from '@/public/images/logos/department-of-health-logotype.png'
 import DreamRiserBuildersInc from '@/public/images/logos/dream-riser-builders-inc.jpg'
@@ -104,8 +104,8 @@ export default function Page() {
           </div>
           <Image
             className="mt-16 h-60 object-cover lg:h-[32.25rem]"
-            src={PlaceholderImage}
-            alt="Placeholder image"
+            src={HeroBanner}
+            alt="Hero banner"
             priority
           />
         </Container>
@@ -114,7 +114,7 @@ export default function Page() {
       <Section>
         <Container>
           <h2 className="font-medium text-gray-600">Join 4,000+ companies already growing</h2>
-          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 lg:gap-y-6">
+          <div className="mt-8 flex gap-x-8 gap-y-4 lg:gap-y-6">
             <Marquee autoFill gradient gradientWidth="12rem">
               {logotypes.map((item, index) => (
                 <Image
