@@ -201,7 +201,7 @@ export default function Page() {
             <div>
               <h2 className="text-display-sm font-semibold">Tell us about your project</h2>
               <p className="mt-4 text-lg text-gray-600 lg:text-xl">
-                Join over 4,000+ startups already growing with Untitled.
+                Join over 4,000+ startups already growing with us.
               </p>
             </div>
             <div className="mt-8">
