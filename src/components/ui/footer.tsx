@@ -33,7 +33,7 @@ const company: NavItem[] = [
   { url: '#', title: 'About' },
   { url: '#', title: 'Process' },
   { url: '/portfolio', title: 'Portfolio' },
-  { url: '#', title: 'Contact us' },
+  { url: '/contact-us', title: 'Contact us' },
 ]
 
 const connect: NavItem[] = [
@@ -55,11 +55,11 @@ export function Footer() {
             <Next className="h-8" />
           </div>
 
-          <dl className="grid grid-cols-2 gap-8 md:grid-cols-3">
+          <dl className="grid gap-8 md:grid-cols-3">
             {companyInformation.map((info, index) => (
               <div key={index}>
-                <dt className="text-sm font-semibold text-gray-500">{info.label}</dt>
-                <dd className="mt-4 font-semibold slashed-zero text-gray-600">
+                <dt className="text-sm font-semibold">{info.label}</dt>
+                <dd className="mt-1 slashed-zero text-gray-600 lg:mt-2">
                   {info.label.includes('address') ? (
                     <address className="not-italic">{info.value}</address>
                   ) : info.label.includes('established') ? (
@@ -73,7 +73,7 @@ export function Footer() {
           </dl>
         </div>
 
-        <nav className="grid grid-cols-2 gap-8 md:grid-cols-3">
+        <nav className="grid gap-8 md:grid-cols-2">
           <div>
             <h2 className="text-sm font-semibold text-gray-500">Clients</h2>
             <ul className="mt-4 flex flex-col gap-3">
@@ -112,7 +112,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          {/* <div>
             <h2 className="text-sm font-semibold text-gray-500">Connect</h2>
             <ul className="mt-4 flex flex-col gap-3">
               {connect.map((item, index) => (
@@ -123,7 +123,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </nav>
 
         <div className="relative flex flex-col gap-8 text-pretty pt-8 before:absolute before:top-0 before:block before:h-px before:w-full before:bg-gray-200 lg:col-span-2 lg:flex-row lg:items-center lg:justify-between">
