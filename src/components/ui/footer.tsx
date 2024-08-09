@@ -36,12 +36,12 @@ const company: NavItem[] = [
   { url: '/contact-us', title: 'Contact us' },
 ]
 
-const connect: NavItem[] = [
+/* const connect: NavItem[] = [
   { url: '#', title: 'Facebook' },
   { url: '#', title: 'Twitter' },
   { url: '#', title: 'Instagram' },
   { url: '#', title: 'LinkedIn' },
-]
+] */
 
 export function Footer() {
   const posts = getPosts()
