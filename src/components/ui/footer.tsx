@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
@@ -7,7 +8,7 @@ import { getPosts } from '@/app/portfolio/utils'
 import { Button } from './button'
 import { Container } from './container'
 
-import Next from '@/public/next.svg'
+import CompanyLogotype from '@/public/images/logos/ecsae-logotype.png'
 
 interface CompanyInformation {
   label: string
@@ -50,9 +51,13 @@ export function Footer() {
     <footer className="py-12 lg:pt-16">
       <Container className="grid gap-12 lg:grid-cols-2">
         <div className="flex flex-col items-start gap-y-12">
-          <div className="relative">
+          <div>
             <span className="sr-only">Company Logo</span>
-            <Next className="h-8" />
+            <Image
+              className="h-16 w-auto rounded-md object-cover"
+              src={CompanyLogotype}
+              alt="EC Solutions and Enterprise"
+            />
           </div>
 
           <dl className="grid gap-8 md:grid-cols-3">

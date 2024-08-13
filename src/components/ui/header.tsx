@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -10,7 +11,7 @@ import { type NavItem } from '@/types/nav'
 
 import { Button } from './button'
 
-import Next from '@/public/next.svg'
+import CompanyLogotype from '@/public/images/logos/ecsae-logotype.png'
 
 const links: NavItem[] = [
   {
@@ -39,9 +40,13 @@ export function Header() {
     <Dialog.Root open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
       <header className="fixed inset-x-0 top-0 z-50 flex h-header-height w-full items-center bg-white/80 backdrop-blur-xl">
         <div className="container flex items-center justify-between">
-          <Link className="relative" href="/" aria-label="Home">
+          <Link href="/" aria-label="Home">
             <span className="sr-only">Company Logo</span>
-            <Next className="h-8" />
+            <Image
+              className="h-12 w-auto rounded object-cover"
+              src={CompanyLogotype}
+              alt="EC Solutions and Enterprise"
+            />
           </Link>
 
           <Dialog.Trigger asChild>
@@ -90,9 +95,13 @@ export function Header() {
           <Dialog.Description className="sr-only">Use arrow keys to navigate</Dialog.Description>
           <div className="fixed inset-x-0 top-0 z-50 w-full bg-white shadow-lg lg:hidden">
             <div className="flex items-center justify-between p-4">
-              <Link className="relative" href="/" aria-label="Home">
+              <Link href="/" aria-label="Home">
                 <span className="sr-only">Company Logo</span>
-                <Next className="h-8" />
+                <Image
+                  className="h-12 w-auto rounded object-cover"
+                  src={CompanyLogotype}
+                  alt="EC Solutions and Enterprise"
+                />
               </Link>
 
               <Dialog.Close asChild>
