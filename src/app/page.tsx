@@ -85,11 +85,12 @@ export default function Page() {
       <Section className="pt-[calc(theme(spacing.16)+var(--header-height))] lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
         <Container>
           <h1 className="max-w-5xl text-display-md font-medium tracking-tight lg:text-display-xl">
-            We design digital experiences that create more happy in the world
+            Innovating the future of business with intelligent, secure, and scalable technology
+            solutions
           </h1>
           <p className="mt-4 max-w-[40rem] text-lg text-gray-600 lg:mt-6 lg:text-xl">
-            — Our agency specializes in crafting simple, functional, and stunning solutions using
-            the latest technologies.
+            — We drive business growth through innovative technology, providing intelligent, secure,
+            and scalable solutions tailored to your unique needs.
           </p>
           <div className="mt-8 flex max-w-[40rem] flex-wrap gap-x-8 gap-y-4 lg:mt-12">
             {technologies.map((technology, index) => {
@@ -134,11 +135,14 @@ export default function Page() {
           <div className="lg:flex lg:justify-between">
             <div className="max-w-3xl text-pretty">
               <h2 className="text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
-                We&apos;ve helped a few of these local organizations and businesses
+                Innovating the Future of Business with Intelligent, Secure, and Scalable Technology
+                Solutions
               </h2>
               <p className="mt-4 text-lg text-gray-600 lg:mt-5 lg:text-xl">
-                Empowering your Tech Journey with Expert Tips, Best Practices, and the latest IT
-                trends
+                We&apos;ve partnered with local businesses and organizations to design and implement
+                tailored systems that drive efficiency, innovation, and growth. By understanding
+                their unique needs, we&apos;ve delivered solutions that empower them to succeed in
+                an increasingly digital world.
               </p>
             </div>
 
@@ -155,9 +159,13 @@ export default function Page() {
               )
               .slice(0, 3)
               .map((post, index) => (
-                <Link href={`/portfolio/${post.slug}`} key={index}>
+                <Link
+                  className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xs lg:p-8"
+                  href={`/portfolio/${post.slug}`}
+                  key={index}
+                >
                   <Image
-                    className="size-24 rounded-full"
+                    className="size-14 rounded-full lg:size-24"
                     src={post.metadata.image}
                     alt={post.metadata.name}
                     width={96}
