@@ -11,7 +11,7 @@ import { AboutUs } from '@/components/block/about-us'
 import { OurServices } from '@/components/block/our-services'
 import { getPosts } from '@/app/portfolio/utils'
 
-import HeroBanner from '@/public/images/backgrounds/flipboard-HejPSp2evf4-unsplash.jpg'
+import HeroBanner from '@/public/images/backgrounds/hero-banner.png'
 import CSS3 from '@/public/images/logos/css3.svg'
 import DepartmentOfHealthLogotype from '@/public/images/logos/department-of-health-logotype.png'
 import DreamRiserBuildersInc from '@/public/images/logos/dream-riser-builders-inc.jpg'
@@ -54,7 +54,7 @@ const technologies: Array<{
   },
   {
     logo: Git,
-    name: 'git',
+    name: 'Git',
   },
   {
     logo: MicrosoftAzure,
@@ -82,37 +82,39 @@ export default function Page() {
 
   return (
     <div>
-      <Section className="pt-[calc(theme(spacing.16)+var(--header-height))] lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
-        <Container>
-          <h1 className="max-w-5xl text-display-md font-medium tracking-tight lg:text-display-xl">
-            Innovating the future of business with intelligent, secure, and scalable technology
-            solutions
-          </h1>
-          <p className="mt-4 max-w-[40rem] text-lg text-gray-600 lg:mt-6 lg:text-xl">
-            — We drive business growth through innovative technology, providing intelligent, secure,
-            and scalable solutions tailored to your unique needs.
-          </p>
-          <div className="mt-8 flex max-w-[40rem] flex-wrap gap-x-8 gap-y-4 lg:mt-12">
-            {technologies.map((technology, index) => {
-              const Tag = technology.logo
-              return (
-                <div className="flex items-center gap-2.5" key={index}>
-                  <Tag className="size-8" />
-                  <p className="text-gray-600">{technology.name}</p>
-                </div>
-              )
-            })}
+      <Section className="relative pt-[calc(theme(spacing.16)+var(--header-height))] lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
+        <Image
+          className="hidden xl:pointer-events-none xl:absolute xl:right-0 xl:top-0 xl:block xl:select-none xl:object-cover xl:object-right"
+          src={HeroBanner}
+          alt="Hero banner"
+          priority
+        />
+        <Container className="lg:relative">
+          <div>
+            <h1 className="max-w-5xl text-display-md font-medium tracking-tight lg:text-display-xl xl:max-w-2xl">
+              Innovating the future of business with intelligent, secure, and scalable technology
+              solutions
+            </h1>
+            <p className="mt-4 max-w-[40rem] text-lg text-gray-600 lg:mt-6 lg:text-xl xl:max-w-xl">
+              — We drive business growth through innovative technology, providing intelligent,
+              secure, and scalable solutions tailored to your unique needs.
+            </p>
+            <div className="mt-8 flex max-w-[40rem] flex-wrap gap-x-8 gap-y-4 lg:mt-12 xl:max-w-xl">
+              {technologies.map((technology, index) => {
+                const Tag = technology.logo
+                return (
+                  <div className="flex items-center gap-2.5" key={index}>
+                    <Tag className="size-8" />
+                    <p className="text-gray-600">{technology.name}</p>
+                  </div>
+                )
+              })}
+            </div>
           </div>
-          <Image
-            className="mt-16 h-60 object-cover lg:h-[32.25rem]"
-            src={HeroBanner}
-            alt="Hero banner"
-            priority
-          />
         </Container>
       </Section>
 
-      <Section>
+      <Section className="xl:relative">
         <Container>
           <h2 className="font-medium text-gray-600">Join 4,000+ companies already growing</h2>
           <div className="mt-8 flex gap-x-8 gap-y-4 lg:gap-y-6">
