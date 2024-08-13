@@ -8,7 +8,7 @@ import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg
 
 export function AboutUs() {
   return (
-    <Section id="about-us">
+    <Section className="bg-gray-50" id="about-us">
       <Container>
         <figure className="flex flex-col gap-10 lg:flex-row lg:gap-16">
           <Image
