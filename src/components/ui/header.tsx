@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import * as Dialog from '@radix-ui/react-dialog'
 
@@ -35,6 +35,7 @@ const links: NavItem[] = [
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
   const pathname = usePathname()
+  const router = useRouter()
 
   return (
     <Dialog.Root open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -63,28 +64,42 @@ export function Header() {
             </Button>
           </Dialog.Trigger>
 
-          {pathname === '/' && (
-            <nav className="hidden lg:flex lg:items-center lg:gap-8">
-              {links.map((link, index) => (
-                <Button
-                  hierarchy="link-gray"
-                  asChild
-                  onClick={(event) => {
-                    if (link.url.startsWith('/')) return
+          <nav className="hidden lg:flex lg:items-center lg:gap-8">
+            {links.map((link, index) => (
+              <Button
+                hierarchy="link-gray"
+                asChild
+                onClick={(event) => {
+                  // If the link is not an anchor tag, navigate to that page
+                  if (link.url.startsWith('/')) return
 
-                    event.preventDefault()
+                  // Prevent the default behavior of the anchor tag
+                  event.preventDefault()
 
-                    document
-                      .getElementById(link.url.slice(1))
-                      ?.scrollIntoView({ behavior: 'smooth' })
-                  }}
-                  key={index}
-                >
-                  <Link href={link.url}>{link.title}</Link>
-                </Button>
-              ))}
-            </nav>
-          )}
+                  // If the current pathname is not the root,
+                  if (pathname !== '/') {
+                    // navigate to the root first,
+                    router.push('/')
+
+                    // then scroll to the section after 500 milliseconds
+                    setTimeout(() => {
+                      document
+                        .getElementById(link.url.slice(1))
+                        ?.scrollIntoView({ behavior: 'smooth' })
+                    }, 500)
+
+                    return
+                  }
+
+                  // If the current pathname is the root, scroll to that section
+                  document.getElementById(link.url.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+                }}
+                key={index}
+              >
+                <Link href={link.url}>{link.title}</Link>
+              </Button>
+            ))}
+          </nav>
         </div>
       </header>
 
@@ -127,9 +142,28 @@ export function Header() {
                   onClick={(event) => {
                     setIsMobileMenuOpen(false)
 
+                    // If the link is not an anchor tag, navigate to that page
                     if (link.url.startsWith('/')) return
 
+                    // Prevent the default behavior of the anchor tag
                     event.preventDefault()
+
+                    // If the current pathname is not the root,
+                    if (pathname !== '/') {
+                      // navigate to the root first,
+                      router.push('/')
+
+                      // then scroll to the section after 500 milliseconds
+                      setTimeout(() => {
+                        document
+                          .getElementById(link.url.slice(1))
+                          ?.scrollIntoView({ behavior: 'smooth' })
+                      }, 500)
+
+                      return
+                    }
+
+                    // If the current pathname is the root, scroll to that section
                     document
                       .getElementById(link.url.slice(1))
                       ?.scrollIntoView({ behavior: 'smooth' })
