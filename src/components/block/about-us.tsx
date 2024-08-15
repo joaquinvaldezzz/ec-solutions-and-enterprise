@@ -4,18 +4,14 @@ import Image from 'next/image'
 
 import { Container, Section } from '../ui/container'
 
-import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
+import CompanyLogo from '@/public/images/logos/ecsae-logotype.png'
 
 export function AboutUs() {
   return (
     <Section className="bg-gray-50" id="about-us">
       <Container>
-        <figure className="flex flex-col gap-10 lg:flex-row lg:gap-16">
-          <Image
-            className="size-[12.5rem] rounded-2xl object-cover lg:size-[20.5rem]"
-            src={PlaceholderImage}
-            alt="Edilberto N. Chua, Jr."
-          />
+        <figure className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+          <Image className="w-[12.5rem] lg:w-[20.5rem] lg:shrink-0" src={CompanyLogo} alt="" />
           <div>
             <blockquote className="text-display-sm font-medium lg:text-display-md lg:tracking-tight">
               <p>
