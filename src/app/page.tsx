@@ -1,7 +1,6 @@
 import { type FC, type SVGProps } from 'react'
 import Image, { type StaticImageData } from 'next/image'
 import Link from 'next/link'
-import Marquee from 'react-fast-marquee'
 
 import { determineBadgeColor } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
@@ -86,12 +85,14 @@ export default function Page() {
         <Image
           className="hidden xl:pointer-events-none xl:absolute xl:right-0 xl:top-0 xl:block xl:select-none xl:object-cover xl:object-right"
           src={HeroBanner}
-          alt="Hero banner"
+          alt=""
+          width={1188}
+          height={1188}
           priority
         />
         <Container className="lg:relative">
           <div>
-            <h1 className="max-w-5xl text-display-md font-medium tracking-tight lg:text-display-xl xl:max-w-2xl">
+            <h1 className="max-w-5xl font-display text-display-md font-semibold uppercase lg:text-display-xl xl:max-w-2xl">
               Innovating the future of business with intelligent, secure, and scalable technology
               solutions
             </h1>
@@ -114,20 +115,13 @@ export default function Page() {
         </Container>
       </Section>
 
-      <Section className="xl:relative">
+      <Section>
         <Container>
           <h2 className="font-medium text-gray-600">Join 4,000+ companies already growing</h2>
-          <div className="mt-8 flex gap-x-8 gap-y-4 lg:gap-y-6">
-            <Marquee autoFill gradient gradientWidth="12rem">
-              {logotypes.map((item, index) => (
-                <Image
-                  className="h-9 w-auto last:mr-8 lg:h-12"
-                  src={item.image}
-                  alt={item.name}
-                  key={index}
-                />
-              ))}
-            </Marquee>
+          <div className="mt-8 flex max-w-[40rem] flex-wrap gap-x-8 gap-y-4 lg:gap-y-6">
+            {logotypes.map((item, index) => (
+              <Image className="h-9 w-auto lg:h-12" src={item.image} alt={item.name} key={index} />
+            ))}
           </div>
         </Container>
       </Section>
