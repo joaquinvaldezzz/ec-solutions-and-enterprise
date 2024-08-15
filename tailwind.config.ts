@@ -60,6 +60,12 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
+        display: [
+          'var(--font-sans)',
+          {
+            fontVariationSettings: '"wdth" 75',
+          },
+        ],
       },
       keyframes: {
         'accordion-down': {

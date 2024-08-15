@@ -41,17 +41,12 @@ export const metadata: Metadata = {
   },
 }
 
-const inter = localFont({
+const font = localFont({
   src: [
     {
-      path: '../../public/fonts/InterVariable.woff2',
-      weight: '100 900',
+      path: '../../public/fonts/Mona-Sans.woff2',
+      weight: '200 900',
       style: 'normal',
-    },
-    {
-      path: '../../public/fonts/InterVariable-Italic.woff2',
-      weight: '100 900',
-      style: 'italic',
     },
   ],
   variable: '--font-sans',
@@ -63,7 +58,7 @@ export default function Layout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={font.variable}>
       <body className="min-w-80 bg-white text-gray-900 antialiased [--header-height:4.5rem] lg:[--header-height:5rem]">
         <Header />
         {children}
