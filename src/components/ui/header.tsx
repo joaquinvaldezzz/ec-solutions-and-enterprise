@@ -27,7 +27,7 @@ const links: NavItem[] = [
     title: 'Our Services',
   },
   {
-    url: '/contact-us',
+    url: '#contact-us',
     title: 'Contact Us',
   },
 ]

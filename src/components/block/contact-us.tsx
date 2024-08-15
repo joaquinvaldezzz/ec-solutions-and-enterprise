@@ -50,7 +50,7 @@ export function ContactUs() {
   }
 
   return (
-    <Section>
+    <Section id="contact-us">
       <Container>
         <h2 className="text-sm font-semibold text-brand-700 lg:text-md">Contact us</h2>
         <p className="mt-3 text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
