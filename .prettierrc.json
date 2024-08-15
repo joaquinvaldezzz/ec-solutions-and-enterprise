@@ -5,6 +5,7 @@
   "plugins": [
     "@ianvs/prettier-plugin-sort-imports",
     "@prettier/plugin-xml",
+    "prettier-plugin-packagejson",
     "prettier-plugin-tailwindcss"
   ],
   "importOrder": [
