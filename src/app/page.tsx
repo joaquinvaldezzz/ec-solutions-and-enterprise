@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Container, Section } from '@/components/ui/container'
 import { AboutUs } from '@/components/block/about-us'
+import { ContactUs } from '@/components/block/contact-us'
 import { OurServices } from '@/components/block/our-services'
 import { getPosts } from '@/app/portfolio/utils'
 
@@ -199,23 +200,7 @@ export default function Page() {
       <AboutUs />
       <OurServices />
 
-      <Section>
-        <Container>
-          <div className="rounded-2xl bg-gray-50 px-6 py-10 lg:p-16">
-            <div>
-              <h2 className="text-display-sm font-semibold">Tell us about your project</h2>
-              <p className="mt-4 text-lg text-gray-600 lg:text-xl">
-                Join over 4,000+ startups already growing with us.
-              </p>
-            </div>
-            <div className="mt-8">
-              <Button size="xl" asChild>
-                <Link href="/contact-us">Say hello</Link>
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </Section>
+      <ContactUs />
     </div>
   )
 }
