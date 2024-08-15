@@ -1,11 +1,7 @@
+'use client'
+
 import Image from 'next/image'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 
-import { type NavItem } from '@/types/nav'
-import { getPosts } from '@/app/portfolio/utils'
-
-import { Button } from './button'
 import { Container } from './container'
 
 import CompanyLogotype from '@/public/images/logos/ecsae-logotype.png'
@@ -30,31 +26,15 @@ const companyInformation: CompanyInformation[] = [
   },
 ]
 
-const company: NavItem[] = [
-  { url: '#', title: 'About' },
-  { url: '#', title: 'Process' },
-  { url: '/portfolio', title: 'Portfolio' },
-  { url: '/contact-us', title: 'Contact us' },
-]
-
-/* const connect: NavItem[] = [
-  { url: '#', title: 'Facebook' },
-  { url: '#', title: 'Twitter' },
-  { url: '#', title: 'Instagram' },
-  { url: '#', title: 'LinkedIn' },
-] */
-
 export function Footer() {
-  const posts = getPosts()
-
   return (
-    <footer className="py-12 lg:pt-16">
+    <footer className="bg-gray-950 py-12 text-white lg:pt-16">
       <Container className="grid gap-12 lg:grid-cols-2">
         <div className="flex flex-col items-start gap-y-12">
           <div>
             <span className="sr-only">Company Logo</span>
             <Image
-              className="h-16 w-auto rounded-md object-cover"
+              className="h-16 w-auto object-cover"
               src={CompanyLogotype}
               alt="EC Solutions and Enterprise"
             />
@@ -63,8 +43,8 @@ export function Footer() {
           <dl className="grid gap-8 md:grid-cols-3">
             {companyInformation.map((info, index) => (
               <div key={index}>
-                <dt className="text-sm font-semibold">{info.label}</dt>
-                <dd className="mt-1 slashed-zero text-gray-600 lg:mt-2">
+                <dt className="text-sm font-semibold text-gray-300">{info.label}</dt>
+                <dd className="mt-1 slashed-zero text-gray-200 lg:mt-2">
                   {info.label.includes('address') ? (
                     <address className="not-italic">{info.value}</address>
                   ) : info.label.includes('established') ? (
@@ -78,7 +58,7 @@ export function Footer() {
           </dl>
         </div>
 
-        <nav className="grid gap-8 md:grid-cols-2">
+        {/* <nav className="grid gap-8 md:grid-cols-2">
           <div>
             <h2 className="text-sm font-semibold text-gray-500">Clients</h2>
             <ul className="mt-4 flex flex-col gap-3">
@@ -103,44 +83,18 @@ export function Footer() {
               </li>
             </ul>
           </div>
+        </nav> */}
 
-          <div>
-            <h2 className="text-sm font-semibold text-gray-500">Company</h2>
-            <ul className="mt-4 flex flex-col gap-3">
-              {company.map((item, index) => (
-                <li key={index}>
-                  <Button size="lg" hierarchy="link-gray" asChild>
-                    <Link href={item.url}>{item.title}</Link>
-                  </Button>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* <div>
-            <h2 className="text-sm font-semibold text-gray-500">Connect</h2>
-            <ul className="mt-4 flex flex-col gap-3">
-              {connect.map((item, index) => (
-                <li key={index}>
-                  <Button size="lg" hierarchy="link-gray" asChild>
-                    <Link href={item.url}>{item.title}</Link>
-                  </Button>
-                </li>
-              ))}
-            </ul>
-          </div> */}
-        </nav>
-
-        <div className="relative flex flex-col gap-8 text-pretty pt-8 before:absolute before:top-0 before:block before:h-px before:w-full before:bg-gray-200 lg:col-span-2 lg:flex-row lg:items-center lg:justify-between">
+        <div className="relative flex flex-col gap-8 text-pretty pt-8 before:absolute before:top-0 before:block before:h-px before:w-full before:bg-gray-800 lg:col-span-2 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="text-lg font-semibold lg:text-xl">
               Move faster with EC Solutions and Enterprise
             </p>
-            <p className="mt-2 text-gray-600">
+            <p className="mt-2 text-gray-200">
               Save countless hours of design and ship great looking designs faster.
             </p>
           </div>
-          <p className="text-gray-500">
+          <p className="text-gray-300">
             &copy; 2024 EC Solutions and Enterprise. All rights reserved.
           </p>
         </div>
