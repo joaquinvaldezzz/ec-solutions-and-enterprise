@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import { Laptop } from 'lucide-react'
+import Image from 'next/image'
 
 import { type Service } from '@/types/service'
 
-import { Button } from '../ui/button'
 import { Container, Section } from '../ui/container'
+
+import PlaceholderImage from '@/public/images/profiles-pictures/joaquin-valdez.jpg'
 
 const services: Service[][] = [
   [
@@ -60,65 +60,37 @@ export function OurServices() {
   return (
     <Section id="our-services">
       <Container>
-        <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
-          <div className="lg:w-[22.5rem] lg:shrink-0">
-            <div className="flex size-12 items-center justify-center rounded-full border-4 border-brand-50 bg-brand-100 ring-4 ring-brand-50">
-              <Laptop className="size-6 text-brand-600" />
-            </div>
-            <h2 className="mt-6 text-display-sm font-semibold">Our Services</h2>
-            <p className="mt-4 text-lg text-gray-600">
-              Our clientele ranges from midsize to large companies. Our core expertise is
-              open-source platforms. Our domain of expertise ranges from:
-            </p>
-          </div>
-          <div className="divide-y lg:-mt-4">
-            {services.map((row, x) => (
-              <div
-                className="grid py-5 first:pt-0 last:pb-0 md:grid-cols-2 md:divide-x md:py-0"
-                key={x}
-              >
-                {row.map((service, y) => (
-                  <div
-                    className="text-pretty py-5 first:pt-0 last:pb-0 not-first:border-t md:px-4 md:first:pl-0 md:first:pt-4 md:last:pb-4 md:last:pr-0 md:not-first:border-t-0 lg:px-8 lg:py-4"
-                    key={y}
-                  >
-                    <h3 className="text-lg font-semibold lg:text-xl">{service.title}</h3>
-                    <p className="mt-1 text-gray-600 lg:mt-2">
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit voluptas sunt
-                      totam.
-                    </p>
-                    <ul className="ml-4 mt-4 flex list-disc flex-col gap-1">
-                      {service.categories?.map((category, i) => (
-                        <li className="marker:text-gray-300" key={i}>
-                          <Button hierarchy="link-gray" asChild>
-                            <Link href="/portfolio">{category}</Link>
-                          </Button>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            ))}
+        <div className="max-w-3xl">
+          <h2 className="text-sm font-semibold text-brand-700 lg:text-md">Features</h2>
+          <p className="mt-3 text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
+            Our Services
+          </p>
+          <p className="mt-4 text-lg text-gray-600 lg:mt-5 lg:text-xl">
+            Our clientele ranges from midsize to large companies. Our core expertise is open-source
+            platforms. Our domain of expertise ranges from:
+          </p>
+        </div>
 
-            {/* {services.flat().map((service, index) => (
-              <div className="text-pretty" key={index}>
-                <h3 className="text-lg font-semibold lg:text-xl">{service.title}</h3>
-                <p className="mt-1 text-gray-600 lg:mt-2">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit voluptas sunt totam.
-                </p>
-                <ul className="ml-4 mt-4 flex list-disc flex-col gap-1">
-                  {service.categories?.map((category, i) => (
-                    <li className="marker:text-gray-300" key={i}>
-                      <Button hierarchy="link-gray" asChild>
-                        <Link href="/portfolio">{category}</Link>
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
+        <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-3 lg:gap-8">
+          {services.flat().map((item, index) => (
+            <div
+              className="group overflow-hidden rounded-2xl bg-gray-25 shadow-sm ring-1 ring-gray-200"
+              key={index}
+            >
+              <div className="relative overflow-hidden">
+                <Image
+                  className="h-[14.25rem] object-cover transition-transform group-hover:scale-125 lg:h-[16.875rem]"
+                  src={PlaceholderImage}
+                  alt=""
+                />
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gray-25" />
               </div>
-            ))} */}
-          </div>
+              <div className="text-pretty p-5 lg:px-6 lg:pb-6 lg:pt-8">
+                <h3 className="text-lg font-semibold lg:text-xl">{item.title}</h3>
+                <p className="mt-1 text-gray-600 lg:mt-2">{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </Container>
     </Section>
