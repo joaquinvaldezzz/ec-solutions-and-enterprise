@@ -20,6 +20,8 @@ import {
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 
+import { Typography } from '../ui/typography'
+
 const formSchema = z.object({
   first_name: z.string().min(1, { message: 'Let us know your first name.' }),
   last_name: z.string().min(1, { message: 'Let us know your last name.' }),
@@ -52,13 +54,15 @@ export function ContactUs() {
   return (
     <Section id="contact-us">
       <Container>
-        <h2 className="text-sm font-semibold text-brand-700 lg:text-md">Contact us</h2>
-        <p className="mt-3 text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
-          Chat to our friendly team
-        </p>
-        <p className="mt-4 text-lg text-gray-600 lg:mt-5 lg:text-xl">
-          We&apos;d love to hear from you. Please fill out this form or shoot us an email.
-        </p>
+        <Typography size="eyebrow">
+          <h2>Contact us</h2>
+        </Typography>
+        <Typography className="mt-3" size="heading">
+          <p>Chat to our friendly team</p>
+        </Typography>
+        <Typography className="mt-4 lg:mt-5" size="supporting-text">
+          <p>We&apos;d love to hear from you. Please fill out this form or shoot us an email.</p>
+        </Typography>
 
         <div className="mt-12 grid gap-y-12 lg:mt-16 lg:grid-cols-2 lg:gap-x-16">
           <dl className="grid gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-1 xl:grid-cols-2 xl:content-start">

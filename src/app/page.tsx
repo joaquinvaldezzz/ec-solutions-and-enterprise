@@ -6,6 +6,7 @@ import { determineBadgeColor } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Container, Section } from '@/components/ui/container'
+import { Typography } from '@/components/ui/typography'
 import { AboutUs } from '@/components/block/about-us'
 import { ContactUs } from '@/components/block/contact-us'
 import { OurServices } from '@/components/block/our-services'
@@ -93,10 +94,12 @@ export default function Page() {
         />
         <Container className="lg:relative">
           <div>
-            <h1 className="max-w-5xl font-display text-display-md font-semibold uppercase lg:text-display-xl xl:max-w-2xl">
-              Innovating the future of business with intelligent, secure, and scalable technology
-              solutions
-            </h1>
+            <Typography className="max-w-5xl xl:max-w-2xl" size="title" font="display">
+              <h1>
+                Innovating the future of business with intelligent, secure, and scalable technology
+                solutions
+              </h1>
+            </Typography>
             <p className="mt-4 max-w-[40rem] text-lg text-gray-600 lg:mt-6 lg:text-xl xl:max-w-xl">
               — We drive business growth through innovative technology, providing intelligent,
               secure, and scalable solutions tailored to your unique needs.
@@ -131,16 +134,20 @@ export default function Page() {
         <Container>
           <div className="lg:flex lg:justify-between">
             <div className="max-w-3xl text-pretty">
-              <h2 className="text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
-                Innovating the Future of Business with Intelligent, Secure, and Scalable Technology
-                Solutions
-              </h2>
-              <p className="mt-4 text-lg text-gray-600 lg:mt-5 lg:text-xl">
-                We&apos;ve partnered with local businesses and organizations to design and implement
-                tailored systems that drive efficiency, innovation, and growth. By understanding
-                their unique needs, we&apos;ve delivered solutions that empower them to succeed in
-                an increasingly digital world.
-              </p>
+              <Typography size="heading">
+                <h2>
+                  Innovating the Future of Business with Intelligent, Secure, and Scalable
+                  Technology Solutions
+                </h2>
+              </Typography>
+              <Typography className="mt-4 lg:mt-5" size="supporting-text">
+                <p>
+                  We&apos;ve partnered with local businesses and organizations to design and
+                  implement tailored systems that drive efficiency, innovation, and growth. By
+                  understanding their unique needs, we&apos;ve delivered solutions that empower them
+                  to succeed in an increasingly digital world.
+                </p>
+              </Typography>
             </div>
 
             <div className="hidden lg:block">
@@ -149,6 +156,7 @@ export default function Page() {
               </Button>
             </div>
           </div>
+
           <div className="mt-12 grid gap-y-12 lg:grid-cols-3 lg:gap-x-8">
             {posts
               .sort((a, z) =>
@@ -189,6 +197,7 @@ export default function Page() {
                 </Link>
               ))}
           </div>
+
           <div className="mt-12 flex flex-col lg:hidden">
             <Button size="xl" asChild>
               <Link href="/portfolio">View all clients</Link>

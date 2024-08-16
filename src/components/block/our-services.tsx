@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import { type Service } from '@/types/service'
+import { Typography } from '@/components/ui/typography'
 
 import { Container, Section } from '../ui/container'
 
@@ -61,14 +62,18 @@ export function OurServices() {
     <Section id="our-services">
       <Container>
         <div className="max-w-3xl">
-          <h2 className="text-sm font-semibold text-brand-700 lg:text-md">Features</h2>
-          <p className="mt-3 text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
-            Our Services
-          </p>
-          <p className="mt-4 text-lg text-gray-600 lg:mt-5 lg:text-xl">
-            Our clientele ranges from midsize to large companies. Our core expertise is open-source
-            platforms. Our domain of expertise ranges from:
-          </p>
+          <Typography size="eyebrow">
+            <h2>Features</h2>
+          </Typography>
+          <Typography className="mt-3" size="heading">
+            <p>Our Services</p>
+          </Typography>
+          <Typography className="mt-4 lg:mt-5" size="supporting-text">
+            <p>
+              Our clientele ranges from midsize to large companies. Our core expertise is
+              open-source platforms. Our domain of expertise ranges from:
+            </p>
+          </Typography>
         </div>
 
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-3 lg:gap-8">
