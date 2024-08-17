@@ -1,8 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { type Service } from '@/types/service'
+import { convertSpacesToPercentEncoding } from '@/lib/utils'
 import { Typography } from '@/components/ui/typography'
 
+import { Button } from '../ui/button'
 import { Container, Section } from '../ui/container'
 
 import PlaceholderImage from '@/public/images/profiles-pictures/joaquin-valdez.jpg'
@@ -40,7 +43,7 @@ const services: Service[][] = [
       title: 'Cybersecurity',
       description:
         'Host your website, web application, or mobile app on the cloud for better performance and scalability.',
-      categories: ['Vulnerability Assessment and Penetration Testing (VAPT)'],
+      categories: ['Vulnerability Assessment and Penetration Testing'],
     },
   ],
   [
@@ -50,7 +53,7 @@ const services: Service[][] = [
       categories: ['Azure', 'AWS'],
     },
     {
-      title: 'Enterprise Resource Planning (ERP)',
+      title: 'Enterprise Resource Planning',
       description: 'A complete solution for managing HR, payroll, and loan processing.',
       categories: ['Food and Beverage', 'Engineering Construction', 'School Information System'],
     },
@@ -84,7 +87,7 @@ export function OurServices() {
             >
               <div className="relative overflow-hidden">
                 <Image
-                  className="h-[14.25rem] object-cover transition-transform group-hover:scale-125 lg:h-[16.875rem]"
+                  className="h-[14.25rem] object-cover grayscale transition group-hover:scale-125 group-hover:grayscale-0 lg:h-[16.875rem]"
                   src={PlaceholderImage}
                   alt=""
                 />
@@ -92,7 +95,19 @@ export function OurServices() {
               </div>
               <div className="text-pretty p-5 lg:px-6 lg:pb-6 lg:pt-8">
                 <h3 className="text-lg font-semibold lg:text-xl">{item.title}</h3>
-                <p className="mt-1 text-gray-600 lg:mt-2">{item.description}</p>
+                <ul className="mt-1 list-disc space-y-1 pl-4 marker:text-gray-300 lg:mt-2">
+                  {item.categories?.map((category, i) => (
+                    <li key={i}>
+                      <Button hierarchy="link-gray" asChild>
+                        <Link
+                          href={`/portfolio/?category=${convertSpacesToPercentEncoding(category)}`}
+                        >
+                          {category}
+                        </Link>
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}

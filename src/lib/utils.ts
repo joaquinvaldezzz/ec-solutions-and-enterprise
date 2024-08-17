@@ -54,3 +54,7 @@ export function slugify(text: string) {
     .replace(/[^\w-]+/g, '') // Remove all non-word characters except for -
     .replace(/--+/g, '-') // Replace multiple - with single -
 }
+
+export function convertSpacesToPercentEncoding(text: string) {
+  return text.replace(/ /g, '%20')
+}
