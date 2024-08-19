@@ -87,7 +87,7 @@ export function OurServices() {
             >
               <div className="relative overflow-hidden">
                 <Image
-                  className="h-[14.25rem] object-cover grayscale transition group-hover:scale-125 group-hover:grayscale-0 lg:h-[16.875rem]"
+                  className="h-[14.25rem] object-cover transition group-hover:scale-125 lg:h-[16.875rem]"
                   src={PlaceholderImage}
                   alt=""
                 />
