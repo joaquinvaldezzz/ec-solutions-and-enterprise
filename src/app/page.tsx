@@ -132,8 +132,8 @@ export default function Page() {
         </Container>
       </Section>
 
-      <OurClients />
       <AboutUs />
+      <OurClients />
       <OurServices />
       <ContactUs />
     </div>
