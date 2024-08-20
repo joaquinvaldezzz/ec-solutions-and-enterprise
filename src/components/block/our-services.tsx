@@ -1,14 +1,12 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { type Service } from '@/types/service'
-import { convertSpacesToPercentEncoding } from '@/lib/utils'
 import { Typography } from '@/components/ui/typography'
 
 import { Button } from '../ui/button'
 import { Container, Section } from '../ui/container'
 
-import PlaceholderImage from '@/public/images/profiles-pictures/joaquin-valdez.jpg'
+import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
 
 const services: Service[][] = [
   [
@@ -99,11 +97,7 @@ export function OurServices() {
                   {item.categories?.map((category, i) => (
                     <li key={i}>
                       <Button hierarchy="link-gray" asChild>
-                        <Link
-                          href={`/portfolio/?category=${convertSpacesToPercentEncoding(category)}`}
-                        >
-                          {category}
-                        </Link>
+                        <span>{category}</span>
                       </Button>
                     </li>
                   ))}
