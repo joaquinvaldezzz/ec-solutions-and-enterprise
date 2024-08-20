@@ -63,8 +63,8 @@ export function OurServices() {
     <Section id="our-services">
       <Container>
         <div className="max-w-3xl">
-          <Typography size="eyebrow">
-            <h2>Features</h2>
+          <Typography className="capitalize" size="eyebrow">
+            <h2>What we do</h2>
           </Typography>
           <Typography className="mt-3" size="heading">
             <p>Our Services</p>
