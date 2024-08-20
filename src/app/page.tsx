@@ -83,9 +83,9 @@ export default function Page() {
 
   return (
     <div>
-      <Section className="relative pt-[calc(theme(spacing.16)+var(--header-height))] lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
+      <Section className="relative overflow-hidden pt-[calc(theme(spacing.16)+var(--header-height))] lg:pb-48 lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
         <Image
-          className="hidden xl:pointer-events-none xl:absolute xl:right-0 xl:top-0 xl:block xl:select-none xl:object-cover xl:object-right"
+          className="hidden xl:pointer-events-none xl:absolute xl:right-0 xl:top-1/2 xl:block xl:-translate-y-1/2 xl:select-none xl:object-cover xl:object-right"
           src={HeroBanner}
           alt=""
           width={1188}
