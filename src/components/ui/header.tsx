@@ -67,6 +67,7 @@ export function Header() {
           <nav className="hidden lg:flex lg:items-center lg:gap-8">
             {links.map((link, index) => (
               <Button
+                size="lg"
                 hierarchy="link-gray"
                 asChild
                 onClick={(event) => {
