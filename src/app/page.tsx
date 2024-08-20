@@ -1,5 +1,6 @@
 import { type FC, type SVGProps } from 'react'
 import Image, { type StaticImageData } from 'next/image'
+import Marquee from 'react-fast-marquee'
 
 import { Container, Section } from '@/components/ui/container'
 import { Typography } from '@/components/ui/typography'
@@ -115,11 +116,18 @@ export default function Page() {
 
       <Section>
         <Container>
-          <h2 className="font-medium text-gray-600">Join 4,000+ companies already growing</h2>
-          <div className="mt-8 flex max-w-[40rem] flex-wrap gap-x-8 gap-y-4 lg:gap-y-6">
-            {logotypes.map((item, index) => (
-              <Image className="h-9 w-auto lg:h-12" src={item.image} alt={item.name} key={index} />
-            ))}
+          <h2 className="font-medium capitalize text-gray-600">Companies we proudly work with</h2>
+          <div className="mt-8 flex gap-x-8 gap-y-4 lg:gap-y-6">
+            <Marquee autoFill gradient>
+              {logotypes.map((item, index) => (
+                <Image
+                  className="h-9 w-auto last:mr-8 lg:h-12"
+                  src={item.image}
+                  alt={item.name}
+                  key={index}
+                />
+              ))}
+            </Marquee>
           </div>
         </Container>
       </Section>
