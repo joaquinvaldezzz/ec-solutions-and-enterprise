@@ -134,7 +134,10 @@ export default function Page() {
         <Container>
           <div className="lg:flex lg:justify-between">
             <div className="max-w-3xl text-pretty">
-              <Typography className="font-display uppercase lg:tracking-normal" size="heading">
+              <Typography
+                className="font-display uppercase lg:text-display-lg lg:tracking-normal"
+                size="heading"
+              >
                 <h2>
                   Innovating the Future of Business with Intelligent, Secure, and Scalable
                   Technology Solutions
@@ -165,7 +168,7 @@ export default function Page() {
               .slice(0, 3)
               .map((post, index) => (
                 <Link
-                  className="rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-xs lg:p-8"
+                  className="rounded-3xl border border-gray-200 bg-gray-50 p-6 transition hover:bg-white lg:p-8"
                   href={`/portfolio/${post.slug}`}
                   key={index}
                 >
@@ -181,7 +184,10 @@ export default function Page() {
                       {post.metadata.name}
                     </div>
                     <div className="mt-2 flex items-start justify-between gap-4">
-                      <h3 className="text-xl font-semibold lg:text-display-xs">
+                      <h3
+                        className="line-clamp-2 text-xl font-semibold lg:text-display-xs"
+                        title={post.metadata.project}
+                      >
                         {post.metadata.project}
                       </h3>
                     </div>
