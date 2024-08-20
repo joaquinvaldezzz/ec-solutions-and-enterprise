@@ -8,7 +8,7 @@ import CompanyLogo from '@/public/images/logos/ecsae-logotype.png'
 
 export function AboutUs() {
   return (
-    <Section className="bg-gray-50" id="about-us">
+    <Section className="bg-gray-50 xl:relative" id="about-us">
       <Container>
         <figure className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
           <Image className="w-[12.5rem] lg:w-[20.5rem] lg:shrink-0" src={CompanyLogo} alt="" />
