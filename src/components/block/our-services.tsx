@@ -60,7 +60,7 @@ const services: Service[][] = [
 
 export function OurServices() {
   return (
-    <Section id="our-services">
+    <Section className="bg-gray-50" id="our-services">
       <Container>
         <div className="max-w-3xl">
           <Typography className="capitalize" size="eyebrow">
