@@ -47,9 +47,9 @@ export function OurClients() {
             )
             .slice(0, 3)
             .map((post, index) => (
-              <Link
-                className="rounded-3xl border border-gray-200 bg-gray-50 p-6 transition hover:bg-white lg:p-8"
-                href={`/portfolio/${post.slug}`}
+              <div
+                className="flex flex-col rounded-3xl border border-gray-200 bg-gray-50 p-6 transition hover:bg-white lg:p-8"
+                // href={`/portfolio/${post.slug}`}
                 key={index}
               >
                 <Image
@@ -59,7 +59,7 @@ export function OurClients() {
                   width={96}
                   height={96}
                 />
-                <div className="mt-5 text-pretty">
+                <div className="mt-5 flex flex-1 flex-col text-pretty">
                   <div className="text-balance text-sm font-semibold text-brand-700">
                     {post.metadata.name}
                   </div>
@@ -71,8 +71,10 @@ export function OurClients() {
                       {post.metadata.project}
                     </h3>
                   </div>
-                  <p className="mt-2 line-clamp-4 text-gray-600">{post.metadata.description}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
+                  <p className="mb-6 mt-2 line-clamp-4 text-gray-600">
+                    {post.metadata.description}
+                  </p>
+                  <div className="mt-auto flex flex-wrap gap-2">
                     {post.metadata.tags.split(', ').map((tag, i) => (
                       <Badge color={determineBadgeColor(tag)} key={i}>
                         {tag}
@@ -80,7 +82,7 @@ export function OurClients() {
                     ))}
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
         </div>
 
