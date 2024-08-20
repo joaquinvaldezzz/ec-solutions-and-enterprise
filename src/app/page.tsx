@@ -134,10 +134,7 @@ export default function Page() {
         <Container>
           <div className="lg:flex lg:justify-between">
             <div className="max-w-3xl text-pretty">
-              <Typography
-                className="font-display uppercase lg:text-display-lg lg:tracking-normal"
-                size="heading"
-              >
+              <Typography className="capitalize" size="heading">
                 <h2>
                   Innovating the Future of Business with Intelligent, Secure, and Scalable
                   Technology Solutions
