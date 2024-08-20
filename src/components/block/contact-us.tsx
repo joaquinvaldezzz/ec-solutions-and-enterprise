@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Headset, Mail, MapPin } from 'lucide-react'
+import { Headset, Mail } from 'lucide-react'
 import { useForm, type SubmitHandler } from 'react-hook-form'
 import { z } from 'zod'
 
@@ -54,33 +54,24 @@ export function ContactUs() {
   return (
     <Section id="contact-us">
       <Container>
-        <Typography size="eyebrow">
+        <Typography className="capitalize" size="eyebrow">
           <h2>Contact us</h2>
         </Typography>
-        <Typography className="mt-3" size="heading">
-          <p>Chat to our friendly team</p>
+        <Typography className="mt-3 capitalize" size="heading">
+          <p>How can we help you?</p>
         </Typography>
         <Typography className="mt-4 lg:mt-5" size="supporting-text">
-          <p>We&apos;d love to hear from you. Please fill out this form or shoot us an email.</p>
+          <p>
+            We&apos;d love to hear from you. You can fill out the form below or directly email us.
+          </p>
         </Typography>
 
-        <div className="mt-12 grid gap-y-12 lg:mt-16 lg:grid-cols-2 lg:gap-x-16">
-          <dl className="grid gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-1 xl:grid-cols-2 xl:content-start">
-            <div>
-              <MapPin className="size-6 stroke-brand-600" size={24} />
-              <dt className="mt-3 text-lg font-semibold lg:mt-4 lg:text-xl">Office address</dt>
-              <p className="mt-1 text-gray-600 lg:mt-2">Come say hello at our office HQ.</p>
-              <dd className="mt-3 lg:mt-4">
-                <Button size="lg" hierarchy="link-color" asChild>
-                  <address className="not-italic">Quezon City</address>
-                </Button>
-              </dd>
-            </div>
-
+        <div className="mt-12 grid gap-y-12 lg:mt-16 lg:grid-cols-2 lg:gap-x-16 xl:grid-cols-3">
+          <dl className="grid gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-1 lg:content-start">
             <div>
               <Mail className="size-6 stroke-brand-600" size={24} />
               <dt className="mt-3 text-lg font-semibold lg:mt-4 lg:text-xl">Email address</dt>
-              <p className="mt-1 text-gray-600 lg:mt-2">Our friendly team is here to help.</p>
+              <p className="mt-1 text-gray-600 lg:mt-2">Get in touch with us.</p>
               <dd className="mt-3 lg:mt-4">
                 <Button className="break-all" size="lg" hierarchy="link-color" asChild>
                   <a href="mailto:bert.chua@ecsolutionsconsulting.com">
@@ -93,7 +84,7 @@ export function ContactUs() {
             <div>
               <Headset className="size-6 stroke-brand-600" size={24} />
               <dt className="mt-3 text-lg font-semibold lg:mt-4 lg:text-xl">Mobile number</dt>
-              <p className="mt-1 text-gray-600 lg:mt-2">Our friendly team is here to help.</p>
+              <p className="mt-1 text-gray-600 lg:mt-2">We&apos;re here to help.</p>
               <Button
                 className="mt-3 slashed-zero lg:mt-4"
                 size="lg"
@@ -107,7 +98,7 @@ export function ContactUs() {
 
           <Form {...form}>
             <form
-              className="flex flex-col gap-6 xl:rounded-2xl xl:bg-gray-50 xl:px-8 xl:py-10"
+              className="flex flex-col gap-6 xl:col-span-2 xl:rounded-2xl xl:bg-gray-50 xl:px-8 xl:py-10"
               // eslint-disable-next-line @typescript-eslint/no-misused-promises
               onSubmit={form.handleSubmit(onSubmit as unknown as SubmitHandler<FormSchema>)}
             >
