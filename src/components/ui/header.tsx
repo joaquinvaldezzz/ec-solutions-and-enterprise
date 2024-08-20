@@ -44,7 +44,7 @@ export function Header() {
           <Link href="/" aria-label="Home">
             <span className="sr-only">Company Logo</span>
             <Image
-              className="h-12 w-auto rounded object-cover"
+              className="h-12 w-auto object-cover"
               src={CompanyLogotype}
               alt="EC Solutions and Enterprise"
             />
