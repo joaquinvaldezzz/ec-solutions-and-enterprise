@@ -23,11 +23,14 @@ export function determineBadgeColor(tag: string): VariantProps<typeof badgeVaria
   switch (tag) {
     case 'Design':
       return 'brand'
-    // error
-    // warning
+    case 'Food and Beverages':
+      return 'error'
+    case 'Payroll':
+      return 'warning'
     case 'Software Development':
       return 'success'
-    // gray-blue
+    case 'Accounting System':
+      return 'gray-blue'
     case 'Product':
       return 'blue-light'
     // blue
@@ -55,6 +58,6 @@ export function slugify(text: string) {
     .replace(/--+/g, '-') // Replace multiple - with single -
 }
 
-export function convertSpacesToPercentEncoding(text: string) {
-  return text.replace(/ /g, '%20')
+export function replaceSpacesWithPlus(text: string) {
+  return text.replace(/ /g, '+')
 }
