@@ -1,16 +1,12 @@
 import { type FC, type SVGProps } from 'react'
 import Image, { type StaticImageData } from 'next/image'
-import Link from 'next/link'
 
-import { determineBadgeColor } from '@/lib/utils'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
 import { Container, Section } from '@/components/ui/container'
 import { Typography } from '@/components/ui/typography'
 import { AboutUs } from '@/components/block/about-us'
 import { ContactUs } from '@/components/block/contact-us'
+import { OurClients } from '@/components/block/our-clients'
 import { OurServices } from '@/components/block/our-services'
-import { getPosts } from '@/app/portfolio/utils'
 
 import HeroBanner from '@/public/images/backgrounds/hero-banner.png'
 import CSS3 from '@/public/images/logos/css3.svg'
@@ -79,8 +75,6 @@ const logotypes: Array<{ image: StaticImageData; name: string }> = [
 ]
 
 export default function Page() {
-  const posts = getPosts()
-
   return (
     <div>
       <Section className="relative overflow-hidden pt-[calc(theme(spacing.16)+var(--header-height))] lg:pb-48 lg:pt-[calc(theme(spacing.24)+var(--header-height))]">
@@ -130,85 +124,7 @@ export default function Page() {
         </Container>
       </Section>
 
-      <Section id="our-clients">
-        <Container>
-          <div className="lg:flex lg:justify-between">
-            <div className="max-w-3xl text-pretty">
-              <Typography className="capitalize" size="heading">
-                <h2>
-                  Innovating the Future of Business with Intelligent, Secure, and Scalable
-                  Technology Solutions
-                </h2>
-              </Typography>
-              <Typography className="mt-4 lg:mt-5" size="supporting-text">
-                <p>
-                  We&apos;ve partnered with local businesses and organizations to design and
-                  implement tailored systems that drive efficiency, innovation, and growth. By
-                  understanding their unique needs, we&apos;ve delivered solutions that empower them
-                  to succeed in an increasingly digital world.
-                </p>
-              </Typography>
-            </div>
-
-            <div className="hidden lg:block">
-              <Button size="xl" asChild>
-                <Link href="/portfolio">View all clients</Link>
-              </Button>
-            </div>
-          </div>
-
-          <div className="mt-12 grid gap-y-12 lg:grid-cols-3 lg:gap-x-8">
-            {posts
-              .sort((a, z) =>
-                new Date(a.metadata.publishedAt) < new Date(z.metadata.publishedAt) ? -1 : 1,
-              )
-              .slice(0, 3)
-              .map((post, index) => (
-                <Link
-                  className="rounded-3xl border border-gray-200 bg-gray-50 p-6 transition hover:bg-white lg:p-8"
-                  href={`/portfolio/${post.slug}`}
-                  key={index}
-                >
-                  <Image
-                    className="size-14 rounded-full lg:size-24"
-                    src={post.metadata.image}
-                    alt={post.metadata.name}
-                    width={96}
-                    height={96}
-                  />
-                  <div className="mt-5 text-pretty">
-                    <div className="text-balance text-sm font-semibold text-brand-700">
-                      {post.metadata.name}
-                    </div>
-                    <div className="mt-2 flex items-start justify-between gap-4">
-                      <h3
-                        className="line-clamp-2 text-xl font-semibold lg:text-display-xs"
-                        title={post.metadata.project}
-                      >
-                        {post.metadata.project}
-                      </h3>
-                    </div>
-                    <p className="mt-2 line-clamp-4 text-gray-600">{post.metadata.description}</p>
-                    <div className="mt-6 flex flex-wrap gap-2">
-                      {post.metadata.tags.split(', ').map((tag, i) => (
-                        <Badge color={determineBadgeColor(tag)} key={i}>
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-          </div>
-
-          <div className="mt-12 flex flex-col lg:hidden">
-            <Button size="xl" asChild>
-              <Link href="/portfolio">View all clients</Link>
-            </Button>
-          </div>
-        </Container>
-      </Section>
-
+      <OurClients />
       <AboutUs />
       <OurServices />
       <ContactUs />
