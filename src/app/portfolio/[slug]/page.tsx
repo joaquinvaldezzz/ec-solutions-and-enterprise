@@ -10,8 +10,6 @@ import { CustomMDX } from '@/components/ui/mdx'
 
 import { formatDate, getPosts } from '../utils'
 
-import PlaceholderImage from '@/public/images/backgrounds/placeholder-image.jpeg'
-
 export async function generateStaticParams() {
   const posts = getPosts()
 
@@ -115,7 +113,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           </p>
         </Container>
 
-        <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 lg:mt-16 lg:gap-8 xl:px-8">
+        <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 *:shrink-0 lg:mt-16 lg:gap-8 xl:px-8">
           {allPosts
             .filter((item) => item.slug !== post.slug)
             .sort((a, z) =>
@@ -123,33 +121,35 @@ export default function Page({ params }: { params: { slug: string } }) {
             )
             .map((item, index) => (
               <Link
-                className="w-80 shrink-0 snap-center lg:w-96"
+                className="flex w-80 flex-col rounded-3xl border border-gray-200 bg-gray-50 p-6 transition hover:bg-white lg:w-96 lg:p-8"
                 href={`/portfolio/${item.slug}`}
                 key={index}
               >
-                <div className="relative flex h-60 items-center justify-center overflow-hidden rounded-2xl bg-brand-50">
-                  <Image
-                    className="object-cover"
-                    src={PlaceholderImage}
-                    alt={item.metadata.name}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 100vw"
-                    priority
-                  />
-                </div>
-                <div className="mt-5">
-                  <div className="line-clamp-1 text-balance text-sm font-semibold text-brand-700">
-                    {item.metadata.project}
+                <Image
+                  className="size-14 rounded-full object-contain lg:size-24"
+                  src={item.metadata.image}
+                  alt={item.metadata.name}
+                  width={96}
+                  height={96}
+                />
+                <div className="mt-5 flex flex-1 flex-col text-pretty">
+                  <div className="text-balance text-sm font-semibold text-brand-700">
+                    {item.metadata.name}
                   </div>
                   <div className="mt-2 flex items-start justify-between gap-4">
-                    <h3 className="text-xl font-semibold lg:text-display-xs">
-                      {item.metadata.name}
+                    <h3
+                      className="line-clamp-2 text-xl font-semibold lg:text-display-xs"
+                      title={item.metadata.project}
+                    >
+                      {item.metadata.project}
                     </h3>
                   </div>
-                  <p className="mt-2 line-clamp-2 text-gray-600">{item.metadata.description}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
+                  <p className="mb-6 mt-2 line-clamp-4 text-gray-600">
+                    {item.metadata.description}
+                  </p>
+                  <div className="mt-auto flex flex-wrap gap-2">
                     {item.metadata.tags.split(', ').map((tag, i) => (
-                      <Badge size="md" color={determineBadgeColor(tag)} key={i}>
+                      <Badge color={determineBadgeColor(tag)} key={i}>
                         {tag}
                       </Badge>
                     ))}
