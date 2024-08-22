@@ -6,6 +6,7 @@ import * as Tabs from '@radix-ui/react-tabs'
 import { determineBadgeColor, slugify } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { Container } from '@/components/ui/container'
+import { Typography } from '@/components/ui/typography'
 
 import { getPosts } from './utils'
 
@@ -30,14 +31,19 @@ export default function Page({
     <main className="mt-header-height">
       <section className="py-16 lg:pt-24">
         <Container>
-          <div className="max-w-3xl">
-            <h1 className="text-sm font-semibold text-brand-700 lg:text-md">Our works</h1>
-            <p className="mt-3 text-display-md font-semibold tracking-tight lg:text-display-lg">
-              Resources and insights
-            </p>
-            <p className="mt-4 text-lg text-gray-600 lg:mt-6 lg:text-xl">
-              The latest industry news, interviews, technologies, and resources.
-            </p>
+          <div className="max-w-3xl text-pretty">
+            <h1 className="text-display-md font-semibold tracking-tight lg:text-display-lg">
+              Innovating the Future of Business with Intelligent, Secure, and Scalable Technology
+              Solutions
+            </h1>
+            <Typography className="mt-4 lg:mt-6" size="supporting-text">
+              <p>
+                We&apos;ve partnered with local businesses and organizations to design and implement
+                tailored systems that drive efficiency, innovation, and growth. By understanding
+                their unique needs, we&apos;ve delivered solutions that empower them to succeed in
+                an increasingly digital world.
+              </p>
+            </Typography>
           </div>
         </Container>
       </section>
