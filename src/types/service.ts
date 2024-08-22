@@ -1,7 +1,7 @@
-import { type IconProp } from '@fortawesome/fontawesome-svg-core'
+import { type StaticImageData } from 'next/image'
 
 export interface Service {
-  icon?: IconProp
+  image: StaticImageData
   title: string
   description: string
   categories?: string[]
