@@ -71,9 +71,9 @@ export function OurClients() {
                       {post.metadata.project}
                     </h3>
                   </div>
-                  <p className="mb-6 mt-2 line-clamp-4 text-gray-600">
-                    {post.metadata.description}
-                  </p>
+                  <Typography className="mb-6 mt-2 line-clamp-4" size="supporting-text">
+                    <p>{post.metadata.description}</p>
+                  </Typography>
                   <div className="mt-auto flex flex-wrap gap-2">
                     {post.metadata.tags.split(', ').map((tag, i) => (
                       <Badge color={determineBadgeColor(tag)} key={i}>

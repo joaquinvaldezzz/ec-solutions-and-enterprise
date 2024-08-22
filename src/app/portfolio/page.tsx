@@ -1,6 +1,5 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import * as Tabs from '@radix-ui/react-tabs'
 
 import { determineBadgeColor, slugify } from '@/lib/utils'
@@ -80,9 +79,9 @@ export default function Page({
                     new Date(a.metadata.publishedAt) < new Date(z.metadata.publishedAt) ? -1 : 1,
                   )
                   .map((post, index) => (
-                    <Link
+                    <div
                       className="flex flex-col rounded-3xl border border-gray-200 bg-gray-50 p-6 transition hover:bg-white lg:p-8"
-                      href={`/portfolio/${post.slug}`}
+                      // href={`/portfolio/${post.slug}`}
                       key={index}
                     >
                       <Image
@@ -104,9 +103,9 @@ export default function Page({
                             {post.metadata.project}
                           </h3>
                         </div>
-                        <p className="mb-6 mt-2 line-clamp-4 text-gray-600">
-                          {post.metadata.description}
-                        </p>
+                        <Typography className="mb-6 mt-2 line-clamp-4" size="supporting-text">
+                          <p className="line-clamp-4">{post.metadata.description}</p>
+                        </Typography>
                         <div className="mt-auto flex flex-wrap gap-2">
                           {post.metadata.tags.split(', ').map((tag, i) => (
                             <Badge color={determineBadgeColor(tag)} key={i}>
@@ -115,7 +114,7 @@ export default function Page({
                           ))}
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   ))}
               </Tabs.Content>
             </div>
