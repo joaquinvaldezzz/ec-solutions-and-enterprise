@@ -17,7 +17,7 @@ export function OurClients() {
       <Container>
         <div className="lg:flex lg:justify-between">
           <div className="max-w-3xl text-pretty">
-            <Typography className="capitalize" size="heading">
+            <Typography size="heading">
               <h2>
                 Innovating the Future of Business with Intelligent, Secure, and Scalable Technology
                 Solutions

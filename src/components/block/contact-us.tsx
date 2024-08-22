@@ -54,10 +54,10 @@ export function ContactUs() {
   return (
     <Section id="contact-us">
       <Container>
-        <Typography className="capitalize" size="eyebrow">
+        <Typography size="eyebrow">
           <h2>Contact us</h2>
         </Typography>
-        <Typography className="mt-3 capitalize" size="heading">
+        <Typography className="mt-3" size="heading">
           <p>How can we help you?</p>
         </Typography>
         <Typography className="mt-4 lg:mt-5" size="supporting-text">
