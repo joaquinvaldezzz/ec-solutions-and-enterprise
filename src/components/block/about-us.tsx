@@ -10,17 +10,21 @@ export function AboutUs() {
   return (
     <Section className="bg-gray-50 xl:relative" id="about-us">
       <Container>
-        <figure className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
-          <Image className="w-[12.5rem] lg:w-[20.5rem] lg:shrink-0" src={CompanyLogo} alt="" />
+        <figure className="flex flex-col items-center gap-8">
+          <Image
+            className="h-10 w-[8.75rem] object-contain"
+            src={CompanyLogo}
+            alt="EC Solutions and Enterprise"
+          />
           <div>
-            <blockquote className="text-display-sm font-medium lg:text-display-md lg:tracking-tight">
+            <blockquote className="text-center text-display-sm font-medium lg:text-display-lg lg:tracking-tight">
               <p>
                 We established EC Solutions and Enterprise to become a renowned technology firm by
                 delivering high-quality and cost-efficient software to small and medium enterprises.
               </p>
             </blockquote>
-            <figcaption className="mt-8">
-              <div className="text-lg font-semibold">— Edilberto N. Chua, Jr.</div>
+            <figcaption className="mt-8 text-center">
+              <div className="text-lg font-semibold">Edilberto N. Chua, Jr.</div>
               <div className="mt-1 text-gray-600">Company Owner</div>
             </figcaption>
           </div>
