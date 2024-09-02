@@ -7,6 +7,7 @@ module.exports = {
     '@ianvs/prettier-plugin-sort-imports',
     '@prettier/plugin-xml',
     'prettier-plugin-packagejson',
+    'prettier-plugin-sh',
     'prettier-plugin-tailwindcss',
   ],
   importOrder: [
