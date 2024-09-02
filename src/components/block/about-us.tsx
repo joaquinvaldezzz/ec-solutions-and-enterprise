@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import { Container, Section } from '../ui/container'
 
-import CompanyLogo from '@/public/images/logos/ecsae-logotype.png'
+import CompanyLogo from '@/public/images/logos/logotype-horizontal.png'
 
 export function AboutUs() {
   return (
