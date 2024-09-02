@@ -11,7 +11,7 @@ import { type NavItem } from '@/types/nav'
 
 import { Button } from './button'
 
-import CompanyLogotype from '@/public/images/logos/ecsae-logotype.png'
+import CompanyLogotype from '@/public/images/logos/logotype-horizontal.png'
 
 const links: NavItem[] = [
   {

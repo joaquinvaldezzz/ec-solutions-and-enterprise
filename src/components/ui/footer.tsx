@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import { Container } from './container'
 
-import CompanyLogotype from '@/public/images/logos/ecsae-logotype.png'
+import CompanyLogotype from '@/public/images/logos/logotype-horizontal.png'
 
 export function Footer() {
   return (
@@ -14,7 +14,7 @@ export function Footer() {
           <div className="flex flex-col items-center">
             <span className="sr-only">EC Solutions and Enterprise</span>
             <Image
-              className="h-16 w-auto object-cover"
+              className="h-8 w-auto object-cover"
               src={CompanyLogotype}
               alt="EC Solutions and Enterprise"
             />
