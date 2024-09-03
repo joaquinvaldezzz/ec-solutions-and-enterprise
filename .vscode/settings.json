@@ -1,3 +1,17 @@
 {
+  "cSpell.words": [
+    "clsx",
+    "commitlint",
+    "embla",
+    "fontawesome",
+    "fortawesome",
+    "heroicons",
+    "hookform",
+    "ianvs",
+    "lucide",
+    "packagejson",
+    "svgr",
+    "tailwindcss"
+  ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
