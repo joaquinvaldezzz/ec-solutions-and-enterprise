@@ -60,7 +60,7 @@ export function Header() {
               }}
             >
               <span className="sr-only">Open mobile menu</span>
-              <Bars3Icon className="size-6" />
+              <Bars3Icon className="size-6 stroke-gray-400" />
             </Button>
           </Dialog.Trigger>
 
@@ -110,7 +110,7 @@ export function Header() {
         <Dialog.Content>
           <Dialog.Title className="sr-only">Mobile menu</Dialog.Title>
           <Dialog.Description className="sr-only">Use arrow keys to navigate</Dialog.Description>
-          <div className="fixed inset-x-0 top-0 z-50 w-full bg-white shadow-lg lg:hidden">
+          <div className="fixed inset-x-0 top-0 z-50 w-full bg-[#002f69] shadow-lg lg:hidden">
             <div className="flex items-center justify-between p-4">
               <Link href="/" aria-label="Home">
                 <span className="sr-only">Company Logo</span>
