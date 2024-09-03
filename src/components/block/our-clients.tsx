@@ -13,7 +13,7 @@ export function OurClients() {
   const posts = getPosts()
 
   return (
-    <Section id="our-clients">
+    <Section className="bg-[#0087ff]" id="our-clients">
       <Container>
         <div className="lg:flex lg:justify-between">
           <div className="max-w-3xl text-pretty">
@@ -23,7 +23,7 @@ export function OurClients() {
                 Solutions
               </h2>
             </Typography>
-            <Typography className="mt-4 lg:mt-5" size="supporting-text">
+            <Typography className="mt-4 text-gray-200 lg:mt-5" size="supporting-text">
               <p>
                 We&apos;ve partnered with local businesses and organizations to design and implement
                 tailored systems that drive efficiency, innovation, and growth. By understanding
@@ -48,7 +48,7 @@ export function OurClients() {
             .slice(0, 3)
             .map((post, index) => (
               <div
-                className="flex flex-col rounded-3xl border border-gray-200 bg-gray-50 p-6 transition hover:bg-white lg:p-8"
+                className="flex flex-col rounded-3xl bg-brand-600 p-6 transition hover:bg-brand-800 lg:p-8"
                 // href={`/portfolio/${post.slug}`}
                 key={index}
               >
@@ -60,7 +60,7 @@ export function OurClients() {
                   height={96}
                 />
                 <div className="mt-5 flex flex-1 flex-col text-pretty">
-                  <div className="text-balance text-sm font-semibold text-brand-700">
+                  <div className="text-balance text-sm font-semibold text-brand-300">
                     {post.metadata.name}
                   </div>
                   <div className="mt-2 flex items-start justify-between gap-4">
@@ -71,7 +71,10 @@ export function OurClients() {
                       {post.metadata.project}
                     </h3>
                   </div>
-                  <Typography className="mb-6 mt-2 line-clamp-4" size="supporting-text">
+                  <Typography
+                    className="mb-6 mt-2 line-clamp-4 text-gray-400"
+                    size="supporting-text"
+                  >
                     <p>{post.metadata.description}</p>
                   </Typography>
                   <div className="mt-auto flex flex-wrap gap-2">

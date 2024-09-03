@@ -95,7 +95,7 @@ export default function Page() {
                 solutions
               </h1>
             </Typography>
-            <p className="mt-4 max-w-[40rem] text-lg text-gray-600 lg:mt-6 lg:text-xl xl:max-w-xl">
+            <p className="mt-4 max-w-[40rem] text-lg text-gray-400 lg:mt-6 lg:text-xl xl:max-w-xl">
               — We drive business growth through innovative technology, providing intelligent,
               secure, and scalable solutions tailored to your unique needs.
             </p>
@@ -105,7 +105,7 @@ export default function Page() {
                 return (
                   <div className="flex items-center gap-2.5" key={index}>
                     <Tag className="size-8" />
-                    <p className="text-gray-600">{technology.name}</p>
+                    <p className="text-gray-400">{technology.name}</p>
                   </div>
                 )
               })}
@@ -116,9 +116,9 @@ export default function Page() {
 
       <Section>
         <Container>
-          <h2 className="font-medium capitalize text-gray-600">Companies we proudly work with</h2>
+          <h2 className="font-medium capitalize text-gray-400">Companies we proudly work with</h2>
           <div className="mt-8 flex gap-x-8 gap-y-4 lg:gap-y-6 xl:max-w-2xl 2xl:max-w-3xl">
-            <Marquee autoFill gradient>
+            <Marquee autoFill>
               {logotypes.map((item, index) => (
                 <Image
                   className="h-9 w-auto last:mr-8 lg:h-12"

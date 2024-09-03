@@ -8,7 +8,7 @@ import CompanyLogo from '@/public/images/logos/logotype-horizontal.png'
 
 export function AboutUs() {
   return (
-    <Section className="bg-gray-50 xl:relative" id="about-us">
+    <Section className="bg-[#eeeef0] xl:relative" id="about-us">
       <Container>
         <figure className="flex flex-col items-center gap-8">
           <Image
@@ -17,14 +17,14 @@ export function AboutUs() {
             alt="EC Solutions and Enterprise"
           />
           <div>
-            <blockquote className="text-center text-display-sm font-medium lg:text-display-lg lg:tracking-tight">
+            <blockquote className="text-center text-display-sm font-medium text-gray-900 lg:text-display-lg lg:tracking-tight">
               <p>
                 We established EC Solutions and Enterprise to become a renowned technology firm by
                 delivering high-quality and cost-efficient software to small and medium enterprises.
               </p>
             </blockquote>
             <figcaption className="mt-8 text-center">
-              <div className="text-lg font-semibold">Edilberto N. Chua, Jr.</div>
+              <div className="text-lg font-semibold text-gray-900">Edilberto N. Chua, Jr.</div>
               <div className="mt-1 text-gray-600">Company Owner</div>
             </figcaption>
           </div>

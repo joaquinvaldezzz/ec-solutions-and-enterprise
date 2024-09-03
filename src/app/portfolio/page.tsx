@@ -35,7 +35,7 @@ export default function Page({
               Innovating the Future of Business with Intelligent, Secure, and Scalable Technology
               Solutions
             </h1>
-            <Typography className="mt-4 lg:mt-6" size="supporting-text">
+            <Typography className="mt-4 text-gray-400 lg:mt-6" size="supporting-text">
               <p>
                 We&apos;ve partnered with local businesses and organizations to design and implement
                 tailored systems that drive efficiency, innovation, and growth. By understanding
@@ -51,16 +51,16 @@ export default function Page({
         <section className="pb-16 lg:pb-24">
           <Container>
             <div className="flex flex-col gap-8 *:w-full *:shrink-0 lg:flex-row lg:justify-between">
-              <Tabs.List className="relative flex gap-3 overflow-auto border-b border-b-gray-200">
+              <Tabs.List className="relative flex gap-3 overflow-auto border-b border-b-white">
                 <Tabs.Trigger
-                  className="h-9 text-nowrap border-b-2 border-b-transparent px-1 pb-3 font-semibold text-gray-500 focus:outline-none data-active:border-b-brand-600 data-active:text-brand-700"
+                  className="h-9 text-nowrap border-b-2 border-b-transparent px-1 pb-3 font-semibold text-gray-400 focus:outline-none data-active:border-b-white data-active:text-white"
                   value="all"
                 >
                   All
                 </Tabs.Trigger>
                 {categories.map((category, index) => (
                   <Tabs.Trigger
-                    className="h-9 text-nowrap border-b-2 border-b-transparent px-1 pb-3 font-semibold text-gray-500 focus:outline-none data-active:border-b-brand-600 data-active:text-brand-700"
+                    className="h-9 text-nowrap border-b-2 border-b-transparent px-1 pb-3 font-semibold text-gray-400 focus:outline-none data-active:border-b-white data-active:text-white"
                     value={slugify(category)}
                     key={index}
                   >
@@ -80,7 +80,7 @@ export default function Page({
                   )
                   .map((post, index) => (
                     <div
-                      className="flex flex-col rounded-3xl border border-gray-200 bg-gray-50 p-6 transition hover:bg-white lg:p-8"
+                      className="flex flex-col rounded-3xl bg-brand-600 p-6 transition hover:bg-brand-800 lg:p-8"
                       // href={`/portfolio/${post.slug}`}
                       key={index}
                     >
@@ -92,7 +92,7 @@ export default function Page({
                         height={96}
                       />
                       <div className="mt-5 flex flex-1 flex-col text-pretty">
-                        <div className="text-balance text-sm font-semibold text-brand-700">
+                        <div className="text-balance text-sm font-semibold text-brand-300">
                           {post.metadata.name}
                         </div>
                         <div className="mt-2 flex items-start justify-between gap-4">
@@ -103,7 +103,10 @@ export default function Page({
                             {post.metadata.project}
                           </h3>
                         </div>
-                        <Typography className="mb-6 mt-2 line-clamp-4" size="supporting-text">
+                        <Typography
+                          className="mb-6 mt-2 line-clamp-4 text-gray-400"
+                          size="supporting-text"
+                        >
                           <p className="line-clamp-4">{post.metadata.description}</p>
                         </Typography>
                         <div className="mt-auto flex flex-wrap gap-2">

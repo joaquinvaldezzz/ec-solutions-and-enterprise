@@ -52,12 +52,12 @@ export function ContactUs() {
   }
 
   return (
-    <Section id="contact-us">
+    <Section className="bg-[#eeeef0]" id="contact-us">
       <Container>
         <Typography size="eyebrow">
           <h2>Contact us</h2>
         </Typography>
-        <Typography className="mt-3" size="heading">
+        <Typography className="mt-3 text-gray-900" size="heading">
           <p>How can we help you?</p>
         </Typography>
         <Typography className="mt-4 lg:mt-5" size="supporting-text">
@@ -70,7 +70,9 @@ export function ContactUs() {
           <dl className="grid gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-1 lg:content-start">
             <div>
               <Mail className="size-6 stroke-brand-600" size={24} />
-              <dt className="mt-3 text-lg font-semibold lg:mt-4 lg:text-xl">Email address</dt>
+              <dt className="mt-3 text-lg font-semibold text-gray-900 lg:mt-4 lg:text-xl">
+                Email address
+              </dt>
               <p className="mt-1 text-gray-600 lg:mt-2">Get in touch with us.</p>
               <dd className="mt-3 lg:mt-4">
                 <Button className="break-all" size="lg" hierarchy="link-color" asChild>
@@ -83,7 +85,9 @@ export function ContactUs() {
 
             <div>
               <Headset className="size-6 stroke-brand-600" size={24} />
-              <dt className="mt-3 text-lg font-semibold lg:mt-4 lg:text-xl">Mobile number</dt>
+              <dt className="mt-3 text-lg font-semibold text-gray-900 lg:mt-4 lg:text-xl">
+                Mobile number
+              </dt>
               <p className="mt-1 text-gray-600 lg:mt-2">We&apos;re here to help.</p>
               <Button
                 className="mt-3 slashed-zero lg:mt-4"

@@ -65,16 +65,16 @@ const services: Service[] = [
 
 export function OurServices() {
   return (
-    <Section className="bg-gray-50" id="our-services">
+    <Section className="bg-[#002f69]" id="our-services">
       <Container>
         <div className="max-w-3xl">
-          <Typography size="eyebrow">
+          <Typography className="text-white" size="eyebrow">
             <h2>What we do</h2>
           </Typography>
           <Typography className="mt-3" size="heading">
             <p>Our Services</p>
           </Typography>
-          <Typography className="mt-4 lg:mt-5" size="supporting-text">
+          <Typography className="mt-4 text-gray-400 lg:mt-5" size="supporting-text">
             <p>
               Our clientele ranges from midsize to large companies. Our core expertise is
               open-source platforms. Our domain of expertise ranges from:
@@ -84,10 +84,7 @@ export function OurServices() {
 
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-3 lg:gap-8">
           {services.map((item, index) => (
-            <div
-              className="overflow-hidden rounded-2xl bg-gray-25 shadow-sm ring-1 ring-gray-200"
-              key={index}
-            >
+            <div className="overflow-hidden rounded-2xl bg-brand-600 shadow-sm" key={index}>
               <div className="relative h-[14.25rem] overflow-hidden lg:h-[16.875rem]">
                 <Image className="scale-125 object-cover" src={item.image} alt={item.title} fill />
                 {/* <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gray-25" /> */}
@@ -97,7 +94,11 @@ export function OurServices() {
                 <ul className="mt-1 list-disc space-y-1 pl-4 marker:text-gray-300 lg:mt-2">
                   {item.categories?.map((category, i) => (
                     <li key={i}>
-                      <Button hierarchy="link-gray" asChild>
+                      <Button
+                        className="text-gray-400 hover:text-gray-300"
+                        hierarchy="link-gray"
+                        asChild
+                      >
                         <span>{category}</span>
                       </Button>
                     </li>
