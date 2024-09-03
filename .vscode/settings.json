@@ -7,11 +7,13 @@
     "embla",
     "fontawesome",
     "fortawesome",
+    "fullhuman",
     "heroicons",
     "hookform",
     "ianvs",
     "lucide",
     "packagejson",
+    "purgecss",
     "svgr",
     "tailwindcss"
   ],
