@@ -8,7 +8,7 @@ import CompanyLogotype from '@/public/images/logos/logotype-horizontal.png'
 
 export function Footer() {
   return (
-    <footer className="bg-black py-12 text-white">
+    <footer className="bg-[#002f69] py-12">
       <Container>
         <div className="flex flex-col gap-y-12 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-col items-center">
