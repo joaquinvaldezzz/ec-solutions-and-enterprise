@@ -1,5 +1,5 @@
 /** @type {import('prettier').Config} */
-module.exports = {
+const config = {
   printWidth: 100,
   semi: false,
   singleQuote: true,
@@ -33,3 +33,5 @@ module.exports = {
   tailwindAttributes: ['tw'],
   tailwindFunctions: ['cva'],
 }
+
+export default config
