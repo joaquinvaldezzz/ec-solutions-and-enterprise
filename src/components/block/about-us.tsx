@@ -12,7 +12,7 @@ export function AboutUs() {
       <Container>
         <figure className="flex flex-col items-center gap-8">
           <Image
-            className="h-16 w-auto object-contain"
+            className="h-16 w-auto object-contain lg:h-24"
             src={CompanyLogo}
             alt="EC Solutions and Enterprise"
           />

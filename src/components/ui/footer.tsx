@@ -14,7 +14,7 @@ export function Footer() {
           <div className="flex flex-col items-center">
             <span className="sr-only">EC Solutions and Enterprise</span>
             <Image
-              className="h-8 w-auto object-cover"
+              className="h-16 w-auto object-cover"
               src={CompanyLogotype}
               alt="EC Solutions and Enterprise"
             />
