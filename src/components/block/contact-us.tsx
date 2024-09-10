@@ -76,9 +76,7 @@ export function ContactUs() {
               <p className="mt-1 text-gray-600 lg:mt-2">Get in touch with us.</p>
               <dd className="mt-3 lg:mt-4">
                 <Button className="break-all" size="lg" hierarchy="link-color" asChild>
-                  <a href="mailto:bert.chua@ecsolutionsconsulting.com">
-                    bert.chua@ecsolutionsconsulting.com
-                  </a>
+                  <a href="mailto:inquiry@myecsolutions.com">inquiry@myecsolutions.com</a>
                 </Button>
               </dd>
             </div>
@@ -95,7 +93,7 @@ export function ContactUs() {
                 hierarchy="link-color"
                 asChild
               >
-                <dd>+63 917 551 0320</dd>
+                <dd>+63 969 593 1897</dd>
               </Button>
             </div>
           </dl>
