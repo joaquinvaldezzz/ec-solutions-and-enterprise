@@ -23,10 +23,6 @@ export function AboutUs() {
                 delivering high-quality and cost-efficient software to small and medium enterprises.
               </p>
             </blockquote>
-            <figcaption className="mt-8 text-center">
-              <div className="text-lg font-semibold text-gray-900">Edilberto N. Chua, Jr.</div>
-              <div className="mt-1 text-gray-600">Company Owner</div>
-            </figcaption>
           </div>
         </figure>
       </Container>
