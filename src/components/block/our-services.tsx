@@ -33,7 +33,7 @@ const services: Service[] = [
   },
   {
     image: Financial,
-    title: 'Financial',
+    title: 'Mobile App Development',
     description:
       'A complete solution for managing hospitals, clinics, and other healthcare facilities.',
     categories: [
@@ -60,6 +60,17 @@ const services: Service[] = [
     title: 'Enterprise Resource Planning',
     description: 'A complete solution for managing HR, payroll, and loan processing.',
     categories: ['Food and Beverage', 'Engineering Construction', 'School Information System'],
+  },
+  {
+    image: Financial,
+    title: 'Financial',
+    description:
+      'A complete solution for managing hospitals, clinics, and other healthcare facilities.',
+    categories: [
+      'Web Portal and Payment Solutions',
+      'Payment Gateway Integration',
+      'Payroll and Accounting System',
+    ],
   },
 ]
 
