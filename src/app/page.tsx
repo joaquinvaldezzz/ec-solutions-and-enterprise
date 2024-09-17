@@ -21,6 +21,7 @@ import MySQL from '@/public/images/logos/my-sql.svg'
 import OurLadyOfFatimaUniversityLogotype from '@/public/images/logos/our-lady-of-fatima-university-logotype.png'
 import Php from '@/public/images/logos/php.svg'
 import Python from '@/public/images/logos/python.svg'
+import ReactJS from '@/public/images/logos/react-js.svg'
 
 const technologies: Array<{
   logo: FC<SVGProps<SVGElement>>
@@ -37,6 +38,10 @@ const technologies: Array<{
   {
     logo: Javascript,
     name: 'JavaScript',
+  },
+  {
+    logo: ReactJS,
+    name: 'React.js',
   },
   {
     logo: Php,
