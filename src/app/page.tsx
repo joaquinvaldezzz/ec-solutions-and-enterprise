@@ -10,18 +10,24 @@ import { OurClients } from '@/components/block/our-clients'
 import { OurServices } from '@/components/block/our-services'
 
 import HeroBanner from '@/public/images/backgrounds/hero-banner.png'
+import CollegeOfSanBenildoRizal from '@/public/images/logos/college-of-san-benildo-rizal.png'
 import CSS3 from '@/public/images/logos/css3.svg'
 import DepartmentOfHealthLogotype from '@/public/images/logos/department-of-health-logotype.png'
 import DreamRiserBuildersInc from '@/public/images/logos/dream-riser-builders-inc.jpg'
+import EscobarsSteakhouse from '@/public/images/logos/escobars-steakhouse.jpg'
 import Git from '@/public/images/logos/git.svg'
 import HTML5 from '@/public/images/logos/html5.svg'
 import Javascript from '@/public/images/logos/javascript.svg'
+import Maximum88Corporation from '@/public/images/logos/maximum-88-corporation.png'
 import MicrosoftAzure from '@/public/images/logos/microsoft-azure.svg'
 import MySQL from '@/public/images/logos/my-sql.svg'
+import NorzagarayCollege from '@/public/images/logos/norzagaray-college.png'
 import OurLadyOfFatimaUniversityLogotype from '@/public/images/logos/our-lady-of-fatima-university-logotype.png'
+import PhilippineNavy from '@/public/images/logos/philippine-navy.png'
 import Php from '@/public/images/logos/php.svg'
 import Python from '@/public/images/logos/python.svg'
 import ReactJS from '@/public/images/logos/react-js.svg'
+import UniversityOfThePhilippinesManila from '@/public/images/logos/university-of-the-philippines.png'
 
 const technologies: Array<{
   logo: FC<SVGProps<SVGElement>>
@@ -78,6 +84,30 @@ const logotypes: Array<{ image: StaticImageData; name: string }> = [
     image: DreamRiserBuildersInc,
     name: 'Dream Riser Builders, Inc.',
   },
+  {
+    image: NorzagarayCollege,
+    name: 'Norzagaray College',
+  },
+  {
+    image: CollegeOfSanBenildoRizal,
+    name: 'College of San Benildo - Rizal',
+  },
+  {
+    image: PhilippineNavy,
+    name: 'Philippine Navy',
+  },
+  {
+    image: UniversityOfThePhilippinesManila,
+    name: 'University of the Philippines - Manila',
+  },
+  {
+    image: EscobarsSteakhouse,
+    name: "Escobar's Steakhouse",
+  },
+  {
+    image: Maximum88Corporation,
+    name: 'Maximum 88 Corporation',
+  },
 ]
 
 export default function Page() {
@@ -122,7 +152,7 @@ export default function Page() {
       <Section>
         <Container>
           <h2 className="font-medium capitalize text-gray-400">Companies we proudly work with</h2>
-          <div className="mt-8 flex gap-x-8 gap-y-4 lg:gap-y-6 xl:max-w-2xl 2xl:max-w-3xl">
+          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-4 lg:gap-y-6 xl:max-w-2xl 2xl:max-w-3xl">
             <Marquee autoFill>
               {logotypes.map((item, index) => (
                 <Image
