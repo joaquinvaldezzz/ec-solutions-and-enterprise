@@ -6,10 +6,10 @@ export default function Page() {
       <Section>
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <div className="text-sm font-semibold text-brand-700 lg:text-md">
+            <div className="text-brand-700 lg:text-md text-sm font-semibold">
               Current as of August 2, 2024
             </div>
-            <h1 className="mt-3 text-display-md font-semibold tracking-tight lg:text-display-lg">
+            <h1 className="text-display-md lg:text-display-lg mt-3 font-semibold tracking-tight">
               Privacy Policy
             </h1>
             <p className="mt-4 text-lg text-gray-600 lg:mt-6 lg:text-xl">

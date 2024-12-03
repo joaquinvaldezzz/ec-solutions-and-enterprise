@@ -8,19 +8,19 @@ import { rehypeImageSize } from '@/lib/rehype-image-size'
 const components: MDXComponents = {
   blockquote: (props) => (
     <blockquote
-      className="my-10 border-l-2 border-brand-700 py-2 pl-4 text-xl font-medium italic *:text-gray-900 first:mt-0 lg:my-12 lg:pl-5 lg:*:text-display-xs"
+      className="border-brand-700 lg:*:text-display-xs my-10 border-l-2 py-2 pl-4 text-xl font-medium italic *:text-gray-900 first:mt-0 lg:my-12 lg:pl-5"
       {...props}
     />
   ),
   h1: (props) => (
     <h1
-      className="mb-4 text-balance text-display-sm font-semibold lg:mb-5 lg:text-display-sm"
+      className="text-display-sm lg:text-display-sm mb-4 font-semibold text-balance lg:mb-5"
       {...props}
     />
   ),
   h2: (props) => (
     <h2
-      className="mb-3 mt-8 text-balance text-xl font-semibold first:mt-0 lg:mb-4 lg:text-display-xs"
+      className="lg:text-display-xs mt-8 mb-3 text-xl font-semibold text-balance first:mt-0 lg:mb-4"
       {...props}
     />
   ),

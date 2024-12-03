@@ -17,7 +17,7 @@ export function AboutUs() {
             alt="EC Solutions and Enterprise"
           />
           <div>
-            <blockquote className="text-center text-display-sm font-medium text-gray-900 lg:text-display-lg lg:tracking-tight">
+            <blockquote className="text-display-sm lg:text-display-lg text-center font-medium text-gray-900 lg:tracking-tight">
               <p>
                 We established EC Solutions and Enterprise to become a renowned technology firm by
                 delivering high-quality and cost-efficient software to small and medium enterprises.

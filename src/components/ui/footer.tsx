@@ -20,7 +20,7 @@ export function Footer() {
             />
           </div>
 
-          <p className="text-pretty text-center text-gray-300">
+          <p className="text-center text-pretty text-gray-300">
             &copy; 2024 EC Solutions and Enterprise. All rights reserved.
           </p>
         </div>

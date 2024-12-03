@@ -69,7 +69,7 @@ export function ContactUs() {
         <div className="mt-12 grid gap-y-12 lg:mt-16 lg:grid-cols-2 lg:gap-x-16 xl:grid-cols-3">
           <dl className="grid gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-1 lg:content-start">
             <div>
-              <Mail className="size-6 stroke-brand-600" size={24} />
+              <Mail className="stroke-brand-600 size-6" size={24} />
               <dt className="mt-3 text-lg font-semibold text-gray-900 lg:mt-4 lg:text-xl">
                 Email address
               </dt>
@@ -82,7 +82,7 @@ export function ContactUs() {
             </div>
 
             <div>
-              <Headset className="size-6 stroke-brand-600" size={24} />
+              <Headset className="stroke-brand-600 size-6" size={24} />
               <dt className="mt-3 text-lg font-semibold text-gray-900 lg:mt-4 lg:text-xl">
                 Mobile number
               </dt>

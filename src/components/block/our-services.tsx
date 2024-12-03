@@ -95,12 +95,17 @@ export function OurServices() {
 
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-3 lg:gap-8">
           {services.map((item, index) => (
-            <div className="overflow-hidden rounded-2xl bg-brand-600 shadow-sm" key={index}>
+            <div className="bg-brand-600 overflow-hidden rounded-2xl shadow-sm" key={index}>
               <div className="relative h-[14.25rem] overflow-hidden lg:h-[16.875rem]">
-                <Image className="scale-125 object-cover" src={item.image} alt={item.title} fill />
-                {/* <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-gray-25" /> */}
+                <Image
+                  className="scale-125 object-cover"
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(min-width: 1024px) 33.33vw, 100vw"
+                />
               </div>
-              <div className="text-pretty p-5 lg:px-6 lg:pb-6 lg:pt-8">
+              <div className="p-5 text-pretty lg:px-6 lg:pt-8 lg:pb-6">
                 <h3 className="text-lg font-semibold lg:text-xl">{item.title}</h3>
                 <ul className="mt-1 list-disc space-y-1 pl-4 marker:text-gray-300 lg:mt-2">
                   {item.categories?.map((category, i) => (
