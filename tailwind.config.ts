@@ -1,6 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { type Config } from 'tailwindcss'
-import { fontFamily } from 'tailwindcss/defaultTheme'
 import plugin from 'tailwindcss/plugin'
 
 import { blurs, boxShadows, colors } from './theme'
@@ -45,21 +43,8 @@ const config: Config = {
         'slide-down': 'slide-down 0.2s ease-out',
         'slide-up': 'slide-up 0.2s ease-out',
       },
-      aria: {
-        invalid: 'invalid="true"',
-      },
-      content: {
-        'open-quote': 'open-quote',
-        'close-quote': 'close-quote',
-      },
-      data: {
-        checked: 'state="checked"',
-        open: 'state="open"',
-        closed: 'state="closed"',
-        active: 'state="active"',
-      },
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
+        sans: 'var(--font-sans)',
         display: [
           'var(--font-sans)',
           {
@@ -100,12 +85,11 @@ const config: Config = {
     },
   },
   plugins: [
-    plugin(({ addVariant }) => {
-      addVariant('not-first', '&:not(:first-child)')
-      addVariant('not-last', '&:not(:last-child)')
-    }),
-
-    require('tailwindcss-animate'),
+    // plugin(({ addVariant }) => {
+    //   addVariant('not-first', '&:not(:first-child)')
+    //   addVariant('not-last', '&:not(:last-child)')
+    // }),
+    // require('tailwindcss-animate'),
   ],
 }
 
