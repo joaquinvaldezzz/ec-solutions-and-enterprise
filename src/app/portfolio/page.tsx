@@ -14,11 +14,10 @@ export const metadata: Metadata = {
   description: 'Resources and insights',
 }
 
-export default function Page({
-  searchParams,
-}: {
-  searchParams: Record<string, string | string[] | undefined>
+export default async function Page(props: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>
 }) {
+  const searchParams = await props.searchParams
   const allPosts = getPosts()
   const categories = Array.from(
     new Set(allPosts.map((post) => post.metadata.tags.split(', ')).flat()),

@@ -18,7 +18,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const post = getPosts().find((item) => item.slug === params.slug)
 
   if (post != null) {
@@ -37,7 +38,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {}
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const post = getPosts().find((item) => item.slug === params.slug)
   const allPosts = getPosts()
 
