@@ -1,4 +1,5 @@
 import { type Config } from 'tailwindcss'
+import animate from 'tailwindcss-animate'
 import plugin from 'tailwindcss/plugin'
 
 import { blurs, boxShadows, colors } from './theme'
@@ -85,11 +86,11 @@ const config: Config = {
     },
   },
   plugins: [
-    // plugin(({ addVariant }) => {
-    //   addVariant('not-first', '&:not(:first-child)')
-    //   addVariant('not-last', '&:not(:last-child)')
-    // }),
-    // require('tailwindcss-animate'),
+    plugin(({ addVariant }) => {
+      addVariant('not-first', '&:not(:first-child)')
+      addVariant('not-last', '&:not(:last-child)')
+    }),
+    animate,
   ],
 }
 
