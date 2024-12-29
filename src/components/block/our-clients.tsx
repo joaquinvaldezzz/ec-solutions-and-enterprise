@@ -48,7 +48,7 @@ export function OurClients() {
             .slice(0, 3)
             .map((post, index) => (
               <div
-                className="flex flex-col rounded-3xl bg-brand-600 p-6 transition hover:bg-brand-800 lg:p-8"
+                className="bg-brand-600 hover:bg-brand-800 flex flex-col rounded-3xl p-6 transition lg:p-8"
                 // href={`/portfolio/${post.slug}`}
                 key={index}
               >
@@ -60,19 +60,19 @@ export function OurClients() {
                   height={96}
                 />
                 <div className="mt-5 flex flex-1 flex-col text-pretty">
-                  <div className="text-balance text-sm font-semibold text-brand-300">
+                  <div className="text-brand-300 text-sm font-semibold text-balance">
                     {post.metadata.name}
                   </div>
                   <div className="mt-2 flex items-start justify-between gap-4">
                     <h3
-                      className="line-clamp-2 text-xl font-semibold lg:text-display-xs"
+                      className="lg:text-display-xs line-clamp-2 text-xl font-semibold"
                       title={post.metadata.project}
                     >
                       {post.metadata.project}
                     </h3>
                   </div>
                   <Typography
-                    className="mb-6 mt-2 line-clamp-4 text-gray-400"
+                    className="mt-2 mb-6 line-clamp-4 text-gray-400"
                     size="supporting-text"
                   >
                     <p>{post.metadata.description}</p>

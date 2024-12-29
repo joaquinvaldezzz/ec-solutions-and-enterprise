@@ -18,7 +18,8 @@ export async function generateStaticParams() {
   }))
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const post = getPosts().find((item) => item.slug === params.slug)
 
   if (post != null) {
@@ -37,7 +38,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {}
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
+export default async function Page(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const post = getPosts().find((item) => item.slug === params.slug)
   const allPosts = getPosts()
 
@@ -57,10 +59,10 @@ export default function Page({ params }: { params: { slug: string } }) {
               width={64}
               height={64}
             />
-            <div className="mt-5 text-sm font-semibold text-brand-700 lg:text-md">
+            <div className="text-brand-700 lg:text-md mt-5 text-sm font-semibold">
               {post?.metadata.name}
             </div>
-            <h1 className="mt-3 text-display-md font-semibold tracking-tight lg:text-display-lg">
+            <h1 className="text-display-md lg:text-display-lg mt-3 font-semibold tracking-tight">
               {post?.metadata.project}
             </h1>
             <p className="mt-4 text-lg text-gray-600 lg:mt-6 lg:text-xl">
@@ -105,7 +107,7 @@ export default function Page({ params }: { params: { slug: string } }) {
 
       <Section>
         <Container>
-          <h2 className="text-display-sm font-semibold lg:text-display-md lg:tracking-tight">
+          <h2 className="text-display-sm lg:text-display-md font-semibold lg:tracking-tight">
             Latest writings
           </h2>
           <p className="mt-4 text-lg text-gray-600 lg:mt-5">
@@ -133,18 +135,18 @@ export default function Page({ params }: { params: { slug: string } }) {
                   height={96}
                 />
                 <div className="mt-5 flex flex-1 flex-col text-pretty">
-                  <div className="text-balance text-sm font-semibold text-brand-700">
+                  <div className="text-brand-700 text-sm font-semibold text-balance">
                     {item.metadata.name}
                   </div>
                   <div className="mt-2 flex items-start justify-between gap-4">
                     <h3
-                      className="line-clamp-2 text-xl font-semibold lg:text-display-xs"
+                      className="lg:text-display-xs line-clamp-2 text-xl font-semibold"
                       title={item.metadata.project}
                     >
                       {item.metadata.project}
                     </h3>
                   </div>
-                  <p className="mb-6 mt-2 line-clamp-4 text-gray-600">
+                  <p className="mt-2 mb-6 line-clamp-4 text-gray-600">
                     {item.metadata.description}
                   </p>
                   <div className="mt-auto flex flex-wrap gap-2">

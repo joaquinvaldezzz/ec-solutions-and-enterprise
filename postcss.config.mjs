@@ -12,9 +12,7 @@ const config = {
       keyframes: true,
       variables: true,
     },
-    autoprefixer: {},
-    'postcss-sort-media-queries': {},
-    tailwindcss: {},
+    '@tailwindcss/postcss': {},
   },
 }
 

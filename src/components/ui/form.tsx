@@ -152,7 +152,7 @@ const FormMessage = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagrap
 
     return (
       <p
-        className={cn('text-sm text-error-500', className)}
+        className={cn('text-error-500 text-sm', className)}
         id={formMessageId}
         ref={ref}
         {...props}

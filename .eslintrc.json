@@ -8,7 +8,7 @@
     "plugin:react/recommended",
     "airbnb-typescript",
     "standard-with-typescript",
-    "plugin:tailwindcss/recommended",
+    // "plugin:tailwindcss/recommended",
     "plugin:prettier/recommended"
   ],
   "overrides": [],

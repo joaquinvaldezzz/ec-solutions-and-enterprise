@@ -39,7 +39,7 @@ export function Header() {
 
   return (
     <Dialog.Root open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-      <header className="fixed inset-x-0 top-0 z-50 flex h-header-height w-full items-center bg-[#002f69]/80 backdrop-blur-xl">
+      <header className="h-header-height fixed inset-x-0 top-0 z-50 flex w-full items-center bg-[#002f69]/80 backdrop-blur-xl">
         <div className="container flex items-center justify-between">
           <Link href="/" aria-label="Home">
             <span className="sr-only">Company Logo</span>
@@ -115,7 +115,7 @@ export function Header() {
               <Link href="/" aria-label="Home">
                 <span className="sr-only">Company Logo</span>
                 <Image
-                  className="h-12 w-auto rounded object-cover"
+                  className="h-12 w-auto rounded-sm object-cover"
                   src={CompanyLogotype}
                   alt="EC Solutions and Enterprise"
                 />
@@ -138,7 +138,7 @@ export function Header() {
             <nav className="flex flex-col gap-2 py-6">
               {links.map((link, index) => (
                 <Link
-                  className="px-4 py-3 font-semibold hover:bg-gray-50 focus:outline-none"
+                  className="px-4 py-3 font-semibold hover:bg-gray-50 focus:outline-hidden"
                   href={link.url}
                   key={index}
                   onClick={(event) => {

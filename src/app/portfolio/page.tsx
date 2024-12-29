@@ -14,11 +14,10 @@ export const metadata: Metadata = {
   description: 'Resources and insights',
 }
 
-export default function Page({
-  searchParams,
-}: {
-  searchParams: Record<string, string | string[] | undefined>
+export default async function Page(props: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>
 }) {
+  const searchParams = await props.searchParams
   const allPosts = getPosts()
   const categories = Array.from(
     new Set(allPosts.map((post) => post.metadata.tags.split(', ')).flat()),
@@ -31,7 +30,7 @@ export default function Page({
       <section className="py-16 lg:pt-24">
         <Container>
           <div className="max-w-3xl text-pretty">
-            <h1 className="text-display-md font-semibold tracking-tight lg:text-display-lg">
+            <h1 className="text-display-md lg:text-display-lg font-semibold tracking-tight">
               Innovating the Future of Business with Intelligent, Secure, and Scalable Technology
               Solutions
             </h1>
@@ -53,14 +52,14 @@ export default function Page({
             <div className="flex flex-col gap-8 *:w-full *:shrink-0 lg:flex-row lg:justify-between">
               <Tabs.List className="relative flex gap-3 overflow-auto border-b border-b-white">
                 <Tabs.Trigger
-                  className="h-9 text-nowrap border-b-2 border-b-transparent px-1 pb-3 font-semibold text-gray-400 focus:outline-none data-active:border-b-white data-active:text-white"
+                  className="h-9 border-b-2 border-b-transparent px-1 pb-3 font-semibold text-nowrap text-gray-400 focus:outline-hidden data-active:border-b-white data-active:text-white"
                   value="all"
                 >
                   All
                 </Tabs.Trigger>
                 {categories.map((category, index) => (
                   <Tabs.Trigger
-                    className="h-9 text-nowrap border-b-2 border-b-transparent px-1 pb-3 font-semibold text-gray-400 focus:outline-none data-active:border-b-white data-active:text-white"
+                    className="h-9 border-b-2 border-b-transparent px-1 pb-3 font-semibold text-nowrap text-gray-400 focus:outline-hidden data-active:border-b-white data-active:text-white"
                     value={slugify(category)}
                     key={index}
                   >
@@ -80,7 +79,7 @@ export default function Page({
                   )
                   .map((post, index) => (
                     <div
-                      className="flex flex-col rounded-3xl bg-brand-600 p-6 transition hover:bg-brand-800 lg:p-8"
+                      className="bg-brand-600 hover:bg-brand-800 flex flex-col rounded-3xl p-6 transition lg:p-8"
                       // href={`/portfolio/${post.slug}`}
                       key={index}
                     >
@@ -92,19 +91,19 @@ export default function Page({
                         height={96}
                       />
                       <div className="mt-5 flex flex-1 flex-col text-pretty">
-                        <div className="text-balance text-sm font-semibold text-brand-300">
+                        <div className="text-brand-300 text-sm font-semibold text-balance">
                           {post.metadata.name}
                         </div>
                         <div className="mt-2 flex items-start justify-between gap-4">
                           <h3
-                            className="line-clamp-2 text-xl font-semibold lg:text-display-xs"
+                            className="lg:text-display-xs line-clamp-2 text-xl font-semibold"
                             title={post.metadata.project}
                           >
                             {post.metadata.project}
                           </h3>
                         </div>
                         <Typography
-                          className="mb-6 mt-2 line-clamp-4 text-gray-400"
+                          className="mt-2 mb-6 line-clamp-4 text-gray-400"
                           size="supporting-text"
                         >
                           <p className="line-clamp-4">{post.metadata.description}</p>

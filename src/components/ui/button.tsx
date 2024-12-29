@@ -7,7 +7,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  'relative inline-flex items-center justify-center rounded-lg border font-semibold shadow-xs focus:outline-none focus:ring-4',
+  'relative inline-flex items-center justify-center rounded-lg border font-semibold shadow-xs focus:ring-4 focus:outline-hidden',
   {
     variants: {
       size: {
@@ -19,7 +19,7 @@ const buttonVariants = cva(
       },
       hierarchy: {
         primary:
-          'border-brand-600 bg-brand-600 text-white hover:border-brand-700 hover:bg-brand-700 focus:ring-brand-500/25 disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-400',
+          'border-brand-600 bg-brand-600 hover:border-brand-700 hover:bg-brand-700 focus:ring-brand-500/25 text-white disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-400',
         'secondary-gray':
           'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-gray-400/15 disabled:border-gray-200 disabled:text-gray-400',
         'secondary-color':
@@ -27,11 +27,11 @@ const buttonVariants = cva(
         'tertiary-gray':
           'border-transparent text-gray-600 shadow-transparent hover:bg-gray-50 disabled:text-gray-400',
         'tertiary-color':
-          'border-transparent text-brand-700 shadow-transparent hover:bg-brand-50 hover:text-brand-800 disabled:text-gray-400',
+          'text-brand-700 hover:bg-brand-50 hover:text-brand-800 border-transparent shadow-transparent disabled:text-gray-400',
         'link-gray':
-          'h-auto rounded border-transparent p-0 text-gray-600 shadow-transparent hover:text-gray-700 focus:ring-2 disabled:text-gray-400',
+          'h-auto rounded-sm border-transparent p-0 text-gray-600 shadow-transparent hover:text-gray-700 focus:ring-2 disabled:text-gray-400',
         'link-color':
-          'h-auto rounded border-transparent p-0 text-gray-700 shadow-transparent hover:text-brand-800 focus:ring-2 disabled:text-gray-400',
+          'hover:text-brand-800 h-auto rounded-sm border-transparent p-0 text-gray-700 shadow-transparent focus:ring-2 disabled:text-gray-400',
         button: 'border-transparent shadow-transparent hover:bg-gray-50 focus:ring-gray-400/15',
       },
     },

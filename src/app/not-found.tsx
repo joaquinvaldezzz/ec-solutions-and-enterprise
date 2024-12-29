@@ -19,11 +19,11 @@ export default function NotFound() {
       <Section>
         <Container>
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="font-semibold text-brand-700">404 error</h1>
-            <p className="mt-3 text-display-md font-semibold lg:text-display-xl lg:tracking-tight">
+            <h1 className="text-brand-700 font-semibold">404 error</h1>
+            <p className="text-display-md lg:text-display-xl mt-3 font-semibold lg:tracking-tight">
               We lost this page
             </p>
-            <p className="mt-4 text-balance text-lg text-gray-600 lg:mt-6 lg:text-xl">
+            <p className="mt-4 text-lg text-balance text-gray-600 lg:mt-6 lg:text-xl">
               We searched high and low, but could not find what you&apos;re looking for. Let&apos;s
               find a better place for you to go.
             </p>
@@ -41,7 +41,7 @@ export default function NotFound() {
 
           <div className="mt-16 grid gap-4 lg:grid-cols-3 lg:gap-8">
             <div className="bg-gray-50 p-5 lg:col-start-2 lg:p-6">
-              <BookOpen className="size-6 stroke-brand-600" />
+              <BookOpen className="stroke-brand-600 size-6" />
               <h2 className="mt-8 text-lg font-semibold lg:mt-12 lg:text-xl">Our portfolio</h2>
               <p className="mt-1 text-gray-600 lg:mt-2">Read the latest posts on our blog.</p>
               <Button className="mt-4 lg:mt-5" size="lg" hierarchy="link-color" asChild>

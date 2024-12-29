@@ -19,7 +19,8 @@
     "packagejson",
     "purgecss",
     "svgr",
-    "tailwindcss"
+    "tailwindcss",
+    "turbopack"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
