@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    deviceSizes: [320, 375, 640, 768, 1024, 1280, 1536],
-  },
   pageExtensions: ['tsx', 'md', 'mdx'],
+
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.('.svg'))
