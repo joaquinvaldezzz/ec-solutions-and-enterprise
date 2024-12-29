@@ -20,7 +20,8 @@
     "purgecss",
     "svgr",
     "tailwindcss",
-    "turbopack"
+    "turbopack",
+    "vercel"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
