@@ -30,7 +30,7 @@ export default async function Page(props: {
       <section className="py-16 lg:pt-24">
         <Container>
           <div className="max-w-3xl text-pretty">
-            <h1 className="text-display-md lg:text-display-lg font-semibold tracking-tight">
+            <h1 className="text-display-md font-semibold tracking-tight lg:text-display-lg">
               Innovating the Future of Business with Intelligent, Secure, and Scalable Technology
               Solutions
             </h1>
@@ -79,7 +79,7 @@ export default async function Page(props: {
                   )
                   .map((post, index) => (
                     <div
-                      className="bg-brand-600 hover:bg-brand-800 flex flex-col rounded-3xl p-6 transition lg:p-8"
+                      className="flex flex-col rounded-3xl bg-brand-600 p-6 transition hover:bg-brand-800 lg:p-8"
                       // href={`/portfolio/${post.slug}`}
                       key={index}
                     >
@@ -91,12 +91,12 @@ export default async function Page(props: {
                         height={96}
                       />
                       <div className="mt-5 flex flex-1 flex-col text-pretty">
-                        <div className="text-brand-300 text-sm font-semibold text-balance">
+                        <div className="text-sm font-semibold text-balance text-brand-300">
                           {post.metadata.name}
                         </div>
                         <div className="mt-2 flex items-start justify-between gap-4">
                           <h3
-                            className="lg:text-display-xs line-clamp-2 text-xl font-semibold"
+                            className="line-clamp-2 text-xl font-semibold lg:text-display-xs"
                             title={post.metadata.project}
                           >
                             {post.metadata.project}

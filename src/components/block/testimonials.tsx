@@ -42,7 +42,7 @@ export function Testimonials() {
   return (
     <Section>
       <Container>
-        <h2 className="text-brand-700 flex items-center justify-center gap-2 font-medium tracking-wide uppercase">
+        <h2 className="flex items-center justify-center gap-2 font-medium tracking-wide text-brand-700 uppercase">
           <div className="h-px w-16 border-t" />
           Testimonials
           <div className="h-px w-16 border-t" />
@@ -53,7 +53,7 @@ export function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index}>
                 <figure className="text-center">
-                  <blockquote className="text-display-sm lg:text-display-lg font-medium text-balance lg:tracking-tight">
+                  <blockquote className="text-display-sm font-medium text-balance lg:text-display-lg lg:tracking-tight">
                     <p>{testimonial.quote}</p>
                   </blockquote>
 

@@ -95,7 +95,7 @@ export function OurServices() {
 
         <div className="mt-12 grid gap-12 lg:mt-16 lg:grid-cols-3 lg:gap-8">
           {services.map((item, index) => (
-            <div className="bg-brand-600 overflow-hidden rounded-2xl shadow-sm" key={index}>
+            <div className="overflow-hidden rounded-2xl bg-brand-600 shadow-sm" key={index}>
               <div className="relative h-[14.25rem] overflow-hidden lg:h-[16.875rem]">
                 <Image
                   className="scale-125 object-cover"
