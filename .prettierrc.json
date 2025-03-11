@@ -30,7 +30,7 @@
     "",
     "^@/public/(.*)$"
   ],
-  "tailwindStylesheet": "",
+  "tailwindStylesheet": "src/styles/main.css",
   "tailwindAttributes": ["tw", "classNames"],
   "tailwindFunctions": ["cva"]
 }
