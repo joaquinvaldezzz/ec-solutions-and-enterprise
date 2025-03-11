@@ -10,45 +10,6 @@
     "preview": "next build && next start",
     "start": "next start"
   },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es2021": true
-    },
-    "parserOptions": {
-      "ecmaVersion": "latest",
-      "project": true,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "react"
-    ],
-    "extends": [
-      "next/core-web-vitals",
-      "plugin:react/recommended",
-      "airbnb-typescript",
-      "standard-with-typescript",
-      "plugin:prettier/recommended"
-    ],
-    "rules": {
-      "@typescript-eslint/consistent-type-imports": [
-        "error",
-        {
-          "fixStyle": "inline-type-imports"
-        }
-      ],
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "react/jsx-curly-brace-presence": [
-        "error",
-        {
-          "props": "never",
-          "children": "never"
-        }
-      ],
-      "react/react-in-jsx-scope": "off"
-    },
-    "overrides": []
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
@@ -110,6 +71,7 @@
     "prettier-plugin-tailwindcss": "^0.6.9",
     "typescript": "^5"
   },
+  "packageManager": "pnpm@10.4.0",
   "postcss": {
     "plugins": {
       "@tailwindcss/postcss": {}
