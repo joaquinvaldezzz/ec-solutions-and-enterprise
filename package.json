@@ -10,44 +10,6 @@
     "preview": "next build && next start",
     "start": "next start"
   },
-  "prettier": {
-    "importOrder": [
-      "^(react/(.*)$)|^(react$)",
-      "^(next/(.*)$)|^(next$)",
-      "<THIRD_PARTY_MODULES>",
-      "",
-      "^types$",
-      "^@/types/(.*)$",
-      "^@/config/(.*)$",
-      "^@/lib/(.*)$",
-      "^@/hooks/(.*)$",
-      "^@/components/ui/(.*)$",
-      "^@/components/(.*)$",
-      "^@/registry/(.*)$",
-      "^@/styles/(.*)$",
-      "^@/app/(.*)$",
-      "",
-      "^[./]",
-      "",
-      "^@/public/(.*)$"
-    ],
-    "plugins": [
-      "@ianvs/prettier-plugin-sort-imports",
-      "@prettier/plugin-xml",
-      "prettier-plugin-packagejson",
-      "prettier-plugin-sh",
-      "prettier-plugin-tailwindcss"
-    ],
-    "printWidth": 100,
-    "semi": false,
-    "singleQuote": true,
-    "tailwindAttributes": [
-      "tw"
-    ],
-    "tailwindFunctions": [
-      "cva"
-    ]
-  },
   "eslintConfig": {
     "env": {
       "browser": true,
