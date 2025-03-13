@@ -1,20 +1,20 @@
-import { forwardRef, type TextareaHTMLAttributes } from 'react'
+import { forwardRef, type TextareaHTMLAttributes } from "react";
 
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 
-import { inputVariants } from './input'
+import { inputVariants } from "./input";
 
 export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(({ className, ...props }, ref) => {
   return (
     <textarea
-      className={cn(inputVariants(), 'min-h-32 px-3.5 py-3', className)}
+      className={cn(inputVariants(), "min-h-32 px-3.5 py-3", className)}
       ref={ref}
       {...props}
     />
-  )
-})
-Textarea.displayName = 'Textarea'
+  );
+});
+Textarea.displayName = "Textarea";
 
-export { Textarea }
+export { Textarea };

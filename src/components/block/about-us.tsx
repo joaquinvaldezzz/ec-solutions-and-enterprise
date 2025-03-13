@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Container, Section } from '../ui/container'
+import { Container, Section } from "../ui/container";
 
-import CompanyLogo from '@/public/images/logos/logotype-horizontal.png'
+import CompanyLogo from "@/public/images/logos/logotype-horizontal.png";
 
 export function AboutUs() {
   return (
@@ -27,5 +27,5 @@ export function AboutUs() {
         </figure>
       </Container>
     </Section>
-  )
+  );
 }

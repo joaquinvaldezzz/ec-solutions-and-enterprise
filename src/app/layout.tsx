@@ -1,32 +1,32 @@
-import { type Metadata } from 'next'
-import localFont from 'next/font/local'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { type Metadata } from "next";
+import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import { Footer } from '@/components/ui/footer'
-import { Header } from '@/components/ui/header'
+import { Footer } from "@/components/ui/footer";
+import { Header } from "@/components/ui/header";
 
-import '@/styles/main.css'
+import "@/styles/main.css";
 
-import { baseUrl } from './sitemap'
+import { baseUrl } from "./sitemap";
 
 export const metadata: Metadata = {
   title: {
-    default: 'EC Solutions and Enterprise',
-    template: '%s | EC Solutions and Enterprise',
+    default: "EC Solutions and Enterprise",
+    template: "%s | EC Solutions and Enterprise",
   },
   description:
-    'EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.',
+    "EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.",
   metadataBase: new URL(baseUrl),
   openGraph: {
     title: {
-      default: 'EC Solutions and Enterprise',
-      template: '%s | EC Solutions and Enterprise',
+      default: "EC Solutions and Enterprise",
+      template: "%s | EC Solutions and Enterprise",
     },
     description:
-      'EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.',
-    siteName: 'EC Solutions and Enterprise',
-    locale: 'en_US',
+      "EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.",
+    siteName: "EC Solutions and Enterprise",
+    locale: "en_US",
   },
   robots: {
     index: true,
@@ -34,28 +34,28 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-}
+};
 
 const font = localFont({
   src: [
     {
-      path: '../../public/fonts/Mona-Sans.woff2',
-      weight: '200 900',
-      style: 'normal',
+      path: "../../public/fonts/Mona-Sans.woff2",
+      weight: "200 900",
+      style: "normal",
     },
   ],
-  variable: '--font-sans',
-})
+  variable: "--font-sans",
+});
 
 export default function Layout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={font.variable}>
@@ -67,5 +67,5 @@ export default function Layout({
         <SpeedInsights />
       </body>
     </html>
-  )
+  );
 }

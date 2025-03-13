@@ -1,104 +1,104 @@
-import { type FC, type SVGProps } from 'react'
-import Image, { type StaticImageData } from 'next/image'
-import Marquee from 'react-fast-marquee'
+import { type FC, type SVGProps } from "react";
+import Image, { type StaticImageData } from "next/image";
+import Marquee from "react-fast-marquee";
 
-import { Container, Section } from '@/components/ui/container'
-import { Typography } from '@/components/ui/typography'
-import { AboutUs } from '@/components/block/about-us'
-import { ContactUs } from '@/components/block/contact-us'
-import { OurClients } from '@/components/block/our-clients'
-import { OurServices } from '@/components/block/our-services'
+import { Container, Section } from "@/components/ui/container";
+import { Typography } from "@/components/ui/typography";
+import { AboutUs } from "@/components/block/about-us";
+import { ContactUs } from "@/components/block/contact-us";
+import { OurClients } from "@/components/block/our-clients";
+import { OurServices } from "@/components/block/our-services";
 
-import HeroBanner from '@/public/images/backgrounds/hero-banner.png'
-import CollegeOfSanBenildoRizal from '@/public/images/logos/college-of-san-benildo-rizal.png'
-import CSS3 from '@/public/images/logos/css3.svg'
-import DepartmentOfHealthLogotype from '@/public/images/logos/department-of-health-logotype.png'
-import DreamRiserBuildersInc from '@/public/images/logos/dream-riser-builders-inc.jpg'
-import EscobarsSteakhouse from '@/public/images/logos/escobars-steakhouse.jpg'
-import Git from '@/public/images/logos/git.svg'
-import HTML5 from '@/public/images/logos/html5.svg'
-import Javascript from '@/public/images/logos/javascript.svg'
-import Maximum88Corporation from '@/public/images/logos/maximum-88-corporation.png'
-import MicrosoftAzure from '@/public/images/logos/microsoft-azure.svg'
-import MySQL from '@/public/images/logos/my-sql.svg'
-import NorzagarayCollege from '@/public/images/logos/norzagaray-college.png'
-import OurLadyOfFatimaUniversityLogotype from '@/public/images/logos/our-lady-of-fatima-university-logotype.png'
-import PhilippineNavy from '@/public/images/logos/philippine-navy.png'
-import Php from '@/public/images/logos/php.svg'
-import Python from '@/public/images/logos/python.svg'
-import ReactJS from '@/public/images/logos/react-js.svg'
-import UniversityOfThePhilippinesManila from '@/public/images/logos/university-of-the-philippines.png'
+import HeroBanner from "@/public/images/backgrounds/hero-banner.png";
+import CollegeOfSanBenildoRizal from "@/public/images/logos/college-of-san-benildo-rizal.png";
+import CSS3 from "@/public/images/logos/css3.svg";
+import DepartmentOfHealthLogotype from "@/public/images/logos/department-of-health-logotype.png";
+import DreamRiserBuildersInc from "@/public/images/logos/dream-riser-builders-inc.jpg";
+import EscobarsSteakhouse from "@/public/images/logos/escobars-steakhouse.jpg";
+import Git from "@/public/images/logos/git.svg";
+import HTML5 from "@/public/images/logos/html5.svg";
+import Javascript from "@/public/images/logos/javascript.svg";
+import Maximum88Corporation from "@/public/images/logos/maximum-88-corporation.png";
+import MicrosoftAzure from "@/public/images/logos/microsoft-azure.svg";
+import MySQL from "@/public/images/logos/my-sql.svg";
+import NorzagarayCollege from "@/public/images/logos/norzagaray-college.png";
+import OurLadyOfFatimaUniversityLogotype from "@/public/images/logos/our-lady-of-fatima-university-logotype.png";
+import PhilippineNavy from "@/public/images/logos/philippine-navy.png";
+import Php from "@/public/images/logos/php.svg";
+import Python from "@/public/images/logos/python.svg";
+import ReactJS from "@/public/images/logos/react-js.svg";
+import UniversityOfThePhilippinesManila from "@/public/images/logos/university-of-the-philippines.png";
 
 const technologies: Array<{
-  logo: FC<SVGProps<SVGElement>>
-  name: string
+  logo: FC<SVGProps<SVGElement>>;
+  name: string;
 }> = [
   {
     logo: HTML5,
-    name: 'HTML5',
+    name: "HTML5",
   },
   {
     logo: CSS3,
-    name: 'CSS3',
+    name: "CSS3",
   },
   {
     logo: Javascript,
-    name: 'JavaScript',
+    name: "JavaScript",
   },
   {
     logo: ReactJS,
-    name: 'React.js',
+    name: "React.js",
   },
   {
     logo: Php,
-    name: 'PHP',
+    name: "PHP",
   },
   {
     logo: Python,
-    name: 'Python',
+    name: "Python",
   },
   {
     logo: MySQL,
-    name: 'MySQL',
+    name: "MySQL",
   },
   {
     logo: Git,
-    name: 'Git',
+    name: "Git",
   },
   {
     logo: MicrosoftAzure,
-    name: 'Microsoft Azure',
+    name: "Microsoft Azure",
   },
-]
+];
 
 const logotypes: Array<{ image: StaticImageData; name: string }> = [
   {
     image: DepartmentOfHealthLogotype,
-    name: 'Department of Health',
+    name: "Department of Health",
   },
   {
     image: OurLadyOfFatimaUniversityLogotype,
-    name: 'Our Lady of Fatima University',
+    name: "Our Lady of Fatima University",
   },
   {
     image: DreamRiserBuildersInc,
-    name: 'Dream Riser Builders, Inc.',
+    name: "Dream Riser Builders, Inc.",
   },
   {
     image: NorzagarayCollege,
-    name: 'Norzagaray College',
+    name: "Norzagaray College",
   },
   {
     image: CollegeOfSanBenildoRizal,
-    name: 'College of San Benildo - Rizal',
+    name: "College of San Benildo - Rizal",
   },
   {
     image: PhilippineNavy,
-    name: 'Philippine Navy',
+    name: "Philippine Navy",
   },
   {
     image: UniversityOfThePhilippinesManila,
-    name: 'University of the Philippines - Manila',
+    name: "University of the Philippines - Manila",
   },
   {
     image: EscobarsSteakhouse,
@@ -106,9 +106,9 @@ const logotypes: Array<{ image: StaticImageData; name: string }> = [
   },
   {
     image: Maximum88Corporation,
-    name: 'Maximum 88 Corporation',
+    name: "Maximum 88 Corporation",
   },
-]
+];
 
 export default function Page() {
   return (
@@ -136,13 +136,13 @@ export default function Page() {
             </p>
             <div className="mt-8 flex max-w-[40rem] flex-wrap gap-x-8 gap-y-4 lg:mt-12 xl:max-w-xl">
               {technologies.map((technology, index) => {
-                const Tag = technology.logo
+                const Tag = technology.logo;
                 return (
                   <div className="flex items-center gap-2.5" key={index}>
                     <Tag className="size-8" />
                     <p className="text-gray-400">{technology.name}</p>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
@@ -172,5 +172,5 @@ export default function Page() {
       <OurServices />
       <ContactUs />
     </div>
-  )
+  );
 }

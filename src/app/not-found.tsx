@@ -1,17 +1,17 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { ArrowLeft, ArrowRight, BookOpen } from 'lucide-react'
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
 
-import { Button } from '@/components/ui/button'
-import { Container, Section } from '@/components/ui/container'
+import { Button } from "@/components/ui/button";
+import { Container, Section } from "@/components/ui/container";
 
 export default function NotFound() {
-  const router = useRouter()
+  const router = useRouter();
 
   function handleClick() {
-    router.back()
+    router.back();
   }
 
   return (
@@ -55,5 +55,5 @@ export default function NotFound() {
         </Container>
       </Section>
     </main>
-  )
+  );
 }

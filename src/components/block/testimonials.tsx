@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import Image, { type StaticImageData } from 'next/image'
+import Image, { type StaticImageData } from "next/image";
 
 import {
   Carousel,
@@ -8,35 +8,35 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '../ui/carousel'
-import { Container, Section } from '../ui/container'
+} from "../ui/carousel";
+import { Container, Section } from "../ui/container";
 
-import GlobalBank from '@/public/images/logos/globalbank.svg'
-import JoaquinValdez from '@/public/images/profiles-pictures/joaquin-valdez.jpg'
+import GlobalBank from "@/public/images/logos/globalbank.svg";
+import JoaquinValdez from "@/public/images/profiles-pictures/joaquin-valdez.jpg";
 
 interface Testimonial {
-  quote: string
-  name: string
-  role: string
-  picture: string | StaticImageData
+  quote: string;
+  name: string;
+  role: string;
+  picture: string | StaticImageData;
 }
 
 const testimonials: Testimonial[] = [
   {
     quote:
       "Untitled has saved us thousands of hours of work. We're able to spin up projects and features faster.",
-    name: 'John Joaquin Valdez',
-    role: 'UX Designer, GlobalBank',
+    name: "John Joaquin Valdez",
+    role: "UX Designer, GlobalBank",
     picture: JoaquinValdez,
   },
   {
     quote:
       "Untitled has saved us thousands of hours of work. We're able to spin up projects and features faster.",
-    name: 'John Joaquin Valdez',
-    role: 'UX Designer, GlobalBank',
+    name: "John Joaquin Valdez",
+    role: "UX Designer, GlobalBank",
     picture: JoaquinValdez,
   },
-]
+];
 
 export function Testimonials() {
   return (
@@ -80,5 +80,5 @@ export function Testimonials() {
         </Carousel>
       </Container>
     </Section>
-  )
+  );
 }

@@ -1,78 +1,78 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { type Service } from '@/types/service'
-import { Typography } from '@/components/ui/typography'
+import { type Service } from "@/types/service";
+import { Typography } from "@/components/ui/typography";
 
-import { Button } from '../ui/button'
-import { Container, Section } from '../ui/container'
+import { Button } from "../ui/button";
+import { Container, Section } from "../ui/container";
 
-import AI from '@/public/images/our-services/ai.png'
-import CloudHosting from '@/public/images/our-services/cloud-hosting.png'
-import Cybersecurity from '@/public/images/our-services/cubersecurity.png'
-import EnterpriseResourcePlanning from '@/public/images/our-services/enterprise-resource-planning.png'
-import Financial from '@/public/images/our-services/financial.png'
-import GraphicDesign from '@/public/images/our-services/graphic-design.png'
+import AI from "@/public/images/our-services/ai.png";
+import CloudHosting from "@/public/images/our-services/cloud-hosting.png";
+import Cybersecurity from "@/public/images/our-services/cubersecurity.png";
+import EnterpriseResourcePlanning from "@/public/images/our-services/enterprise-resource-planning.png";
+import Financial from "@/public/images/our-services/financial.png";
+import GraphicDesign from "@/public/images/our-services/graphic-design.png";
 
 const services: Service[] = [
   {
     image: AI,
-    title: 'Artificial Intelligence (AI) Tools',
-    description: 'A complete solution for managing schools and educational institutions.',
-    categories: ['AI Marketing'],
+    title: "Artificial Intelligence (AI) Tools",
+    description: "A complete solution for managing schools and educational institutions.",
+    categories: ["AI Marketing"],
   },
   {
     image: GraphicDesign,
-    title: 'Graphic Design and Visualization',
-    description: 'Integrate payment gateways to your website or mobile app.',
+    title: "Graphic Design and Visualization",
+    description: "Integrate payment gateways to your website or mobile app.",
     categories: [
-      'Branding and Logo design',
-      'Packaging Design',
-      'Web Design',
-      '3D models Architectural Design',
+      "Branding and Logo design",
+      "Packaging Design",
+      "Web Design",
+      "3D models Architectural Design",
     ],
   },
   {
     image: Financial,
-    title: 'Mobile App Development',
+    title: "Mobile App Development",
     description:
-      'A complete solution for managing hospitals, clinics, and other healthcare facilities.',
+      "A complete solution for managing hospitals, clinics, and other healthcare facilities.",
     categories: [
-      'Web Portal and Payment Solutions',
-      'Payment Gateway Integration',
-      'Payroll and Accounting System',
+      "Web Portal and Payment Solutions",
+      "Payment Gateway Integration",
+      "Payroll and Accounting System",
     ],
   },
   {
     image: Cybersecurity,
-    title: 'Cybersecurity',
+    title: "Cybersecurity",
     description:
-      'Host your website, web application, or mobile app on the cloud for better performance and scalability.',
-    categories: ['Vulnerability Assessment and Penetration Testing'],
+      "Host your website, web application, or mobile app on the cloud for better performance and scalability.",
+    categories: ["Vulnerability Assessment and Penetration Testing"],
   },
   {
     image: CloudHosting,
-    title: 'Cloud Hosting',
-    description: 'A complete solution for managing engineering and construction projects.',
-    categories: ['Azure', 'AWS'],
+    title: "Cloud Hosting",
+    description: "A complete solution for managing engineering and construction projects.",
+    categories: ["Azure", "AWS"],
   },
   {
     image: EnterpriseResourcePlanning,
-    title: 'Enterprise Resource Planning',
-    description: 'A complete solution for managing HR, payroll, and loan processing.',
-    categories: ['Food and Beverage', 'Engineering Construction', 'School Information System'],
+    title: "Enterprise Resource Planning",
+    description: "A complete solution for managing HR, payroll, and loan processing.",
+    categories: ["Food and Beverage", "Engineering Construction", "School Information System"],
   },
   {
     image: Financial,
-    title: 'Financial',
+    title: "Financial",
     description:
-      'A complete solution for managing hospitals, clinics, and other healthcare facilities.',
+      "A complete solution for managing hospitals, clinics, and other healthcare facilities.",
     categories: [
-      'Web Portal and Payment Solutions',
-      'Payment Gateway Integration',
-      'Payroll and Accounting System',
+      "Web Portal and Payment Solutions",
+      "Payment Gateway Integration",
+      "Payroll and Accounting System",
     ],
   },
-]
+];
 
 export function OurServices() {
   return (
@@ -126,5 +126,5 @@ export function OurServices() {
         </div>
       </Container>
     </Section>
-  )
+  );
 }

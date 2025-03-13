@@ -1,9 +1,9 @@
-import Image, { type ImageProps } from 'next/image'
-import { type MDXComponents } from 'mdx/types'
-import { MDXRemote, type MDXRemoteProps } from 'next-mdx-remote/rsc'
-import remarkUnwrapImages from 'remark-unwrap-images'
+import Image, { type ImageProps } from "next/image";
+import { type MDXComponents } from "mdx/types";
+import { MDXRemote, type MDXRemoteProps } from "next-mdx-remote/rsc";
+import remarkUnwrapImages from "remark-unwrap-images";
 
-import { rehypeImageSize } from '@/lib/rehype-image-size'
+import { rehypeImageSize } from "@/lib/rehype-image-size";
 
 const components: MDXComponents = {
   blockquote: (props) => (
@@ -33,7 +33,7 @@ const components: MDXComponents = {
       <Image className="rounded-xl" {...(props as ImageProps)} />
     </div>
   ),
-}
+};
 
 export function CustomMDX(props: MDXRemoteProps) {
   return (
@@ -41,11 +41,11 @@ export function CustomMDX(props: MDXRemoteProps) {
       components={{ ...components }}
       options={{
         mdxOptions: {
-          rehypePlugins: [[rehypeImageSize, { root: 'public' }]],
+          rehypePlugins: [[rehypeImageSize, { root: "public" }]],
           remarkPlugins: [remarkUnwrapImages],
         },
       }}
       {...props}
     />
-  )
+  );
 }

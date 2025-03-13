@@ -1,29 +1,29 @@
-import { type Metadata } from 'next'
-import Image from 'next/image'
-import * as Tabs from '@radix-ui/react-tabs'
+import { type Metadata } from "next";
+import Image from "next/image";
+import * as Tabs from "@radix-ui/react-tabs";
 
-import { determineBadgeColor, slugify } from '@/lib/utils'
-import { Badge } from '@/components/ui/badge'
-import { Container } from '@/components/ui/container'
-import { Typography } from '@/components/ui/typography'
+import { determineBadgeColor, slugify } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import { Container } from "@/components/ui/container";
+import { Typography } from "@/components/ui/typography";
 
-import { getPosts } from './utils'
+import { getPosts } from "./utils";
 
 export const metadata: Metadata = {
-  title: 'All of our works',
-  description: 'Resources and insights',
-}
+  title: "All of our works",
+  description: "Resources and insights",
+};
 
 export default async function Page(props: {
-  searchParams: Promise<Record<string, string | string[] | undefined>>
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const searchParams = await props.searchParams
-  const allPosts = getPosts()
+  const searchParams = await props.searchParams;
+  const allPosts = getPosts();
   const categories = Array.from(
-    new Set(allPosts.map((post) => post.metadata.tags.split(', ')).flat()),
-  ).sort()
+    new Set(allPosts.map((post) => post.metadata.tags.split(", ")).flat()),
+  ).sort();
 
-  console.log(searchParams)
+  console.log(searchParams);
 
   return (
     <main className="mt-header-height">
@@ -109,7 +109,7 @@ export default async function Page(props: {
                           <p className="line-clamp-4">{post.metadata.description}</p>
                         </Typography>
                         <div className="mt-auto flex flex-wrap gap-2">
-                          {post.metadata.tags.split(', ').map((tag, i) => (
+                          {post.metadata.tags.split(", ").map((tag, i) => (
                             <Badge color={determineBadgeColor(tag)} key={i}>
                               {tag}
                             </Badge>
@@ -124,5 +124,5 @@ export default async function Page(props: {
         </section>
       </Tabs.Root>
     </main>
-  )
+  );
 }

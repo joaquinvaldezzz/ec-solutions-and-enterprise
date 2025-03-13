@@ -1,16 +1,16 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
-import { determineBadgeColor } from '@/lib/utils'
-import { getPosts } from '@/app/portfolio/utils'
+import { determineBadgeColor } from "@/lib/utils";
+import { getPosts } from "@/app/portfolio/utils";
 
-import { Badge } from '../ui/badge'
-import { Button } from '../ui/button'
-import { Container, Section } from '../ui/container'
-import { Typography } from '../ui/typography'
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
+import { Container, Section } from "../ui/container";
+import { Typography } from "../ui/typography";
 
 export function OurClients() {
-  const posts = getPosts()
+  const posts = getPosts();
 
   return (
     <Section className="bg-[#0087ff]" id="our-clients">
@@ -78,7 +78,7 @@ export function OurClients() {
                     <p>{post.metadata.description}</p>
                   </Typography>
                   <div className="mt-auto flex flex-wrap gap-2">
-                    {post.metadata.tags.split(', ').map((tag, i) => (
+                    {post.metadata.tags.split(", ").map((tag, i) => (
                       <Badge color={determineBadgeColor(tag)} key={i}>
                         {tag}
                       </Badge>
@@ -96,5 +96,5 @@ export function OurClients() {
         </div>
       </Container>
     </Section>
-  )
+  );
 }

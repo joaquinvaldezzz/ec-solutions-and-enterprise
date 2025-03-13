@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Container } from './container'
+import { Container } from "./container";
 
-import CompanyLogotype from '@/public/images/logos/logotype-horizontal.png'
+import CompanyLogotype from "@/public/images/logos/logotype-horizontal.png";
 
 export function Footer() {
   return (
@@ -26,5 +26,5 @@ export function Footer() {
         </div>
       </Container>
     </footer>
-  )
+  );
 }

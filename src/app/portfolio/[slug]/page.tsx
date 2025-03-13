@@ -1,26 +1,26 @@
-import { type Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
+import { type Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
-import { determineBadgeColor } from '@/lib/utils'
-import { Badge } from '@/components/ui/badge'
-import { Container, Section } from '@/components/ui/container'
-import { CustomMDX } from '@/components/ui/mdx'
+import { determineBadgeColor } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import { Container, Section } from "@/components/ui/container";
+import { CustomMDX } from "@/components/ui/mdx";
 
-import { formatDate, getPosts } from '../utils'
+import { formatDate, getPosts } from "../utils";
 
 export async function generateStaticParams() {
-  const posts = getPosts()
+  const posts = getPosts();
 
   return posts.map((post) => ({
     slug: post.slug,
-  }))
+  }));
 }
 
 export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
-  const params = await props.params
-  const post = getPosts().find((item) => item.slug === params.slug)
+  const params = await props.params;
+  const post = getPosts().find((item) => item.slug === params.slug);
 
   if (post != null) {
     const metadata: Metadata = {
@@ -30,21 +30,21 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
         title: `${post.metadata.project} | ${post.metadata.name}`,
         description: post.metadata.description,
       },
-    }
+    };
 
-    return metadata
+    return metadata;
   }
 
-  return {}
+  return {};
 }
 
 export default async function Page(props: { params: Promise<{ slug: string }> }) {
-  const params = await props.params
-  const post = getPosts().find((item) => item.slug === params.slug)
-  const allPosts = getPosts()
+  const params = await props.params;
+  const post = getPosts().find((item) => item.slug === params.slug);
+  const allPosts = getPosts();
 
   if (post == null) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -70,7 +70,7 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-2">
-              {post.metadata.tags.split(', ').map((tag, index) => (
+              {post.metadata.tags.split(", ").map((tag, index) => (
                 <Badge size="md" color={determineBadgeColor(tag)} key={index}>
                   {tag}
                 </Badge>
@@ -150,7 +150,7 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
                     {item.metadata.description}
                   </p>
                   <div className="mt-auto flex flex-wrap gap-2">
-                    {item.metadata.tags.split(', ').map((tag, i) => (
+                    {item.metadata.tags.split(", ").map((tag, i) => (
                       <Badge color={determineBadgeColor(tag)} key={i}>
                         {tag}
                       </Badge>
@@ -162,5 +162,5 @@ export default async function Page(props: { params: Promise<{ slug: string }> })
         </div>
       </Section>
     </main>
-  )
+  );
 }

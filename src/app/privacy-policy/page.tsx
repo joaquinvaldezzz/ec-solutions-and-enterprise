@@ -1,4 +1,4 @@
-import { Container, Section } from '@/components/ui/container'
+import { Container, Section } from "@/components/ui/container";
 
 export default function Page() {
   return (
@@ -24,5 +24,5 @@ export default function Page() {
         <article className="mx-auto max-w-[720px]"></article>
       </div>
     </div>
-  )
+  );
 }

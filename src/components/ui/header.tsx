@@ -1,41 +1,41 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import * as Dialog from '@radix-ui/react-dialog'
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import * as Dialog from "@radix-ui/react-dialog";
 
-import { type NavItem } from '@/types/nav'
+import { type NavItem } from "@/types/nav";
 
-import { Button } from './button'
+import { Button } from "./button";
 
-import CompanyLogotype from '@/public/images/logos/logotype-horizontal.png'
+import CompanyLogotype from "@/public/images/logos/logotype-horizontal.png";
 
 const links: NavItem[] = [
   {
-    url: '#about-us',
-    title: 'About Us',
+    url: "#about-us",
+    title: "About Us",
   },
   {
-    url: '#our-clients',
-    title: 'Our Clients',
+    url: "#our-clients",
+    title: "Our Clients",
   },
   {
-    url: '#our-services',
-    title: 'Our Services',
+    url: "#our-services",
+    title: "Our Services",
   },
   {
-    url: '#contact-us',
-    title: 'Contact Us',
+    url: "#contact-us",
+    title: "Contact Us",
   },
-]
+];
 
 export function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
-  const pathname = usePathname()
-  const router = useRouter()
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   return (
     <Dialog.Root open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -56,7 +56,7 @@ export function Header() {
               hierarchy="link-gray"
               type="button"
               onClick={() => {
-                setIsMobileMenuOpen(!isMobileMenuOpen)
+                setIsMobileMenuOpen(!isMobileMenuOpen);
               }}
             >
               <span className="sr-only">Open mobile menu</span>
@@ -73,28 +73,30 @@ export function Header() {
                 asChild
                 onClick={(event) => {
                   // If the link is not an anchor tag, navigate to that page
-                  if (link.url.startsWith('/')) return
+                  if (link.url.startsWith("/")) return;
 
                   // Prevent the default behavior of the anchor tag
-                  event.preventDefault()
+                  event.preventDefault();
 
                   // If the current pathname is not the root,
-                  if (pathname !== '/') {
+                  if (pathname !== "/") {
                     // navigate to the root first,
-                    router.push('/')
+                    router.push("/");
 
                     // then scroll to the section after 500 milliseconds
                     setTimeout(() => {
                       document
                         .getElementById(link.url.slice(1))
-                        ?.scrollIntoView({ behavior: 'smooth' })
-                    }, 500)
+                        ?.scrollIntoView({ behavior: "smooth" });
+                    }, 500);
 
-                    return
+                    return;
                   }
 
                   // If the current pathname is the root, scroll to that section
-                  document.getElementById(link.url.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+                  document
+                    .getElementById(link.url.slice(1))
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 key={index}
               >
@@ -127,7 +129,7 @@ export function Header() {
                   hierarchy="link-gray"
                   type="button"
                   onClick={() => {
-                    setIsMobileMenuOpen(!isMobileMenuOpen)
+                    setIsMobileMenuOpen(!isMobileMenuOpen);
                   }}
                 >
                   <span className="sr-only">Close mobile menu</span>
@@ -142,33 +144,33 @@ export function Header() {
                   href={link.url}
                   key={index}
                   onClick={(event) => {
-                    setIsMobileMenuOpen(false)
+                    setIsMobileMenuOpen(false);
 
                     // If the link is not an anchor tag, navigate to that page
-                    if (link.url.startsWith('/')) return
+                    if (link.url.startsWith("/")) return;
 
                     // Prevent the default behavior of the anchor tag
-                    event.preventDefault()
+                    event.preventDefault();
 
                     // If the current pathname is not the root,
-                    if (pathname !== '/') {
+                    if (pathname !== "/") {
                       // navigate to the root first,
-                      router.push('/')
+                      router.push("/");
 
                       // then scroll to the section after 500 milliseconds
                       setTimeout(() => {
                         document
                           .getElementById(link.url.slice(1))
-                          ?.scrollIntoView({ behavior: 'smooth' })
-                      }, 500)
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      }, 500);
 
-                      return
+                      return;
                     }
 
                     // If the current pathname is the root, scroll to that section
                     document
                       .getElementById(link.url.slice(1))
-                      ?.scrollIntoView({ behavior: 'smooth' })
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   {link.title}
@@ -179,5 +181,5 @@ export function Header() {
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
-  )
+  );
 }

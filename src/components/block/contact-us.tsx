@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Headset, Mail } from 'lucide-react'
-import { useForm, type SubmitHandler } from 'react-hook-form'
-import { z } from 'zod'
+import Link from "next/link";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Headset, Mail } from "lucide-react";
+import { useForm, type SubmitHandler } from "react-hook-form";
+import { z } from "zod";
 
-import { Button } from '@/components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Container, Section } from '@/components/ui/container'
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Container, Section } from "@/components/ui/container";
 import {
   Form,
   FormControl,
@@ -16,39 +16,39 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
-import { Typography } from '../ui/typography'
+import { Typography } from "../ui/typography";
 
 const formSchema = z.object({
-  first_name: z.string().min(1, { message: 'Let us know your first name.' }),
-  last_name: z.string().min(1, { message: 'Let us know your last name.' }),
-  email: z.string().email({ message: 'Please enter a valid email address.' }),
-  phone: z.string().min(10, { message: 'Please enter a valid phone number.' }),
-  message: z.string().min(1, { message: 'Please enter a message.' }),
+  first_name: z.string().min(1, { message: "Let us know your first name." }),
+  last_name: z.string().min(1, { message: "Let us know your last name." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number." }),
+  message: z.string().min(1, { message: "Please enter a message." }),
   terms: z.boolean().refine((value) => value, {
-    message: 'You must accept the privacy policy.',
+    message: "You must accept the privacy policy.",
   }),
-})
-type FormSchema = z.infer<typeof formSchema>
+});
+type FormSchema = z.infer<typeof formSchema>;
 
 export function ContactUs() {
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      first_name: '',
-      last_name: '',
-      email: '',
-      phone: '',
-      message: '',
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      message: "",
       terms: false,
     },
-  })
+  });
 
   function onSubmit(values: FormSchema) {
-    console.log(values)
+    console.log(values);
   }
 
   return (
@@ -210,7 +210,7 @@ export function ContactUs() {
                         />
                       </FormControl>
                       <FormLabel className="text-md font-normal text-gray-700">
-                        You agree to our friendly{' '}
+                        You agree to our friendly{" "}
                         <Button
                           className="font-normal underline"
                           size="lg"
@@ -233,5 +233,5 @@ export function ContactUs() {
         </div>
       </Container>
     </Section>
-  )
+  );
 }
