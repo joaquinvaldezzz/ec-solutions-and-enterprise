@@ -3,12 +3,50 @@
   "version": "3.0.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev --turbopack",
-    "format": "prettier --write .",
-    "lint": "next lint",
+    "build": "next build",
+    "start": "next start",
     "preview": "next build && next start",
-    "start": "next start"
+    "lint": "next lint",
+    "format": "prettier --write ."
+  },
+  "prettier": {
+    "printWidth": 100,
+    "plugins": [
+      "@ianvs/prettier-plugin-sort-imports",
+      "@prettier/plugin-xml",
+      "prettier-plugin-sh",
+      "prettier-plugin-tailwindcss"
+    ],
+    "importOrder": [
+      "^(react/(.*)$)|^(react$)",
+      "^(next/(.*)$)|^(next$)",
+      "<THIRD_PARTY_MODULES>",
+      "",
+      "^types$",
+      "^@/types/(.*)$",
+      "^@/config/(.*)$",
+      "^@/lib/(.*)$",
+      "^@/hooks/(.*)$",
+      "^@/components/ui/(.*)$",
+      "^@/components/(.*)$",
+      "^@/registry/(.*)$",
+      "^@/styles/(.*)$",
+      "^@/app/(.*)$",
+      "^@/pages/(.*)$",
+      "",
+      "^[./]",
+      "",
+      "^@/public/(.*)$"
+    ],
+    "tailwindStylesheet": "src/styles/main.css",
+    "tailwindAttributes": [
+      "tw",
+      "classNames"
+    ],
+    "tailwindFunctions": [
+      "cva"
+    ]
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
