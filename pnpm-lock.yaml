@@ -84,8 +84,8 @@ importers:
         specifier: ^7.54.2
         version: 7.54.2(react@19.0.0)
       remark-unwrap-images:
-        specifier: ^5.0.0
-        version: 5.0.0
+        specifier: ^4.0.1
+        version: 4.0.1
       tailwind-merge:
         specifier: ^3.0.2
         version: 3.0.2
@@ -2327,9 +2327,8 @@ packages:
   remark-rehype@11.1.1:
     resolution: {integrity: sha512-g/osARvjkBXb6Wo0XvAeXQohVta8i84ACbenPpoSsxTOQH/Ae0/RGP4WZgnMH5pMLpsj4FG7OHmcIcXxpza8eQ==}
 
-  remark-unwrap-images@5.0.0:
-    resolution: {integrity: sha512-s7WSIA6s98ywa93v/5x+wFeGgJSl1VJnNYgg//0MUgu12CyxVMi+vcCifXFEUtQfnnWSTXWOH6f8LkDBNLthrg==}
-    deprecated: 'Deprecated: use `rehype-unwrap-images` instead'
+  remark-unwrap-images@4.0.1:
+    resolution: {integrity: sha512-J9HibCHx0/X7ovgqaFe0otizCHpbb1s6Jh3IeiD5ibQm2Oz/OhCDXSKMEW5T54iBw5CxuqRL6BrYp+jLLdqBOw==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -4983,7 +4982,11 @@ snapshots:
       unified: 11.0.5
       vfile: 6.0.3
 
-  remark-unwrap-images@5.0.0: {}
+  remark-unwrap-images@4.0.1:
+    dependencies:
+      '@types/mdast': 4.0.4
+      hast-util-whitespace: 3.0.0
+      unist-util-visit: 5.0.0
 
   resolve-from@4.0.0: {}
 
