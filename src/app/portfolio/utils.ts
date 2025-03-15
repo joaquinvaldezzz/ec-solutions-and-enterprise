@@ -16,19 +16,24 @@ interface Metadata {
 function parseFrontmatter(fileContent: string) {
   const frontmatterRegex = /---\s*([\s\S]*?)\s*---/;
   const match = frontmatterRegex.exec(fileContent);
-  const frontmatterBlock = match?.[1];
-  const content = fileContent.replace(frontmatterRegex, "").trim();
-  const frontmatterLines = frontmatterBlock?.trim().split("\n");
   const metadata: Partial<Metadata> = {};
 
-  frontmatterLines?.forEach((line) => {
+  if (match == null) return { metadata: {}, content: fileContent };
+
+  const frontmatterBlock = match[1];
+  const frontmatterLines = frontmatterBlock.trim().split("\n");
+  const content = fileContent.replace(frontmatterRegex, "").trim();
+
+  frontmatterLines.forEach((line) => {
     const [key, ...valueArr] = line.split(": ");
     let value = valueArr.join(": ").trim();
     value = value.replace(/^['"](.*)['"]$/, "$1"); // Remove quotes
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- Idk why this is flagged. TODO: Investigate
     metadata[key.trim() as keyof Metadata] = value;
   });
 
-  return { metadata: metadata as Metadata, content };
+  return { metadata, content };
 }
 
 function getMDXFiles(dir: string) {
