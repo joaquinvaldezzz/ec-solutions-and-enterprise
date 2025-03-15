@@ -1,14 +1,9 @@
-import { type Metadata } from "next";
-import localFont from "next/font/local";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
-import { Footer } from "@/components/ui/footer";
-import { Header } from "@/components/ui/header";
-
-import "@/styles/main.css";
+import type { ReactNode } from "react";
+import type { Metadata } from "next";
 
 import { baseUrl } from "./sitemap";
+
+import "../styles/main.css";
 
 export const metadata: Metadata = {
   title: {
@@ -41,31 +36,14 @@ export const metadata: Metadata = {
   },
 };
 
-const font = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Mona-Sans.woff2",
-      weight: "200 900",
-      style: "normal",
-    },
-  ],
-  variable: "--font-sans",
-});
-
-export default function Layout({
+export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={font.variable}>
-      <body className="min-w-80 bg-[#002f69] text-white antialiased [--header-height:4.5rem] lg:[--header-height:5rem]">
-        <Header />
-        {children}
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
-      </body>
+    <html lang="en">
+      <body className="min-w-80 antialiased">{children}</body>
     </html>
   );
 }
