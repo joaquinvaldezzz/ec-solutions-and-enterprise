@@ -1,9 +1,12 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 
 import { baseUrl } from "./sitemap";
 
 import "../styles/main.css";
+
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: {
@@ -36,13 +39,29 @@ export const metadata: Metadata = {
   },
 };
 
+const inter = localFont({
+  src: [
+    {
+      path: "./fonts/InterVariable.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterVariable-Italic.woff2",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-inter",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn(inter.variable)}>
       <body className="min-w-80 antialiased">{children}</body>
     </html>
   );
