@@ -100,5 +100,9 @@
       "@tailwindcss/postcss": {}
     }
   },
-  "packageManager": "pnpm@10.6.3"
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ]
+  }
 }
