@@ -1,28 +1,3 @@
 {
-  "cSpell.words": [
-    "Benildo",
-    "Chua",
-    "clsx",
-    "commitlint",
-    "Edilberto",
-    "embla",
-    "Escobar's",
-    "Escobars",
-    "fontawesome",
-    "fortawesome",
-    "fullhuman",
-    "heroicons",
-    "hookform",
-    "ianvs",
-    "lucide",
-    "Norzagaray",
-    "packagejson",
-    "purgecss",
-    "rgba",
-    "svgr",
-    "tailwindcss",
-    "turbopack",
-    "vercel"
-  ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }

@@ -1,32 +1,30 @@
-import { type Metadata } from 'next'
-import localFont from 'next/font/local'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import type { ReactNode } from "react";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
 
-import { Footer } from '@/components/ui/footer'
-import { Header } from '@/components/ui/header'
+import { baseUrl } from "./sitemap";
 
-import '@/styles/main.css'
+import "../styles/main.css";
 
-import { baseUrl } from './sitemap'
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: {
-    default: 'EC Solutions and Enterprise',
-    template: '%s | EC Solutions and Enterprise',
+    default: "EC Solutions and Enterprise",
+    template: "%s | EC Solutions and Enterprise",
   },
   description:
-    'EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.',
+    "EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.",
   metadataBase: new URL(baseUrl),
   openGraph: {
     title: {
-      default: 'EC Solutions and Enterprise',
-      template: '%s | EC Solutions and Enterprise',
+      default: "EC Solutions and Enterprise",
+      template: "%s | EC Solutions and Enterprise",
     },
     description:
-      'EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.',
-    siteName: 'EC Solutions and Enterprise',
-    locale: 'en_US',
+      "EC Solutions and Enterprise is a software development company that specializes in web development, mobile development, and custom software development.",
+    siteName: "EC Solutions and Enterprise",
+    locale: "en_US",
   },
   robots: {
     index: true,
@@ -34,38 +32,37 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-}
+};
 
-const font = localFont({
+const inter = localFont({
   src: [
     {
-      path: '../../public/fonts/Mona-Sans.woff2',
-      weight: '200 900',
-      style: 'normal',
+      path: "./fonts/InterVariable.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/InterVariable-Italic.woff2",
+      weight: "100 900",
+      style: "italic",
     },
   ],
-  variable: '--font-sans',
-})
+  variable: "--font-inter",
+});
 
-export default function Layout({
+export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={font.variable}>
-      <body className="min-w-80 bg-[#002f69] text-white antialiased [--header-height:4.5rem] lg:[--header-height:5rem]">
-        <Header />
-        {children}
-        <Footer />
-        <Analytics />
-        <SpeedInsights />
-      </body>
+    <html lang="en" className={cn(inter.variable)}>
+      <body className="min-w-80 antialiased">{children}</body>
     </html>
-  )
+  );
 }

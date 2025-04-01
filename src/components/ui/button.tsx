@@ -1,77 +1,52 @@
-'use client'
+import type { ComponentProps } from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { forwardRef, type ButtonHTMLAttributes } from 'react'
-import { Slot } from '@radix-ui/react-slot'
-import { cva, type VariantProps } from 'class-variance-authority'
-
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  'relative inline-flex items-center justify-center rounded-lg border font-semibold shadow-xs focus:ring-4 focus:outline-hidden',
+  "inline-flex shrink-0 items-center justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
-      size: {
-        sm: 'h-9 gap-1 px-3 py-2 text-sm',
-        md: 'h-10 gap-1 px-3.5 py-2.5 text-sm',
-        lg: 'h-11 gap-1.5 px-4 py-2.5',
-        xl: 'h-12 gap-1.5 px-4.5 py-3',
-        '2xl': 'h-15 gap-2.5 px-5.5 py-4 text-lg',
+      variant: {
+        default: "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:bg-destructive/60 dark:focus-visible:ring-destructive/40",
+        outline:
+          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
+        secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
+        link: "text-primary underline-offset-4 hover:underline",
       },
-      hierarchy: {
-        primary:
-          'border-brand-600 bg-brand-600 hover:border-brand-700 hover:bg-brand-700 focus:ring-brand-500/25 text-white disabled:border-gray-200 disabled:bg-gray-100 disabled:text-gray-400',
-        'secondary-gray':
-          'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-gray-400/15 disabled:border-gray-200 disabled:text-gray-400',
-        'secondary-color':
-          'border-brand-300 bg-brand-50 text-brand-700 hover:bg-brand-100 hover:text-brand-800 focus:ring-brand-500/25 disabled:border-brand-200 disabled:bg-white disabled:text-gray-400',
-        'tertiary-gray':
-          'border-transparent text-gray-600 shadow-transparent hover:bg-gray-50 disabled:text-gray-400',
-        'tertiary-color':
-          'text-brand-700 hover:bg-brand-50 hover:text-brand-800 border-transparent shadow-transparent disabled:text-gray-400',
-        'link-gray':
-          'h-auto rounded-sm border-transparent p-0 text-gray-600 shadow-transparent hover:text-gray-700 focus:ring-2 disabled:text-gray-400',
-        'link-color':
-          'hover:text-brand-800 h-auto rounded-sm border-transparent p-0 text-gray-700 shadow-transparent focus:ring-2 disabled:text-gray-400',
-        button: 'border-transparent shadow-transparent hover:bg-gray-50 focus:ring-gray-400/15',
+      size: {
+        default: "h-9 px-4 py-2 has-[>svg]:px-3",
+        sm: "h-8 gap-1.5 rounded-md px-3 has-[>svg]:px-2.5",
+        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        icon: "size-9",
       },
     },
     defaultVariants: {
-      size: 'sm',
-      hierarchy: 'primary',
+      variant: "default",
+      size: "default",
     },
   },
-)
+);
 
-interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean
+type ButtonProps = ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
+function Button({ className, variant, size, asChild = false, ...props }: ButtonProps) {
+  const Component = asChild ? Slot : "button";
+
+  return (
+    <Component
+      className={cn(buttonVariants({ variant, size, className }))}
+      data-slot="button"
+      {...props}
+    />
+  );
 }
 
-/**
- * Button component.
- *
- * @component
- * @example
- * ```tsx
- * <Button size="small" hierarchy="primary" onClick={handleClick}>
- *   Click me
- * </Button>
- * ```
- */
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, size, hierarchy, asChild = false, ...props }, ref) => {
-    const Component = asChild ? Slot : 'button'
-
-    return (
-      <Component
-        className={cn(buttonVariants({ size, hierarchy }), className)}
-        ref={ref}
-        {...props}
-      />
-    )
-  },
-)
-Button.displayName = 'Button'
-
-export { Button, type ButtonProps }
+export { Button, buttonVariants };

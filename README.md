@@ -1,69 +1,17 @@
-# EC Solutions and Enterprise
+# EC Solutions and Enterprise's Website
 
-This is a website built with the Next.js framework and featuring TypeScript, ESLint, Prettier, and Tailwind CSS. These tools are widely used in the web development community and can help you create modern, scalable, and maintainable websites.
+The company uses [Next.js](https://nextjs.org) to showcase its services and projects.
 
-## Features
+This project uses [pnpm](https://pnpm.io) as the package manager, so ensure it's installed on your machine before running the project. If it's not installed, follow the instructions in the [pnpm documentation](https://pnpm.io/installation).
 
-The repository template includes the following features:
-
-- **Next.js**: A popular React-based framework for building web applications with server-side rendering, static site generation, and other features.
-- **TypeScript**: A typed superset of JavaScript that helps you catch errors early and improve code quality.
-- **ESLint**: A tool for finding and fixing code issues and enforcing consistent coding styles.
-- **Prettier**: A code formatter that helps you maintain consistent formatting and saves time.
-- **Tailwind CSS**: A utility-first CSS framework that enables you to rapidly design and customize your user interface.
-
-The template also includes some preconfigured settings and dependencies, such as:
-
-- A `.eslintrc.json` file with some common rules for TypeScript and React development.
-- A `.prettierrc.json` file with some default formatting options.
-- A `tailwind.config.ts` file with some basic configurations for customizing the Tailwind CSS styles.
-- Some sample Next.js pages and components that demonstrate how to use TypeScript and Tailwind CSS.
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Prerequisites
-
-Make sure you have the following software installed on your machine:
-
-- [Git](https://git-scm.com)
-- [Node.js](https://nodejs.org/en) (version 14 or later)
-
-### Installation
-
-1. Download or clone the repository to your local machine
-
-   ```bash
-   git clone https://github.com/joaquinvaldezzz/ec-solutions-and-enterprise.git
-   ```
-
-2. Go to the project directory
-
-   ```bash
-   cd ec-solutions-and-enterprise
-   ```
-
-3. Install dependencies using npm
-
-   ```bash
-   npm install
-   ```
-
-### Run Locally
-
-To start the development server, run the following command:
+First, install the dependencies:
 
 ```bash
-npm run dev
+pnpm install
 ```
 
-This will start the server at http://localhost:3000. You can access the app in your web browser at that address.
-
-## Local Production Preview
-
-To preview the production build locally, run the following command:
+Then, start the development server:
 
 ```bash
-npm run preview
+pnpm run dev
 ```
