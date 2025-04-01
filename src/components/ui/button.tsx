@@ -24,10 +24,14 @@ const buttonVariants = cva(
         lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
         icon: "size-9",
       },
+      pill: {
+        true: "rounded-full",
+      },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      pill: false,
     },
   },
 );
@@ -37,12 +41,12 @@ type ButtonProps = ComponentProps<"button"> &
     asChild?: boolean;
   };
 
-function Button({ className, variant, size, asChild = false, ...props }: ButtonProps) {
+function Button({ className, variant, size, pill, asChild = false, ...props }: ButtonProps) {
   const Component = asChild ? Slot : "button";
 
   return (
     <Component
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, pill, className }))}
       data-slot="button"
       {...props}
     />
