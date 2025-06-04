@@ -1,5 +1,6 @@
 import path from "path";
 import { includeIgnoreFile } from "@eslint/compat";
+import { FlatCompat } from "@eslint/eslintrc";
 import jsEslint from "@eslint/js";
 import love from "eslint-config-love";
 import eslintConfigPrettier from "eslint-config-prettier";
@@ -7,6 +8,11 @@ import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import eslintPluginReact from "eslint-plugin-react";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: jsEslint.configs.recommended,
+});
 
 export default tsEslint.config(
   includeIgnoreFile(path.resolve(".gitignore")),
@@ -17,6 +23,9 @@ export default tsEslint.config(
     extends: [
       jsEslint.configs.recommended,
       tsEslint.configs.recommended,
+      ...compat.config({
+        extends: ["next"],
+      }),
       love,
       eslintPluginPrettier,
       eslintConfigPrettier,
