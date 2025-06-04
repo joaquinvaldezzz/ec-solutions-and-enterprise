@@ -73,6 +73,16 @@
       "prettier-plugin-sh",
       "prettier-plugin-tailwindcss"
     ],
+    "overrides": [
+      {
+        "files": [
+          "*.mdc"
+        ],
+        "options": {
+          "parser": "markdown"
+        }
+      }
+    ],
     "importOrder": [
       "^(react/(.*)$)|^(react$)",
       "^(next/(.*)$)|^(next$)",
