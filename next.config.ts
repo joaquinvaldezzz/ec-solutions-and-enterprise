@@ -4,6 +4,15 @@ import type { Configuration, RuleSetRule } from "webpack";
 const nextConfig: NextConfig = {
   pageExtensions: ["tsx", "md", "mdx"],
 
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.ts",
+      },
+    },
+  },
+
   webpack: (config: Configuration) => {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module?.rules?.find((rule): rule is RuleSetRule => {
@@ -35,17 +44,6 @@ const nextConfig: NextConfig = {
     }
 
     return config;
-  },
-
-  experimental: {
-    turbo: {
-      rules: {
-        "*.svg": {
-          loaders: ["@svgr/webpack"],
-          as: "*.ts",
-        },
-      },
-    },
   },
 };
 
