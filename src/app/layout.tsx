@@ -61,7 +61,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(inter.variable)}>
+    <html className={cn(inter.variable)} lang="en">
       <body className="min-w-80 antialiased">{children}</body>
     </html>
   );
