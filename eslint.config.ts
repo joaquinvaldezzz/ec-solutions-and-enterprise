@@ -4,6 +4,7 @@ import { FlatCompat } from "@eslint/eslintrc";
 import jsEslint from "@eslint/js";
 import love from "eslint-config-love";
 import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginPerfectionist from "eslint-plugin-perfectionist";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import eslintPluginReact from "eslint-plugin-react";
 import globals from "globals";
@@ -40,10 +41,63 @@ export default tsEslint.config(
   {
     files: ["src/**"],
     extends: [eslintPluginReact.configs.flat.recommended],
+    plugins: {
+      perfectionist: eslintPluginPerfectionist,
+    },
     rules: {
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/prefer-destructuring": "off",
       "react/react-in-jsx-scope": "off",
+      "perfectionist/sort-jsx-props": [
+        "error",
+        {
+          type: "natural",
+          order: "asc",
+          ignoreCase: true,
+          ignorePattern: [],
+          groups: [
+            "className",
+            "style",
+            "id",
+            "name",
+            "data",
+            "src",
+            "for",
+            "type",
+            "placeholder",
+            "href",
+            "value",
+            "title",
+            "alt",
+            "role",
+            "aria",
+            "tabIndex",
+            "unknown",
+            "callback",
+            "shorthand",
+            "multiline",
+          ],
+          customGroups: {
+            className: "className",
+            id: "id",
+            name: "name",
+            data: "^data-.+",
+            src: "src",
+            for: "for",
+            type: "type",
+            placeholder: "placeholder",
+            href: "href",
+            value: "value",
+            title: "title",
+            alt: "alt",
+            role: "role",
+            aria: "^aria-.+",
+            tabIndex: "tabIndex",
+            style: "style",
+            callback: "^on.+",
+          },
+        },
+      ],
     },
     settings: {
       react: { version: "detect" },
