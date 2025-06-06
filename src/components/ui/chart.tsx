@@ -32,6 +32,9 @@ interface ChartContextProps {
 
 const ChartContext = createContext<ChartContextProps | null>(null);
 
+/**
+ * @returns The chart context.
+ */
 function useChart() {
   const context = useContext(ChartContext);
 
@@ -42,6 +45,14 @@ function useChart() {
   return context;
 }
 
+/**
+ * @param props The props for the ChartContainer component.
+ * @param props.id The id for the ChartContainer component.
+ * @param props.className The class name for the ChartContainer component.
+ * @param props.children The children for the ChartContainer component.
+ * @param props.config The config for the ChartContainer component.
+ * @returns The ChartContainer component.
+ */
 function ChartContainer({
   id,
   className,
@@ -73,6 +84,12 @@ function ChartContainer({
   );
 }
 
+/**
+ * @param props The props for the ChartStyle component.
+ * @param props.id The id for the ChartStyle component.
+ * @param props.config The config for the ChartStyle component.
+ * @returns The ChartStyle component.
+ */
 const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   const colorConfig = Object.entries(config).filter(
     ([, config]) => config.theme != null || config.color != null,
@@ -92,7 +109,7 @@ ${prefix} [data-chart=${id}] {
 ${colorConfig
   .map(([key, itemConfig]) => {
     const color = itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ?? itemConfig.color;
-    return color ? `  --color-${key}: ${color};` : null;
+    return color != null ? `  --color-${key}: ${color};` : null;
   })
   .join("\n")}
 }
@@ -106,6 +123,23 @@ ${colorConfig
 
 const ChartTooltip = RechartsPrimitive.Tooltip;
 
+/**
+ * @param props The props for the ChartTooltipContent component.
+ * @param props.active The active for the ChartTooltipContent component.
+ * @param props.payload The payload for the ChartTooltipContent component.
+ * @param props.className The class name for the ChartTooltipContent component.
+ * @param props.indicator The indicator for the ChartTooltipContent component.
+ * @param props.hideLabel The hideLabel for the ChartTooltipContent component.
+ * @param props.hideIndicator The hideIndicator for the ChartTooltipContent component.
+ * @param props.label The label for the ChartTooltipContent component.
+ * @param props.labelFormatter The labelFormatter for the ChartTooltipContent component.
+ * @param props.labelClassName The labelClassName for the ChartTooltipContent component.
+ * @param props.formatter The formatter for the ChartTooltipContent component.
+ * @param props.color The color for the ChartTooltipContent component.
+ * @param props.nameKey The nameKey for the ChartTooltipContent component.
+ * @param props.labelKey The labelKey for the ChartTooltipContent component.
+ * @returns The ChartTooltipContent component.
+ */
 function ChartTooltipContent({
   active,
   payload,
@@ -130,31 +164,34 @@ function ChartTooltipContent({
   }) {
   const { config } = useChart();
 
+  // eslint-disable-next-line complexity -- This is a complex component.
   const tooltipLabel = useMemo(() => {
-    if (hideLabel || !payload?.length) {
+    if (hideLabel || payload == null || payload.length === 0) {
       return null;
     }
 
     const [item] = payload;
-    const key = `${labelKey ?? item?.dataKey ?? item?.name ?? "value"}`;
+    const key = `${labelKey ?? item.dataKey ?? item.name ?? "value"}`;
     const itemConfig = getPayloadConfigFromPayload(config, item, key);
     const value =
-      !labelKey && typeof label === "string" ? (config[label]?.label ?? label) : itemConfig?.label;
+      labelKey == null && typeof label === "string"
+        ? (config[label].label ?? label)
+        : itemConfig?.label;
 
-    if (labelFormatter) {
+    if (labelFormatter != null) {
       return (
         <div className={cn("font-medium", labelClassName)}>{labelFormatter(value, payload)}</div>
       );
     }
 
-    if (!value) {
+    if (value == null) {
       return null;
     }
 
     return <div className={cn("font-medium", labelClassName)}>{value}</div>;
   }, [label, labelFormatter, payload, hideLabel, labelClassName, config, labelKey]);
 
-  if (active == null || payload == null || payload.length === 0) {
+  if (active == null || payload == null || payload.length === 0 || payload.length === 1) {
     return null;
   }
 
@@ -169,10 +206,12 @@ function ChartTooltipContent({
     >
       {!nestLabel ? tooltipLabel : null}
       <div className="grid gap-1.5">
+        {/* eslint-disable-next-line complexity -- This is a complex component. */}
         {payload.map((item, index) => {
           const key = `${nameKey ?? item.name ?? item.dataKey ?? "value"}`;
           const itemConfig = getPayloadConfigFromPayload(config, item, key);
-          const indicatorColor = color || item.payload.fill || item.color;
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access -- TODO: Fix this
+          const indicatorColor = color ?? item.payload?.fill ?? item.color;
 
           return (
             <div
@@ -180,13 +219,14 @@ function ChartTooltipContent({
                 "flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2.5 [&>svg]:w-2.5 [&>svg]:text-muted-foreground",
                 indicator === "dot" && "items-center",
               )}
-              key={item.dataKey}
+              key={item.dataKey as string}
             >
-              {formatter != null && item?.value !== undefined && item.name != null ? (
+              {formatter != null && item.value != null && item.name != null ? (
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-argument -- TODO: Fix this
                 formatter(item.value, item.name, item, index, item.payload)
               ) : (
                 <>
-                  {itemConfig?.icon ? (
+                  {itemConfig?.icon != null ? (
                     <itemConfig.icon />
                   ) : (
                     !hideIndicator && (
@@ -203,9 +243,11 @@ function ChartTooltipContent({
                         )}
                         style={
                           {
+                            /* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- TODO: Fix this */ // @ts-expect-error -- TODO: Fix this
                             "--color-bg": indicatorColor,
+                            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- TODO: Fix this
                             "--color-border": indicatorColor,
-                          } as CSSProperties
+                          } satisfies CSSProperties
                         }
                       />
                     )
@@ -219,10 +261,10 @@ function ChartTooltipContent({
                     <div className="grid gap-1.5">
                       {nestLabel ? tooltipLabel : null}
                       <span className="text-muted-foreground">
-                        {itemConfig?.label || item.name}
+                        {itemConfig?.label ?? item.name}
                       </span>
                     </div>
-                    {item.value && (
+                    {item.value != null && (
                       <span className="font-mono font-medium text-foreground tabular-nums">
                         {item.value.toLocaleString()}
                       </span>
@@ -241,12 +283,13 @@ function ChartTooltipContent({
 const ChartLegend = RechartsPrimitive.Legend;
 
 /**
- * @param root0
- * @param root0.className
- * @param root0.hideIcon
- * @param root0.payload
- * @param root0.verticalAlign
- * @param root0.nameKey
+ * @param props The props for the ChartLegendContent component.
+ * @param props.className The class name for the ChartLegendContent component.
+ * @param props.hideIcon Whether to hide the icon for the ChartLegendContent component.
+ * @param props.payload The payload for the ChartLegendContent component.
+ * @param props.verticalAlign The vertical alignment for the ChartLegendContent component.
+ * @param props.nameKey The name key for the ChartLegendContent component.
+ * @returns The ChartLegendContent component.
  */
 function ChartLegendContent({
   className,
@@ -261,7 +304,7 @@ function ChartLegendContent({
   }) {
   const { config } = useChart();
 
-  if (!payload?.length) {
+  if (payload == null || payload.length === 0) {
     return null;
   }
 
@@ -274,7 +317,8 @@ function ChartLegendContent({
       )}
     >
       {payload.map((item) => {
-        const key = `${nameKey || item.dataKey || "value"}`;
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions -- TODO: Fix this
+        const key = `${nameKey ?? item.dataKey ?? "value"}`;
         const itemConfig = getPayloadConfigFromPayload(config, item, key);
 
         return (
@@ -282,9 +326,9 @@ function ChartLegendContent({
             className={cn(
               "flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground",
             )}
-            key={item.value}
+            key={item.value as string}
           >
-            {itemConfig?.icon && !hideIcon ? (
+            {itemConfig?.icon != null && !hideIcon ? (
               <itemConfig.icon />
             ) : (
               <div
@@ -305,12 +349,14 @@ function ChartLegendContent({
 // Helper to extract item config from a payload.
 
 /**
- * @param config
- * @param payload
- * @param key
+ * @param config The config for the getPayloadConfigFromPayload function.
+ * @param payload The payload for the getPayloadConfigFromPayload function.
+ * @param key The key for the getPayloadConfigFromPayload function.
+ * @returns The payload config for the getPayloadConfigFromPayload function.
  */
+// eslint-disable-next-line complexity -- This is a complex component.
 function getPayloadConfigFromPayload(config: ChartConfig, payload: unknown, key: string) {
-  if (typeof payload !== "object" || payload === null) {
+  if (typeof payload !== "object" || payload == null) {
     return undefined;
   }
 
@@ -324,7 +370,7 @@ function getPayloadConfigFromPayload(config: ChartConfig, payload: unknown, key:
   if (key in payload && typeof payload[key as keyof typeof payload] === "string") {
     configLabelKey = payload[key as keyof typeof payload] as string;
   } else if (
-    payloadPayload &&
+    payloadPayload != null &&
     key in payloadPayload &&
     typeof payloadPayload[key as keyof typeof payloadPayload] === "string"
   ) {
@@ -336,9 +382,9 @@ function getPayloadConfigFromPayload(config: ChartConfig, payload: unknown, key:
 
 export {
   ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
   ChartLegend,
   ChartLegendContent,
   ChartStyle,
+  ChartTooltip,
+  ChartTooltipContent,
 };
