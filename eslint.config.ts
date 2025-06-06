@@ -4,6 +4,7 @@ import { FlatCompat } from "@eslint/eslintrc";
 import jsEslint from "@eslint/js";
 import love from "eslint-config-love";
 import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginJsdoc from "eslint-plugin-jsdoc";
 import eslintPluginPerfectionist from "eslint-plugin-perfectionist";
 import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import eslintPluginReact from "eslint-plugin-react";
@@ -40,12 +41,17 @@ export default tsEslint.config(
   // Rules for files within the `src` folder
   {
     files: ["src/**"],
-    extends: [eslintPluginReact.configs.flat.recommended],
+    extends: [
+      eslintPluginReact.configs.flat.recommended,
+      eslintPluginJsdoc.configs["flat/recommended-typescript"],
+      eslintPluginJsdoc.configs["flat/stylistic-typescript"],
+    ],
     plugins: {
       perfectionist: eslintPluginPerfectionist,
     },
     rules: {
       "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-unsafe-type-assertion": "off",
       "@typescript-eslint/prefer-destructuring": "off",
       "react/react-in-jsx-scope": "off",
       "perfectionist/sort-jsx-props": [
