@@ -32,9 +32,7 @@ interface ChartContextProps {
 
 const ChartContext = createContext<ChartContextProps | null>(null);
 
-/**
- * @returns The chart context.
- */
+/** @returns The chart context. */
 function useChart() {
   const context = useContext(ChartContext);
 
