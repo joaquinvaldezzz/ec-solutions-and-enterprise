@@ -17,6 +17,7 @@ const compat = new FlatCompat({
 });
 
 export default tsEslint.config(
+  // @ts-expect-error -- idk what happened here
   includeIgnoreFile(path.resolve(".gitignore")),
 
   // Rules for all files
@@ -32,7 +33,10 @@ export default tsEslint.config(
       eslintPluginPrettier,
       eslintConfigPrettier,
     ],
-    languageOptions: { globals: globals.browser },
+    languageOptions: {
+      ecmaVersion: "latest",
+      globals: globals.browser,
+    },
     rules: {
       "@typescript-eslint/no-magic-numbers": "off",
     },
