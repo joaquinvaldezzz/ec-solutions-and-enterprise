@@ -57,6 +57,8 @@ export default tsEslint.config(
       "@typescript-eslint/explicit-function-return-type": "off",
       "@typescript-eslint/no-unsafe-type-assertion": "off",
       "@typescript-eslint/prefer-destructuring": "off",
+      "jsdoc/check-line-alignment": "off",
+      "jsdoc/tag-lines": "off",
       "react/react-in-jsx-scope": "off",
       "perfectionist/sort-jsx-props": [
         "error",
