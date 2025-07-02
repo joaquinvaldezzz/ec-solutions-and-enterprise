@@ -29,7 +29,6 @@ function parseFrontmatter(fileContent: string) {
     let value = valueArr.join(": ").trim();
     value = value.replace(/^['"](.*)['"]$/, "$1"); // Remove quotes
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion -- Idk why this is flagged. TODO: Investigate
     metadata[key.trim() as keyof Metadata] = value;
   });
 
