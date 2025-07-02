@@ -2,8 +2,7 @@
 
 import type { ComponentProps } from "react";
 import { createContext, useContext, useId } from "react";
-import type * as LabelPrimitive from "@radix-ui/react-label";
-import { Slot } from "@radix-ui/react-slot";
+import { Slot as SlotPrimitive, type Label as LabelPrimitive } from "radix-ui";
 import {
   Controller,
   FormProvider,
@@ -89,11 +88,11 @@ function FormLabel({ className, ...props }: ComponentProps<typeof LabelPrimitive
   );
 }
 
-function FormControl({ ...props }: ComponentProps<typeof Slot>) {
+function FormControl({ ...props }: ComponentProps<typeof SlotPrimitive.Slot>) {
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField();
 
   return (
-    <Slot
+    <SlotPrimitive.Slot
       aria-invalid={error != null}
       id={formItemId}
       data-slot="form-control"
