@@ -66,7 +66,7 @@
     "tailwindcss": "^4.1.8",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
-    "zod": "^3.24.2"
+    "zod": "^3.25.67"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.8",
