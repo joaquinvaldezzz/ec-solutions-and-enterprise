@@ -57,7 +57,7 @@
     "@types/react-dom": "19.0.4",
     "@types/webpack": "^5.28.5",
     "eslint": "^9.29.0",
-    "eslint-config-love": "^119.0.0",
+    "eslint-config-love": "^122.0.0",
     "eslint-config-next": "^15.3.3",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-jsdoc": "^50.7.1",
