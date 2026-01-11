@@ -1,7 +1,6 @@
+import next from "eslint-config-next";
 import path from "path";
 import { includeIgnoreFile } from "@eslint/compat";
-import { FlatCompat } from "@eslint/eslintrc";
-import jsEslint from "@eslint/js";
 import love from "eslint-config-love";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginJsdoc from "eslint-plugin-jsdoc";
@@ -10,11 +9,6 @@ import eslintPluginPrettier from "eslint-plugin-prettier/recommended";
 import eslintPluginReact from "eslint-plugin-react";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: jsEslint.configs.recommended,
-});
 
 export default tsEslint.config(
   // @ts-expect-error -- idk what happened here
@@ -26,9 +20,7 @@ export default tsEslint.config(
     extends: [
       jsEslint.configs.recommended,
       tsEslint.configs.recommended,
-      ...compat.config({
-        extends: ["next"],
-      }),
+      ...next,
       love,
       eslintPluginPrettier,
       eslintConfigPrettier,
